@@ -1,0 +1,281 @@
+{
+  "generated_at": "2026-05-08T16:56:32.007590Z",
+  "regions": {
+    "North Ohio": {
+      "total_schools": 8,
+      "total_enrollment": 2781,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": 92.0,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Horizon Science Academy Springfield",
+        "Horizon Science Academy Toledo",
+        "Horizon Science Academy Cleveland High School",
+        "Horizon Science Academy Cleveland Elementary School",
+        "Horizon Science Academy Denison",
+        "Horizon Science Academy Lorain",
+        "Horizon Science Academy Youngstown",
+        "Noble Academy Euclid"
+      ]
+    },
+    "Columbus": {
+      "total_schools": 5,
+      "total_enrollment": 1280,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": null,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Horizon Science Academy Columbus High School Morse Road Campus",
+        "Horizon Science Academy Columbus Middle School",
+        "Horizon Science Academy Columbus Primary School",
+        "Horizon Science Academy Columbus Elementary School",
+        "Noble Academy Columbus"
+      ]
+    },
+    "Dayton/Cincinnati": {
+      "total_schools": 4,
+      "total_enrollment": 1410,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": null,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Horizon Science Academy Dayton Elementary School",
+        "Horizon Science Academy Dayton High School",
+        "Horizon Science Academy Dayton Downtown",
+        "Horizon Science Academy Cincinnati"
+      ]
+    },
+    "Michigan": {
+      "total_schools": 2,
+      "total_enrollment": 850,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": null,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Michigan Math and Science Academy Lorraine",
+        "Michigan Math and Science Academy Dequindre"
+      ]
+    },
+    "Missouri": {
+      "total_schools": 4,
+      "total_enrollment": 1330,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": null,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Gateway Science Academy of St. Louis - Smiley",
+        "Gateway Science Academy of St. Louis - High",
+        "Gateway Science Academy of St. Louis - Middle",
+        "Gateway Science Academy of St. Louis - South"
+      ]
+    },
+    "Illinois": {
+      "total_schools": 4,
+      "total_enrollment": 2538,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": null,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Chicago Math and Science Academy",
+        "Horizon Science Academy Belmont",
+        "Horizon Science Academy McKinley Park",
+        "Horizon Science Academy Southwest Chicago"
+      ]
+    },
+    "Iowa": {
+      "total_schools": 2,
+      "total_enrollment": 500,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": null,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Horizon Science Academy Des Moines",
+        "Horizon Science Academy Davenport"
+      ]
+    },
+    "Minnesota": {
+      "total_schools": 2,
+      "total_enrollment": 600,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": null,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Minnesota Math and Science Academy",
+        "Horizon Science Academy Twin Cities"
+      ]
+    },
+    "Indiana": {
+      "total_schools": 2,
+      "total_enrollment": 1135,
+      "ela_proficiency_weighted_avg": null,
+      "ela_proficiency_schools_included": 0,
+      "math_proficiency_weighted_avg": null,
+      "math_proficiency_schools_included": 0,
+      "teacher_fte_total": 109.0,
+      "pct_teachers_certified_avg": null,
+      "grad_rate_4yr_avg": null,
+      "accountability_distribution": {},
+      "growth_rating_distribution": {},
+      "schools_with_growth_data": 0,
+      "schools_with_accountability": 0,
+      "race_ethnicity_totals": {
+        "american_indian": 0,
+        "asian": 0,
+        "black": 0,
+        "hispanic": 0,
+        "pacific_islander": 0,
+        "two_or_more": 0,
+        "white": 0
+      },
+      "assessment_years_present": [],
+      "schools": [
+        "Indiana Math and Science Academy West",
+        "Indiana Math and Science Academy North"
+      ]
+    }
+  }
+}

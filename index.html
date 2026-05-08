@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept Schools Network Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  /* ── Reset & Base ─────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f5f6f8;
+    --surface: #ffffff;
+    --border: #e2e5ea;
+    --text-primary: #1a1d23;
+    --text-secondary: #5a6175;
+    --text-muted: #8c94a6;
+    --accent: #2563eb;
+    --accent-light: #eff6ff;
+    --accent-dark: #1d4ed8;
+    --green: #16a34a;
+    --green-light: #f0fdf4;
+    --yellow: #ca8a04;
+    --yellow-light: #fefce8;
+    --red: #dc2626;
+    --red-light: #fef2f2;
+    --gray: #9ca3af;
+    --gray-light: #f3f4f6;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.07);
+    --shadow: 0 2px 8px rgba(0,0,0,.09);
+    --radius: 8px;
+    --radius-lg: 12px;
+
+    /* Region colors */
+    --r-north-ohio: #2563eb;
+    --r-columbus: #7c3aed;
+    --r-dayton: #db2777;
+    --r-michigan: #059669;
+    --r-missouri: #d97706;
+    --r-illinois: #dc2626;
+    --r-iowa: #0891b2;
+    --r-minnesota: #65a30d;
+    --r-indiana: #9333ea;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h1, h2, h3, h4, h5 { line-height: 1.3; }
+  a { color: var(--accent); }
+
+  /* ── Header ───────────────────────────────────────────────── */
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  .header-logo {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+  .header-logo span { color: var(--accent); }
+  .header-stats { display: flex; gap: 20px; }
+  .header-stat { display: flex; flex-direction: column; line-height: 1.2; }
+  .header-stat-value { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+  .header-stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; }
+  .freshness-badge {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--green-light); color: var(--green);
+    border: 1px solid #bbf7d0;
+    border-radius: 20px; padding: 4px 10px;
+    font-size: 12px; font-weight: 500;
+  }
+  .freshness-badge.stale { background: var(--yellow-light); color: var(--yellow); border-color: #fde68a; }
+  .freshness-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+  /* ── Tabs ─────────────────────────────────────────────────── */
+  .tabs-nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex; gap: 0;
+  }
+  .tab-btn {
+    padding: 14px 18px;
+    border: none; background: none; cursor: pointer;
+    font-size: 14px; font-weight: 500; color: var(--text-secondary);
+    border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--text-primary); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+  /* ── Cards ────────────────────────────────────────────────── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  .card-header {
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .card-title { font-size: 14px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.4px; }
+  .card-body { padding: 20px; }
+
+  /* ── Summary Stat Cards ───────────────────────────────────── */
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .stat-card-label { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .stat-card-value { font-size: 28px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.5px; }
+  .stat-card-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .stat-card-value.null-val { color: var(--gray); font-size: 20px; }
+
+  /* ── Chart Grid ───────────────────────────────────────────── */
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+  .chart-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+  .chart-full { grid-column: 1 / -1; }
+  .chart-wrap { position: relative; height: 280px; }
+  .chart-wrap canvas { position: absolute; inset: 0; }
+
+  /* ── Data Table ───────────────────────────────────────────── */
+  .data-table-wrap { overflow-x: auto; }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .data-table th {
+    text-align: left; padding: 10px 12px;
+    font-size: 11px; font-weight: 600;
+    color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+    background: var(--gray-light);
+  }
+  .data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: var(--bg); }
+  .data-table tr.clickable { cursor: pointer; }
+  .data-table .school-name { font-weight: 500; }
+  .data-table .region-group td { background: var(--gray-light); font-weight: 600; font-size: 12px; color: var(--text-secondary); }
+
+  /* ── Badges & Pills ───────────────────────────────────────── */
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 20px;
+    font-size: 11px; font-weight: 600; white-space: nowrap;
+  }
+  .badge-green { background: var(--green-light); color: var(--green); }
+  .badge-yellow { background: var(--yellow-light); color: var(--yellow); }
+  .badge-red { background: var(--red-light); color: var(--red); }
+  .badge-blue { background: var(--accent-light); color: var(--accent); }
+  .badge-gray { background: var(--gray-light); color: var(--text-muted); }
+
+  .data-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; }
+  .data-dot.ok { background: var(--green); }
+  .data-dot.partial { background: var(--yellow); }
+  .data-dot.missing { background: var(--red); }
+  .data-dot.na { background: var(--gray); }
+
+  /* ── Progress Bars ────────────────────────────────────────── */
+  .pill-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .pill-bar-label { font-size: 12px; color: var(--text-secondary); width: 90px; flex-shrink: 0; }
+  .pill-bar-track { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .pill-bar-fill { height: 100%; border-radius: 4px; transition: width .3s; }
+  .pill-bar-val { font-size: 12px; font-weight: 600; color: var(--text-primary); width: 42px; text-align: right; }
+
+  /* ── Selects & Search ─────────────────────────────────────── */
+  .select-wrapper { position: relative; }
+  select {
+    appearance: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 32px 8px 12px;
+    font-size: 14px;
+    color: var(--text-primary);
+    cursor: pointer;
+    outline: none;
+    min-width: 220px;
+  }
+  select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.12); }
+  .select-chevron {
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    pointer-events: none; color: var(--text-muted);
+  }
+  input[type="text"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+    width: 300px;
+  }
+  input[type="text"]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.12); }
+
+  /* ── Section headers ─────────────────────────────────────── */
+  .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .section-title { font-size: 17px; font-weight: 700; color: var(--text-primary); }
+  .section-divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+
+  /* ── School Detail ────────────────────────────────────────── */
+  .detail-header {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .detail-school-name { font-size: 22px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.3px; }
+  .detail-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .detail-meta-item { font-size: 13px; color: var(--text-secondary); display: flex; align-items: center; gap: 4px; }
+
+  .perf-card-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .perf-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .perf-card-subject { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 8px; }
+  .perf-card-pct { font-size: 44px; font-weight: 800; letter-spacing: -1px; color: var(--text-primary); }
+  .perf-card-pct.null-val { font-size: 28px; color: var(--gray); }
+  .perf-card-year { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .perf-card-chart { height: 100px; margin-top: 12px; }
+  .perf-card-chart canvas { width: 100% !important; height: 100% !important; }
+
+  .subgroup-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 12px; }
+  .subgroup-table th { text-align: left; padding: 5px 8px; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--border); }
+  .subgroup-table td { padding: 5px 8px; border-bottom: 1px solid var(--border); }
+  .subgroup-table tr:last-child td { border-bottom: none; }
+
+  .growth-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .growth-metric { text-align: center; }
+  .growth-metric-label { font-size: 11px; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+  .growth-metric-value { font-size: 24px; font-weight: 700; }
+  .growth-metric-sub { font-size: 11px; color: var(--text-muted); }
+
+  /* ── Data Status Tab ──────────────────────────────────────── */
+  .status-grid-header {
+    display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .status-summary-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    box-shadow: var(--shadow-sm);
+  }
+  .status-summary-box strong { color: var(--text-primary); }
+  .status-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .status-legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+  .status-cell { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; }
+  .status-cell.ok { background: #dcfce7; color: #16a34a; }
+  .status-cell.partial { background: #fef9c3; color: #ca8a04; }
+  .status-cell.missing { background: #fee2e2; color: #dc2626; }
+  .status-cell.na { background: #f3f4f6; color: #9ca3af; }
+
+  .expand-btn {
+    background: none; border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 8px 16px; cursor: pointer; font-size: 13px; color: var(--text-secondary);
+    transition: background .15s;
+  }
+  .expand-btn:hover { background: var(--bg); }
+  .expandable { display: none; }
+  .expandable.open { display: block; }
+
+  /* ── Null State ───────────────────────────────────────────── */
+  .null-state {
+    text-align: center; padding: 48px 24px;
+    color: var(--text-muted); font-size: 14px;
+  }
+  .null-state-icon { font-size: 40px; margin-bottom: 12px; }
+  .null-state-title { font-size: 16px; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
+
+  /* ── Region color chips ──────────────────────────────────── */
+  .region-chip {
+    display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+    vertical-align: middle; margin-right: 4px; flex-shrink: 0;
+  }
+
+  /* ── Responsive ───────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .chart-grid, .chart-grid-3, .perf-card-pair { grid-template-columns: 1fr; }
+    .header-stats { display: none; }
+    .growth-card { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .container { padding: 16px; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .growth-card { grid-template-columns: 1fr; }
+  }
+
+  /* ── Loading overlay ─────────────────────────────────────── */
+  #loading-overlay {
+    position: fixed; inset: 0; background: rgba(245,246,248,.9);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 999; flex-direction: column; gap: 16px;
+  }
+  .spinner {
+    width: 40px; height: 40px; border: 3px solid var(--border);
+    border-top-color: var(--accent); border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #loading-overlay.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div id="loading-overlay">
+  <div class="spinner"></div>
+  <div style="font-size:14px;color:var(--text-secondary)">Loading dashboard data…</div>
+</div>
+
+<!-- ── Header ──────────────────────────────────────────────── -->
+<header class="header">
+  <div class="header-left">
+    <div class="header-logo">Concept Schools <span>Network Dashboard</span></div>
+    <div class="header-stats">
+      <div class="header-stat">
+        <span class="header-stat-value" id="hdr-schools">–</span>
+        <span class="header-stat-label">Schools</span>
+      </div>
+      <div class="header-stat">
+        <span class="header-stat-value" id="hdr-enrollment">–</span>
+        <span class="header-stat-label">Students</span>
+      </div>
+      <div class="header-stat">
+        <span class="header-stat-value" id="hdr-states">7</span>
+        <span class="header-stat-label">States</span>
+      </div>
+    </div>
+  </div>
+  <div id="freshness-badge" class="freshness-badge">
+    <div class="freshness-dot"></div>
+    <span id="freshness-text">Loading…</span>
+  </div>
+</header>
+
+<!-- ── Tabs Nav ────────────────────────────────────────────── -->
+<nav class="tabs-nav">
+  <button class="tab-btn active" data-tab="tab-network">Network Overview</button>
+  <button class="tab-btn" data-tab="tab-region">By Region</button>
+  <button class="tab-btn" data-tab="tab-school">By School</button>
+  <button class="tab-btn" data-tab="tab-status">Data Status</button>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- TAB 1: NETWORK OVERVIEW                                    -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="tab-panel active" id="tab-network">
+<div class="container">
+
+  <!-- Summary stat cards -->
+  <div class="stat-grid" id="network-stat-grid">
+    <div class="stat-card"><div class="stat-card-label">Total Enrollment</div><div class="stat-card-value" id="net-enrollment">–</div><div class="stat-card-sub" id="net-enroll-year"></div></div>
+    <div class="stat-card"><div class="stat-card-label">ELA Proficiency</div><div class="stat-card-value" id="net-ela">–</div><div class="stat-card-sub" id="net-ela-year">weighted avg</div></div>
+    <div class="stat-card"><div class="stat-card-label">Math Proficiency</div><div class="stat-card-value" id="net-math">–</div><div class="stat-card-sub" id="net-math-year">weighted avg</div></div>
+    <div class="stat-card"><div class="stat-card-label">Accountability ✓</div><div class="stat-card-value" id="net-accountability">–</div><div class="stat-card-sub">schools rated</div></div>
+    <div class="stat-card"><div class="stat-card-label">Teacher FTE</div><div class="stat-card-value" id="net-fte">–</div><div class="stat-card-sub">network total</div></div>
+    <div class="stat-card"><div class="stat-card-label">Avg Certified</div><div class="stat-card-value" id="net-certified">–</div><div class="stat-card-sub">teacher certification</div></div>
+  </div>
+
+  <div class="chart-grid">
+    <!-- Proficiency by Region -->
+    <div class="card">
+      <div class="card-header"><span class="card-title">Proficiency by Region</span><span style="font-size:12px;color:var(--text-muted)">ELA &amp; Math</span></div>
+      <div class="card-body"><div class="chart-wrap"><canvas id="chart-region-proficiency"></canvas></div></div>
+    </div>
+    <!-- Demographics -->
+    <div class="card">
+      <div class="card-header"><span class="card-title">Network Demographics</span><span style="font-size:12px;color:var(--text-muted)">Race/Ethnicity</span></div>
+      <div class="card-body"><div class="chart-wrap" style="height:240px"><canvas id="chart-demographics"></canvas></div></div>
+    </div>
+  </div>
+
+  <div class="chart-grid">
+    <!-- Trend -->
+    <div class="card">
+      <div class="card-header"><span class="card-title">Proficiency Trend</span><span style="font-size:12px;color:var(--text-muted)">Network average over time</span></div>
+      <div class="card-body"><div class="chart-wrap"><canvas id="chart-trend"></canvas></div></div>
+    </div>
+    <!-- Scatter -->
+    <div class="card">
+      <div class="card-header"><span class="card-title">ELA vs. Math Proficiency</span><span style="font-size:12px;color:var(--text-muted)">Per school · size = enrollment</span></div>
+      <div class="card-body"><div class="chart-wrap"><canvas id="chart-scatter"></canvas></div></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- TAB 2: BY REGION                                           -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-region">
+<div class="container">
+  <div class="section-header">
+    <span class="section-title">Region View</span>
+    <div class="select-wrapper">
+      <select id="region-select"></select>
+      <svg class="select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </div>
+
+  <div class="stat-grid" id="region-stat-grid"></div>
+
+  <div class="card">
+    <div class="card-header"><span class="card-title">Schools in Region</span></div>
+    <div class="card-body" style="padding:0">
+      <div class="data-table-wrap">
+        <table class="data-table" id="region-table">
+          <thead>
+            <tr>
+              <th>School</th>
+              <th>Grade Band</th>
+              <th>Enrollment</th>
+              <th>ELA %</th>
+              <th>Math %</th>
+              <th>Growth</th>
+              <th>State Rating</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody id="region-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- TAB 3: BY SCHOOL                                           -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-school">
+<div class="container">
+  <div class="section-header">
+    <span class="section-title">School Detail</span>
+    <div class="select-wrapper">
+      <select id="school-select"></select>
+      <svg class="select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </div>
+
+  <div id="school-detail-container">
+    <div class="null-state">
+      <div class="null-state-icon">🏫</div>
+      <div class="null-state-title">Select a school above</div>
+      <div>School data will appear here</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- TAB 4: DATA STATUS                                         -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-status">
+<div class="container">
+  <div class="section-header">
+    <span class="section-title">Data Status</span>
+  </div>
+
+  <div class="status-summary-box" id="status-summary-text">Loading…</div>
+
+  <div class="status-legend">
+    <div class="status-legend-item"><div class="status-cell ok">✓</div> Data available</div>
+    <div class="status-legend-item"><div class="status-cell partial">~</div> Partial / suppressed</div>
+    <div class="status-legend-item"><div class="status-cell missing">!</div> Manual download needed</div>
+    <div class="status-legend-item"><div class="status-cell na">–</div> Not applicable</div>
+  </div>
+
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-header"><span class="card-title">Source Coverage by School</span></div>
+    <div class="card-body" style="padding:0">
+      <div class="data-table-wrap">
+        <table class="data-table" id="status-table">
+          <thead>
+            <tr>
+              <th>School</th>
+              <th>State</th>
+              <th>NCES CCD</th>
+              <th>EDFacts</th>
+              <th>State Assessment</th>
+              <th>State Growth</th>
+              <th>Accountability</th>
+              <th>Flags</th>
+            </tr>
+          </thead>
+          <tbody id="status-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Update instructions expandable -->
+  <div class="card">
+    <div class="card-header" style="cursor:pointer" onclick="toggleExpand('update-instructions')">
+      <span class="card-title">How to Update Data</span>
+      <button class="expand-btn" id="update-instructions-toggle">Show ▾</button>
+    </div>
+    <div class="card-body expandable" id="update-instructions">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
+
+        <div>
+          <h4 style="margin-bottom:8px;font-size:13px">🟦 Ohio</h4>
+          <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">Download bulk CSVs from the Ohio Report Card download page.</p>
+          <a href="https://reportcard.education.ohio.gov/download" target="_blank" style="font-size:12px">reportcard.education.ohio.gov/download</a>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:4px">Files needed: Achievement, Progress, Gap Closing, Overall Summary</p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:8px;font-size:13px">🟩 Michigan</h4>
+          <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">Navigate to Student Performance &gt; M-STEP on MI School Data portal.</p>
+          <a href="https://www.mischooldata.org" target="_blank" style="font-size:12px">mischooldata.org</a>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:4px">Filter by district/school, export CSV for most recent year</p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:8px;font-size:13px">🟧 Missouri</h4>
+          <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">Download MAP assessment data from DESE or MCDS portal.</p>
+          <a href="https://dese.mo.gov/data-system-management/data-download" target="_blank" style="font-size:12px">dese.mo.gov/data-system-management/data-download</a>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:8px;font-size:13px">🟥 Illinois</h4>
+          <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">Download IAR/PSAT/SAT data from ISBE.</p>
+          <a href="https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx" target="_blank" style="font-size:12px">isbe.net/Pages/Illinois-State-Report-Card-Data.aspx</a>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:8px;font-size:13px">🟦 Iowa</h4>
+          <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">Download ISASP results from Iowa DE.</p>
+          <a href="https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data" target="_blank" style="font-size:12px">educateiowa.gov/data-reporting/…</a>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:8px;font-size:13px">🟩 Minnesota</h4>
+          <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">Download MCA results from MDE.</p>
+          <a href="https://education.mn.gov/MDE/Data/" target="_blank" style="font-size:12px">education.mn.gov/MDE/Data/</a>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:8px;font-size:13px">🟪 Indiana</h4>
+          <p style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">Download ILEARN data from IDOE.</p>
+          <a href="https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports" target="_blank" style="font-size:12px">doe.in.gov/accountability/…</a>
+        </div>
+
+      </div>
+
+      <hr class="section-divider">
+      <h4 style="margin-bottom:8px;font-size:13px">Running the full pipeline</h4>
+      <pre style="background:var(--gray-light);padding:12px;border-radius:6px;font-size:12px;overflow-x:auto">cd concept-dashboard
+pip install -r requirements.txt
+python scripts/00_build_master_list.py
+python scripts/01_fetch_nces_ccd.py
+python scripts/02_fetch_edfacts.py
+python scripts/03_fetch_oh.py
+# ... through 09_fetch_in.py
+python scripts/10_aggregate.py</pre>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT                                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<script>
+"use strict";
+
+// ── Config ──────────────────────────────────────────────────
+const DATA_BASE = "./data";
+const REGION_COLORS = {
+  "North Ohio": "#2563eb",
+  "Columbus": "#7c3aed",
+  "Dayton/Cincinnati": "#db2777",
+  "Michigan": "#059669",
+  "Missouri": "#d97706",
+  "Illinois": "#dc2626",
+  "Iowa": "#0891b2",
+  "Minnesota": "#65a30d",
+  "Indiana": "#9333ea",
+};
+
+function regionColor(r) { return REGION_COLORS[r] || "#6b7280"; }
+
+// ── State ────────────────────────────────────────────────────
+const state = {
+  manifest: null,
+  network: null,
+  byRegion: null,
+  schoolRecords: {},  // nces_id → full record
+  selectedRegion: null,
+  selectedSchool: null,
+  chartInstances: {},
+};
+
+// ── Utilities ─────────────────────────────────────────────────
+function fmt(v, decimals=1, suffix="") {
+  if (v === null || v === undefined) return "–";
+  return Number(v).toFixed(decimals) + suffix;
+}
+function fmtPct(v) { return v != null ? fmt(v, 1) + "%" : "–"; }
+function fmtInt(v) { return v != null ? Number(v).toLocaleString() : "–"; }
+function fmtK(v) { return v != null ? (Number(v) >= 1000 ? (Number(v)/1000).toFixed(1)+"k" : String(Number(v))) : "–"; }
+
+function destroyChart(id) {
+  if (state.chartInstances[id]) {
+    state.chartInstances[id].destroy();
+    delete state.chartInstances[id];
+  }
+}
+
+function makeChart(id, config) {
+  destroyChart(id);
+  const canvas = document.getElementById(id);
+  if (!canvas) return null;
+  const ctx = canvas.getContext("2d");
+  state.chartInstances[id] = new Chart(ctx, config);
+  return state.chartInstances[id];
+}
+
+function statusCell(status) {
+  const map = { ok: ["ok", "✓"], partial: ["partial", "~"], suppressed: ["partial", "~"],
+                needs_manual_download: ["missing", "!"], error: ["missing", "!"] };
+  const [cls, sym] = map[status] || ["na", "–"];
+  return `<div class="status-cell ${cls}">${sym}</div>`;
+}
+
+function dataDot(status) {
+  const map = { ok: "ok", partial: "partial", suppressed: "partial",
+                needs_manual_download: "missing", error: "missing" };
+  return `<span class="data-dot ${map[status] || "na"}"></span>`;
+}
+
+// ── Data Loading ─────────────────────────────────────────────
+async function loadJSON(path) {
+  try {
+    const r = await fetch(path);
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
+
+async function loadSchoolRecord(ncesId) {
+  if (state.schoolRecords[ncesId]) return state.schoolRecords[ncesId];
+  const rec = await loadJSON(`${DATA_BASE}/by_school/${ncesId}.json`);
+  if (rec) state.schoolRecords[ncesId] = rec;
+  return rec;
+}
+
+// ── Bootstrap ─────────────────────────────────────────────────
+async function bootstrap() {
+  const [manifest, network, byRegion] = await Promise.all([
+    loadJSON(`${DATA_BASE}/data_manifest.json`),
+    loadJSON(`${DATA_BASE}/aggregated/network.json`),
+    loadJSON(`${DATA_BASE}/aggregated/by_region.json`),
+  ]);
+
+  state.manifest = manifest;
+  state.network = network;
+  state.byRegion = byRegion;
+
+  document.getElementById("loading-overlay").classList.add("hidden");
+
+  initHeader();
+  initNetworkTab();
+  initRegionTab();
+  initSchoolTab();
+  initStatusTab();
+
+  // Tab switching
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+      btn.classList.add("active");
+      document.getElementById(btn.dataset.tab).classList.add("active");
+    });
+  });
+}
+
+// ── Header ────────────────────────────────────────────────────
+function initHeader() {
+  const n = state.network;
+  if (!n) return;
+  document.getElementById("hdr-schools").textContent = fmtInt(n.total_schools);
+  document.getElementById("hdr-enrollment").textContent = fmtK(n.total_enrollment);
+
+  const badge = document.getElementById("freshness-badge");
+  const text = document.getElementById("freshness-text");
+  if (state.manifest?.generated_at) {
+    const d = new Date(state.manifest.generated_at);
+    const daysAgo = Math.floor((Date.now() - d) / 86400000);
+    text.textContent = `Updated ${d.toLocaleDateString()}`;
+    if (daysAgo > 90) badge.classList.add("stale");
+  } else {
+    text.textContent = "Data freshness unknown";
+    badge.classList.add("stale");
+  }
+}
+
+// ── Network Tab ───────────────────────────────────────────────
+function initNetworkTab() {
+  const n = state.network;
+  if (!n) {
+    document.getElementById("network-stat-grid").innerHTML = nullStatGrid();
+    return;
+  }
+
+  const yr = n.assessment_years_present?.[n.assessment_years_present.length-1] || "";
+  document.getElementById("net-enrollment").textContent = fmtInt(n.total_enrollment);
+  document.getElementById("net-ela").textContent = fmtPct(n.ela_proficiency_weighted_avg);
+  document.getElementById("net-ela-year").textContent = yr ? `${yr} · weighted avg` : "weighted avg";
+  document.getElementById("net-math").textContent = fmtPct(n.math_proficiency_weighted_avg);
+  document.getElementById("net-math-year").textContent = yr ? `${yr} · weighted avg` : "weighted avg";
+  const acctTotal = Object.values(n.accountability_distribution || {}).reduce((a,b)=>a+b, 0);
+  document.getElementById("net-accountability").textContent = acctTotal > 0 ? acctTotal : "–";
+  document.getElementById("net-fte").textContent = fmtInt(n.teacher_fte_total);
+  document.getElementById("net-certified").textContent = fmtPct(n.pct_teachers_certified_avg);
+
+  buildRegionProficiencyChart();
+  buildDemographicsChart();
+  buildTrendChart();
+  buildScatterChart();
+}
+
+function buildRegionProficiencyChart() {
+  const r = state.byRegion?.regions;
+  if (!r) return;
+  const regions = Object.keys(r);
+  const elaData = regions.map(rg => r[rg].ela_proficiency_weighted_avg);
+  const mathData = regions.map(rg => r[rg].math_proficiency_weighted_avg);
+
+  makeChart("chart-region-proficiency", {
+    type: "bar",
+    data: {
+      labels: regions.map(rg => rg.replace("Dayton/Cincinnati", "Dayton/Cincy")),
+      datasets: [
+        { label: "ELA %", data: elaData, backgroundColor: "#2563eb", borderRadius: 3, barPercentage: 0.6 },
+        { label: "Math %", data: mathData, backgroundColor: "#7c3aed", borderRadius: 3, barPercentage: 0.6 },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      indexAxis: "y",
+      plugins: { legend: { position: "top" }, tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.raw != null ? ctx.raw.toFixed(1)+"%" : "No data"}` } } },
+      scales: { x: { min: 0, max: 100, ticks: { callback: v => v+"%" }, grid: { color: "#f0f0f0" } }, y: { grid: { display: false } } }
+    }
+  });
+}
+
+function buildDemographicsChart() {
+  const n = state.network;
+  if (!n?.race_ethnicity_totals) return;
+  const rt = n.race_ethnicity_totals;
+  const labels = ["Black", "Hispanic", "White", "Asian", "Two+ Races", "Native American", "Pacific Islander"];
+  const keys = ["black", "hispanic", "white", "asian", "two_or_more", "american_indian", "pacific_islander"];
+  const data = keys.map(k => rt[k] || 0);
+  const colors = ["#2563eb","#7c3aed","#059669","#d97706","#db2777","#0891b2","#65a30d"];
+
+  makeChart("chart-demographics", {
+    type: "doughnut",
+    data: { labels, datasets: [{ data, backgroundColor: colors, borderWidth: 2, borderColor: "#fff" }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "right", labels: { font: { size: 11 }, padding: 8, boxWidth: 12 } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const total = ctx.dataset.data.reduce((a,b)=>a+b,0);
+              const pct = total > 0 ? (ctx.raw / total * 100).toFixed(1) : 0;
+              return `${ctx.label}: ${fmtInt(ctx.raw)} (${pct}%)`;
+            }
+          }
+        }
+      }
+    }
+  });
+}
+
+function buildTrendChart() {
+  const schools = state.network?.schools || [];
+  const allYears = ["2021-22", "2022-23", "2023-24"];
+
+  // Aggregate trend data from school records where available
+  const elaByYear = {};
+  const mathByYear = {};
+  allYears.forEach(y => { elaByYear[y] = []; mathByYear[y] = []; });
+
+  schools.forEach(s => {
+    if (!s.nces_id) return;
+    const rec = state.schoolRecords[s.nces_id];
+    const trends = rec?.trends;
+    if (!trends) return;
+    allYears.forEach(y => {
+      if (trends.ela_proficiency_by_year?.[y] != null) elaByYear[y].push(trends.ela_proficiency_by_year[y]);
+      if (trends.math_proficiency_by_year?.[y] != null) mathByYear[y].push(trends.math_proficiency_by_year[y]);
+    });
+  });
+
+  const avg = arr => arr.length > 0 ? arr.reduce((a,b)=>a+b)/arr.length : null;
+  const elaVals = allYears.map(y => avg(elaByYear[y]));
+  const mathVals = allYears.map(y => avg(mathByYear[y]));
+
+  // If all null, use current year values as single data points
+  const hasData = elaVals.some(v => v !== null) || mathVals.some(v => v !== null);
+  const singleEla = hasData ? elaVals : [null, null, state.network?.ela_proficiency_weighted_avg];
+  const singleMath = hasData ? mathVals : [null, null, state.network?.math_proficiency_weighted_avg];
+
+  makeChart("chart-trend", {
+    type: "line",
+    data: {
+      labels: allYears,
+      datasets: [
+        { label: "ELA %", data: singleEla, borderColor: "#2563eb", backgroundColor: "rgba(37,99,235,.1)", tension: 0.3, fill: true, pointRadius: 5, spanGaps: false },
+        { label: "Math %", data: singleMath, borderColor: "#7c3aed", backgroundColor: "rgba(124,58,237,.1)", tension: 0.3, fill: true, pointRadius: 5, spanGaps: false },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: "top" } },
+      scales: { y: { min: 0, max: 100, ticks: { callback: v => v+"%" }, grid: { color: "#f0f0f0" } }, x: { grid: { display: false } } }
+    }
+  });
+}
+
+function buildScatterChart() {
+  const schools = state.network?.schools || [];
+  const datasets = {};
+
+  schools.forEach(s => {
+    const region = s.region || "Unknown";
+    if (!datasets[region]) {
+      datasets[region] = { label: region, data: [], backgroundColor: regionColor(region)+"cc", borderColor: regionColor(region), borderWidth: 1, pointRadius: [], _schools: [] };
+    }
+    if (s.ela_pct != null && s.math_pct != null) {
+      const enrollment = s.enrollment || 100;
+      const radius = Math.max(5, Math.min(18, Math.sqrt(enrollment) / 4));
+      datasets[region].data.push({ x: s.ela_pct, y: s.math_pct });
+      datasets[region].pointRadius.push(radius);
+      datasets[region]._schools.push(s);
+    }
+  });
+
+  makeChart("chart-scatter", {
+    type: "scatter",
+    data: { datasets: Object.values(datasets) },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "top", labels: { font: { size: 11 }, padding: 8, boxWidth: 12 } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const ds = ctx.dataset;
+              const s = ds._schools?.[ctx.dataIndex];
+              if (!s) return `ELA: ${ctx.parsed.x}% · Math: ${ctx.parsed.y}%`;
+              return [
+                s.school_name,
+                `ELA: ${fmtPct(ctx.parsed.x)} · Math: ${fmtPct(ctx.parsed.y)}`,
+                s.accountability ? `Rating: ${s.accountability}` : null,
+                s.enrollment ? `Enrollment: ${fmtInt(s.enrollment)}` : null,
+              ].filter(Boolean);
+            }
+          }
+        }
+      },
+      scales: {
+        x: { min: 0, max: 100, title: { display: true, text: "ELA Proficiency %" }, ticks: { callback: v => v+"%" }, grid: { color: "#f0f0f0" } },
+        y: { min: 0, max: 100, title: { display: true, text: "Math Proficiency %" }, ticks: { callback: v => v+"%" }, grid: { color: "#f0f0f0" } }
+      }
+    }
+  });
+}
+
+// ── Region Tab ────────────────────────────────────────────────
+function initRegionTab() {
+  const sel = document.getElementById("region-select");
+  const regions = Object.keys(state.byRegion?.regions || {});
+  regions.forEach(r => {
+    const opt = document.createElement("option");
+    opt.value = r; opt.textContent = r;
+    sel.appendChild(opt);
+  });
+  if (regions.length) {
+    state.selectedRegion = regions[0];
+    renderRegionView(regions[0]);
+  }
+  sel.addEventListener("change", e => {
+    state.selectedRegion = e.target.value;
+    renderRegionView(e.target.value);
+  });
+}
+
+function renderRegionView(regionName) {
+  const r = state.byRegion?.regions?.[regionName];
+  const networkSchools = state.network?.schools || [];
+  const regionSchools = networkSchools.filter(s => s.region === regionName);
+
+  // Stat cards
+  const grid = document.getElementById("region-stat-grid");
+  grid.innerHTML = `
+    <div class="stat-card"><div class="stat-card-label">Schools</div><div class="stat-card-value">${r ? fmtInt(r.total_schools) : "–"}</div></div>
+    <div class="stat-card"><div class="stat-card-label">Enrollment</div><div class="stat-card-value">${r ? fmtInt(r.total_enrollment) : "–"}</div></div>
+    <div class="stat-card"><div class="stat-card-label">ELA Proficiency</div><div class="stat-card-value">${fmtPct(r?.ela_proficiency_weighted_avg)}</div></div>
+    <div class="stat-card"><div class="stat-card-label">Math Proficiency</div><div class="stat-card-value">${fmtPct(r?.math_proficiency_weighted_avg)}</div></div>
+    <div class="stat-card"><div class="stat-card-label">Teacher FTE</div><div class="stat-card-value">${r ? fmtInt(r.teacher_fte_total) : "–"}</div></div>
+  `;
+
+  // Table
+  const tbody = document.getElementById("region-table-body");
+  tbody.innerHTML = "";
+  if (!regionSchools.length) {
+    tbody.innerHTML = `<tr><td colspan="8" class="null-state" style="padding:32px">No school data available for this region</td></tr>`;
+    return;
+  }
+  regionSchools.forEach(s => {
+    const manifestEntry = Object.values(state.manifest?.schools || {}).find(e => e.school_name === s.school_name);
+    const overallStatus = getOverallDataStatus(manifestEntry);
+    const tr = document.createElement("tr");
+    tr.className = "clickable";
+    tr.innerHTML = `
+      <td class="school-name">${s.school_name}</td>
+      <td><span class="badge badge-blue">${s.grade_band || "–"}</span></td>
+      <td>${fmtInt(s.enrollment)}</td>
+      <td>${fmtPct(s.ela_pct)}</td>
+      <td>${fmtPct(s.math_pct)}</td>
+      <td>${s.growth_rating ? `<span class="badge ${growthBadgeClass(s.growth_rating)}">${s.growth_rating}</span>` : "–"}</td>
+      <td>${s.accountability ? `<span class="badge badge-gray">${s.accountability}</span>` : "–"}</td>
+      <td>${dataDot(overallStatus)}</td>
+    `;
+    tr.addEventListener("click", () => navigateToSchool(s.nces_id));
+    tbody.appendChild(tr);
+  });
+}
+
+function getOverallDataStatus(entry) {
+  if (!entry) return "na";
+  const statuses = Object.values(entry.data_sources || {}).map(s => s.status);
+  if (statuses.every(s => s === "ok")) return "ok";
+  if (statuses.some(s => s === "needs_manual_download" || s === "error")) return "needs_manual_download";
+  return "partial";
+}
+
+function growthBadgeClass(rating) {
+  const r = (rating || "").toLowerCase();
+  if (r.includes("above") || r.includes("exceeded")) return "badge-green";
+  if (r.includes("below")) return "badge-red";
+  return "badge-blue";
+}
+
+function navigateToSchool(ncesId) {
+  document.querySelector('[data-tab="tab-school"]').click();
+  document.getElementById("school-select").value = ncesId;
+  loadAndRenderSchool(ncesId);
+}
+
+// ── School Tab ────────────────────────────────────────────────
+function initSchoolTab() {
+  const sel = document.getElementById("school-select");
+  const schools = state.network?.schools || [];
+  const grouped = {};
+  schools.forEach(s => {
+    if (!s.nces_id) return;
+    (grouped[s.region] = grouped[s.region] || []).push(s);
+  });
+  Object.entries(grouped).sort().forEach(([region, list]) => {
+    const og = document.createElement("optgroup");
+    og.label = region;
+    list.sort((a,b) => a.school_name.localeCompare(b.school_name)).forEach(s => {
+      const opt = document.createElement("option");
+      opt.value = s.nces_id; opt.textContent = s.school_name;
+      og.appendChild(opt);
+    });
+    sel.appendChild(og);
+  });
+  sel.addEventListener("change", e => {
+    if (e.target.value) loadAndRenderSchool(e.target.value);
+  });
+}
+
+async function loadAndRenderSchool(ncesId) {
+  const container = document.getElementById("school-detail-container");
+  container.innerHTML = `<div class="null-state"><div class="spinner" style="margin:0 auto"></div><div style="margin-top:12px">Loading school data…</div></div>`;
+
+  const record = await loadSchoolRecord(ncesId);
+  const networkSchool = state.network?.schools?.find(s => s.nces_id === ncesId);
+  const manifestEntry = Object.values(state.manifest?.schools || {}).find(e => {
+    return Object.values(state.manifest?.schools || {}).find(m => {
+      return m.school_name === (record?.meta?.school_name || networkSchool?.school_name);
+    });
+  });
+  const mEntry = findManifestEntry(record?.meta?.school_name || networkSchool?.school_name);
+
+  if (!record) {
+    container.innerHTML = `
+      <div class="null-state">
+        <div class="null-state-icon">⚠️</div>
+        <div class="null-state-title">Data unavailable</div>
+        <div>No data file found for NCES ID ${ncesId}.</div>
+      </div>`;
+    return;
+  }
+
+  renderSchoolDetail(container, record, mEntry, ncesId);
+}
+
+function findManifestEntry(schoolName) {
+  if (!schoolName || !state.manifest?.schools) return null;
+  const entries = Object.entries(state.manifest.schools);
+  const found = entries.find(([id, e]) => e.school_name === schoolName);
+  return found ? found[1] : null;
+}
+
+function renderSchoolDetail(container, rec, manifestEntry, ncesId) {
+  const m = rec.meta || {};
+  const enroll = rec.enrollment || {};
+  const staff = rec.staff || {};
+  const assess = rec.assessment || {};
+  const growth = rec.growth || {};
+  const grad = rec.graduation || {};
+  const attend = rec.attendance || {};
+  const acct = rec.accountability || {};
+  const trends = rec.trends || {};
+
+  const isHighSchool = ["9-12","6-12","K-12","PreK-12"].includes(m.grade_band);
+
+  // Demographic donut data
+  const race = enroll.by_race_ethnicity || {};
+  const raceLabels = ["Black","Hispanic","White","Asian","Two+ Races","Native American","Pacific Islander"];
+  const raceKeys = ["black","hispanic","white","asian","two_or_more","american_indian","pacific_islander"];
+  const raceData = raceKeys.map(k => race[k] || 0);
+  const raceColors = ["#2563eb","#7c3aed","#059669","#d97706","#db2777","#0891b2","#65a30d"];
+
+  container.innerHTML = `
+    <!-- ── Section 1: Snapshot ── -->
+    <div class="detail-header">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <div class="detail-school-name">${m.school_name || "Unknown School"}</div>
+          <div class="detail-meta">
+            <span class="detail-meta-item">📍 ${m.city}, ${m.state}</span>
+            <span class="detail-meta-item">🏫 ${m.region}</span>
+            <span class="detail-meta-item">📚 Grades ${m.grade_band}</span>
+            ${m.target_region ? '<span class="badge badge-blue">Target Region</span>' : ""}
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div class="stat-card-value">${fmtInt(enroll.total)}</div>
+          <div class="stat-card-sub">${enroll.year ? enroll.year + " enrollment" : "students"}</div>
+        </div>
+      </div>
+      <hr class="section-divider" style="margin:16px 0">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
+        <div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px">Demographics</div>
+          <canvas id="donut-demo" height="180" style="max-height:180px"></canvas>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px">Student Populations</div>
+          ${pillBar("Free/Reduced Lunch", enroll.pct_free_reduced_lunch, "#2563eb")}
+          ${pillBar("English Learners", enroll.pct_ell, "#7c3aed")}
+          ${pillBar("Students w/ Disabilities", enroll.pct_sped, "#db2777")}
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Section 2: Academic Performance ── -->
+    <div style="margin-bottom:20px">
+      <div class="section-header"><span class="section-title">Academic Performance</span></div>
+      <div class="perf-card-pair">
+        <div class="perf-card">
+          <div class="perf-card-subject">ELA / Reading</div>
+          <div class="perf-card-pct ${assess.ela?.pct_proficient_all == null ? "null-val" : ""}">${fmtPct(assess.ela?.pct_proficient_all)}</div>
+          <div class="perf-card-year">proficient or above${assess.year ? " · " + assess.year : ""}</div>
+          ${subgroupTable(assess.ela?.by_subgroup, "ELA")}
+        </div>
+        <div class="perf-card">
+          <div class="perf-card-subject">Math</div>
+          <div class="perf-card-pct ${assess.math?.pct_proficient_all == null ? "null-val" : ""}">${fmtPct(assess.math?.pct_proficient_all)}</div>
+          <div class="perf-card-year">proficient or above${assess.year ? " · " + assess.year : ""}</div>
+          ${subgroupTable(assess.math?.by_subgroup, "Math")}
+        </div>
+      </div>
+
+      <!-- Growth card -->
+      <div class="growth-card">
+        <div class="growth-metric">
+          <div class="growth-metric-label">ELA Growth</div>
+          <div class="growth-metric-value" style="color:var(--accent)">${growth.ela_growth != null ? fmt(growth.ela_growth) : "–"}</div>
+          <div class="growth-metric-sub">${growth.metric_name || "growth metric"}</div>
+        </div>
+        <div class="growth-metric">
+          <div class="growth-metric-label">Math Growth</div>
+          <div class="growth-metric-value" style="color:var(--accent-dark)">${growth.math_growth != null ? fmt(growth.math_growth) : "–"}</div>
+          <div class="growth-metric-sub">${growth.metric_name || "growth metric"}</div>
+        </div>
+        <div class="growth-metric">
+          <div class="growth-metric-label">Overall Rating</div>
+          <div class="growth-metric-value" style="font-size:18px;color:var(--text-primary)">${growth.overall_growth_rating || "–"}</div>
+          <div class="growth-metric-sub">${growth.source || ""} ${growth.year || ""}</div>
+        </div>
+      </div>
+
+      <!-- Trend chart -->
+      <div class="card">
+        <div class="card-header"><span class="card-title">Year-over-Year Proficiency</span></div>
+        <div class="card-body"><div class="chart-wrap" style="height:200px"><canvas id="chart-school-trend"></canvas></div></div>
+      </div>
+    </div>
+
+    <!-- ── Section 3: Staff ── -->
+    <div style="margin-bottom:20px">
+      <div class="section-header"><span class="section-title">Staff</span></div>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-card-label">Teacher FTE</div><div class="stat-card-value">${fmt(staff.teacher_fte, 1)}</div><div class="stat-card-sub">${staff.year || ""}</div></div>
+        <div class="stat-card"><div class="stat-card-label">% Certified</div><div class="stat-card-value">${fmtPct(staff.pct_teachers_certified)}</div></div>
+        <div class="stat-card"><div class="stat-card-label">% Novice</div><div class="stat-card-value">${fmtPct(staff.pct_teachers_novice)}</div></div>
+        <div class="stat-card"><div class="stat-card-label">Retention Rate</div><div class="stat-card-value">${fmtPct(staff.teacher_retention_rate)}</div></div>
+      </div>
+    </div>
+
+    <!-- ── Section 4: Accountability ── -->
+    <div style="margin-bottom:20px">
+      <div class="section-header"><span class="section-title">Accountability</span></div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-card-label">State Rating</div>
+          <div class="stat-card-value ${acct.state_rating ? "" : "null-val"}" style="font-size:${acct.state_rating && acct.state_rating.length <= 2 ? "44" : "24"}px">${acct.state_rating || "–"}</div>
+          <div class="stat-card-sub">${m.state} · ${acct.year || ""}</div>
+        </div>
+        <div class="stat-card"><div class="stat-card-label">State Percentile</div><div class="stat-card-value">${fmtPct(acct.state_percentile_rank)}</div></div>
+        <div class="stat-card"><div class="stat-card-label">Similar Schools</div><div class="stat-card-value">${fmtPct(acct.similar_schools_percentile)}</div></div>
+        <div class="stat-card"><div class="stat-card-label">Attendance Rate</div><div class="stat-card-value">${fmtPct(attend.avg_daily_attendance_rate)}</div><div class="stat-card-sub">${attend.year || ""}</div></div>
+        <div class="stat-card"><div class="stat-card-label">Chronic Absent.</div><div class="stat-card-value">${fmtPct(attend.chronic_absenteeism_rate)}</div></div>
+        ${isHighSchool ? `<div class="stat-card"><div class="stat-card-label">4-Yr Grad Rate</div><div class="stat-card-value">${fmtPct(grad.four_year_grad_rate)}</div><div class="stat-card-sub">${grad.year || ""}</div></div>` : ""}
+      </div>
+    </div>
+
+    <!-- ── Section 5: Data Notes ── -->
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-header"><span class="card-title">Data Notes</span></div>
+      <div class="card-body" id="school-data-notes">
+        <div style="color:var(--text-muted);font-size:13px">No manifest data found for this school.</div>
+      </div>
+    </div>
+  `;
+
+  // Render charts after DOM insertion
+  setTimeout(() => {
+    // Donut
+    const donutCtx = document.getElementById("donut-demo");
+    if (donutCtx) {
+      destroyChart("donut-demo");
+      state.chartInstances["donut-demo"] = new Chart(donutCtx, {
+        type: "doughnut",
+        data: { labels: raceLabels, datasets: [{ data: raceData, backgroundColor: raceColors, borderWidth: 2, borderColor: "#fff" }] },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "right", labels: { font: { size: 10 }, padding: 6, boxWidth: 10 } },
+            tooltip: { callbacks: { label: ctx => { const t = ctx.dataset.data.reduce((a,b)=>a+b,0); return `${ctx.label}: ${(ctx.raw/t*100).toFixed(1)}%`; } } }
+          }
+        }
+      });
+    }
+
+    // School trend
+    const trendEl = document.getElementById("chart-school-trend");
+    if (trendEl) {
+      const years = ["2021-22","2022-23","2023-24"];
+      const ela = years.map(y => trends.ela_proficiency_by_year?.[y] ?? null);
+      const math = years.map(y => trends.math_proficiency_by_year?.[y] ?? null);
+      destroyChart("chart-school-trend");
+      state.chartInstances["chart-school-trend"] = new Chart(trendEl, {
+        type: "line",
+        data: {
+          labels: years,
+          datasets: [
+            { label: "ELA %", data: ela, borderColor: "#2563eb", tension: 0.3, pointRadius: 4, spanGaps: false },
+            { label: "Math %", data: math, borderColor: "#7c3aed", tension: 0.3, pointRadius: 4, spanGaps: false },
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { position: "top" } },
+          scales: { y: { min: 0, max: 100, ticks: { callback: v => v+"%" } }, x: { grid: { display: false } } }
+        }
+      });
+    }
+
+    // Data notes
+    renderSchoolDataNotes(manifestEntry, ncesId);
+  }, 50);
+}
+
+function renderSchoolDataNotes(entry, ncesId) {
+  const el = document.getElementById("school-data-notes");
+  if (!el) return;
+
+  // Try to find manifest entry by ncesId
+  let mEntry = state.manifest?.schools?.[ncesId];
+  if (!mEntry && entry) mEntry = entry;
+  if (!mEntry) {
+    el.innerHTML = `<div style="color:var(--text-muted);font-size:13px">No manifest data found for this school.</div>`;
+    return;
+  }
+
+  const sources = mEntry.data_sources || {};
+  const flags = mEntry.flags || [];
+
+  let html = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:16px">';
+  const sourceLabels = {
+    nces_ccd: "NCES CCD", edfacts: "EDFacts", edfacts_grad: "EDFacts Grad",
+    state_assessment: "State Assessment", state_growth: "State Growth",
+    state_accountability: "State Accountability",
+  };
+  Object.entries(sources).forEach(([key, src]) => {
+    const label = sourceLabels[key] || key;
+    const statusClass = src.status === "ok" ? "badge-green" : src.status === "needs_manual_download" ? "badge-red" : "badge-yellow";
+    const statusLabel = src.status === "ok" ? "Available" : src.status === "needs_manual_download" ? "Manual needed" : src.status;
+    html += `
+      <div style="border:1px solid var(--border);border-radius:8px;padding:12px">
+        <div style="font-size:12px;font-weight:600;color:var(--text-secondary);margin-bottom:6px">${label}</div>
+        <span class="badge ${statusClass}">${statusLabel}</span>
+        ${src.year ? `<div style="font-size:11px;color:var(--text-muted);margin-top:4px">${src.year}</div>` : ""}
+        ${src.manual_url ? `<div style="margin-top:6px"><a href="${src.manual_url}" target="_blank" style="font-size:11px">Download ↗</a></div>` : ""}
+      </div>
+    `;
+  });
+  html += "</div>";
+
+  if (flags.length) {
+    html += `<div style="background:var(--yellow-light);border:1px solid #fde68a;border-radius:8px;padding:12px">
+      <div style="font-size:12px;font-weight:600;color:var(--yellow);margin-bottom:6px">Flags</div>
+      <ul style="margin:0;padding-left:16px;font-size:12px;color:var(--text-secondary)">
+        ${flags.map(f => `<li>${f}</li>`).join("")}
+      </ul>
+    </div>`;
+  }
+  el.innerHTML = html;
+}
+
+function pillBar(label, value, color) {
+  if (value == null) return `
+    <div class="pill-bar">
+      <div class="pill-bar-label">${label}</div>
+      <div class="pill-bar-track"><div class="pill-bar-fill" style="width:0;background:${color}"></div></div>
+      <div class="pill-bar-val">–</div>
+    </div>`;
+  return `
+    <div class="pill-bar">
+      <div class="pill-bar-label">${label}</div>
+      <div class="pill-bar-track"><div class="pill-bar-fill" style="width:${Math.min(100,value)}%;background:${color}"></div></div>
+      <div class="pill-bar-val">${fmtPct(value)}</div>
+    </div>`;
+}
+
+function subgroupTable(subgroups, subject) {
+  if (!subgroups) return "";
+  const labels = { black: "Black", hispanic: "Hispanic", white: "White", ell: "ELL", sped: "Students w/ IEP", frl: "Free/Reduced Lunch" };
+  const rows = Object.entries(labels).map(([k, label]) => {
+    const v = subgroups[k];
+    return `<tr><td>${label}</td><td style="font-weight:${v!=null?"600":"400"}">${fmtPct(v)}</td></tr>`;
+  }).join("");
+  return `
+    <table class="subgroup-table">
+      <thead><tr><th>Subgroup</th><th>${subject} %</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+// ── Status Tab ────────────────────────────────────────────────
+function initStatusTab() {
+  const manifest = state.manifest;
+  if (!manifest) {
+    document.getElementById("status-summary-text").innerHTML = "Manifest data not found.";
+    return;
+  }
+
+  const schools = manifest.schools || {};
+  const total = Object.keys(schools).length;
+  const fullData = Object.values(schools).filter(s =>
+    Object.values(s.data_sources || {}).length > 0 &&
+    Object.values(s.data_sources || {}).every(src => src.status === "ok")
+  ).length;
+  const manualNeeded = Object.values(schools).filter(s =>
+    Object.values(s.data_sources || {}).some(src => src.status === "needs_manual_download")
+  ).length;
+
+  document.getElementById("status-summary-text").innerHTML =
+    `<strong>${fullData}</strong> of <strong>${total}</strong> schools have complete data. ` +
+    `<strong>${manualNeeded}</strong> sources need manual download.`;
+
+  const tbody = document.getElementById("status-table-body");
+  tbody.innerHTML = "";
+
+  // Group by state
+  const byState = {};
+  Object.entries(schools).forEach(([id, s]) => {
+    const st = s.state || "?";
+    (byState[st] = byState[st] || []).push([id, s]);
+  });
+
+  Object.entries(byState).sort().forEach(([state, entries]) => {
+    const groupRow = document.createElement("tr");
+    groupRow.className = "region-group";
+    groupRow.innerHTML = `<td colspan="8" style="padding:8px 12px">${state}</td>`;
+    tbody.appendChild(groupRow);
+
+    entries.sort((a,b) => a[1].school_name.localeCompare(b[1].school_name)).forEach(([id, s]) => {
+      const ds = s.data_sources || {};
+      const flags = s.flags || [];
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="school-name">${s.school_name}</td>
+        <td>${state}</td>
+        <td>${statusCell(ds.nces_ccd?.status)}</td>
+        <td>${statusCell(ds.edfacts?.status)}</td>
+        <td>${statusCell(ds.state_assessment?.status)}</td>
+        <td>${statusCell(ds.state_growth?.status)}</td>
+        <td>${statusCell(ds.state_accountability?.status)}</td>
+        <td style="font-size:11px;color:var(--text-muted)">${flags.length ? `<span title="${flags.join("\n")}" style="cursor:help">⚠ ${flags.length}</span>` : "–"}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  });
+}
+
+// ── Expand toggle ─────────────────────────────────────────────
+function toggleExpand(id) {
+  const el = document.getElementById(id);
+  const btn = document.getElementById(id + "-toggle");
+  if (el.classList.toggle("open")) {
+    if (btn) btn.textContent = "Hide ▴";
+  } else {
+    if (btn) btn.textContent = "Show ▾";
+  }
+}
+
+// ── Boot ──────────────────────────────────────────────────────
+window.addEventListener("DOMContentLoaded", bootstrap);
+</script>
+</body>
+</html>

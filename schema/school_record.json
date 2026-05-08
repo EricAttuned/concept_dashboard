@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConceptSchoolRecord",
+  "description": "Canonical schema for a single Concept Schools network school record",
+  "type": "object",
+  "required": ["meta"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "School identity and record metadata",
+      "required": ["nces_id", "school_name", "region", "city", "state", "grade_band", "target_region"],
+      "properties": {
+        "nces_id":        { "type": ["string", "null"], "description": "12-digit NCES ncessch identifier" },
+        "school_name":    { "type": "string" },
+        "region":         { "type": "string", "description": "Concept Schools internal region label" },
+        "city":           { "type": "string" },
+        "state":          { "type": "string", "minLength": 2, "maxLength": 2 },
+        "grade_band":     { "type": "string", "description": "e.g. K-8, 9-12, PreK-12" },
+        "target_region":  { "type": "boolean", "description": "Attuned priority target region flag" },
+        "last_updated":   { "type": ["string", "null"], "format": "date-time" },
+        "data_sources":   { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "enrollment": {
+      "type": ["object", "null"],
+      "properties": {
+        "year":                   { "type": ["string", "null"] },
+        "total":                  { "type": ["integer", "null"] },
+        "by_grade":               { "type": ["object", "null"] },
+        "by_race_ethnicity": {
+          "type": ["object", "null"],
+          "properties": {
+            "american_indian":  { "type": ["integer", "null"] },
+            "asian":            { "type": ["integer", "null"] },
+            "black":            { "type": ["integer", "null"] },
+            "hispanic":         { "type": ["integer", "null"] },
+            "pacific_islander": { "type": ["integer", "null"] },
+            "two_or_more":      { "type": ["integer", "null"] },
+            "white":            { "type": ["integer", "null"] }
+          }
+        },
+        "pct_free_reduced_lunch": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "pct_ell":                { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "pct_sped":               { "type": ["number", "null"], "minimum": 0, "maximum": 100 }
+      }
+    },
+    "staff": {
+      "type": ["object", "null"],
+      "properties": {
+        "year":                    { "type": ["string", "null"] },
+        "teacher_fte":             { "type": ["number", "null"] },
+        "pct_teachers_certified":  { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "pct_teachers_novice":     { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "teacher_retention_rate":  { "type": ["number", "null"] }
+      }
+    },
+    "assessment": {
+      "type": ["object", "null"],
+      "properties": {
+        "year":   { "type": ["string", "null"] },
+        "source": { "type": ["string", "null"] },
+        "ela": {
+          "type": ["object", "null"],
+          "properties": {
+            "pct_proficient_all": { "type": ["number", "null"] },
+            "by_grade":    { "type": ["object", "null"] },
+            "by_subgroup": { "type": ["object", "null"] }
+          }
+        },
+        "math": {
+          "type": ["object", "null"],
+          "properties": {
+            "pct_proficient_all": { "type": ["number", "null"] },
+            "by_grade":    { "type": ["object", "null"] },
+            "by_subgroup": { "type": ["object", "null"] }
+          }
+        },
+        "science": {
+          "type": ["object", "null"],
+          "properties": {
+            "pct_proficient_all": { "type": ["number", "null"] }
+          }
+        }
+      }
+    },
+    "growth": {
+      "type": ["object", "null"],
+      "properties": {
+        "year":                 { "type": ["string", "null"] },
+        "source":               { "type": ["string", "null"] },
+        "metric_name":          { "type": ["string", "null"] },
+        "ela_growth":           { "type": ["number", "null"] },
+        "math_growth":          { "type": ["number", "null"] },
+        "overall_growth_rating":{ "type": ["string", "null"] }
+      }
+    },
+    "graduation": {
+      "type": ["object", "null"],
+      "properties": {
+        "year":               { "type": ["string", "null"] },
+        "four_year_grad_rate":{ "type": ["number", "null"] },
+        "five_year_grad_rate":{ "type": ["number", "null"] },
+        "by_subgroup":        { "type": ["object", "null"] }
+      }
+    },
+    "attendance": {
+      "type": ["object", "null"],
+      "properties": {
+        "year":                       { "type": ["string", "null"] },
+        "avg_daily_attendance_rate":  { "type": ["number", "null"] },
+        "chronic_absenteeism_rate":   { "type": ["number", "null"] }
+      }
+    },
+    "accountability": {
+      "type": ["object", "null"],
+      "properties": {
+        "year":                    { "type": ["string", "null"] },
+        "state_rating":            { "type": ["string", "null"] },
+        "state_percentile_rank":   { "type": ["number", "null"] },
+        "similar_schools_percentile": { "type": ["number", "null"] }
+      }
+    },
+    "trends": {
+      "type": ["object", "null"],
+      "properties": {
+        "ela_proficiency_by_year":  { "type": ["object", "null"] },
+        "math_proficiency_by_year": { "type": ["object", "null"] }
+      }
+    }
+  }
+}
