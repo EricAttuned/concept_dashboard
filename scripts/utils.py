@@ -63,6 +63,47 @@ def get_json(url: str, params: Optional[dict] = None, session: Optional[requests
         return None
 
 
+def load_raw_csv(state: str, keyword: str = "") -> Optional[list]:
+    """
+    Look for a CSV or ZIP file in data/raw/{state}/ whose filename contains
+    `keyword` (case-insensitive). Returns list of row dicts, or None if not found.
+    Searches all files if keyword is empty, returning rows from the first CSV found.
+    """
+    import csv as _csv
+    import zipfile as _zip
+    raw_dir = ROOT / "data" / "raw" / state
+    if not raw_dir.exists():
+        return None
+
+    candidates = sorted(raw_dir.iterdir())
+    for path in candidates:
+        name_lower = path.name.lower()
+        if keyword and keyword.lower() not in name_lower:
+            continue
+        try:
+            if path.suffix.lower() == ".zip":
+                with _zip.ZipFile(path) as zf:
+                    csv_names = [n for n in zf.namelist() if n.lower().endswith(".csv")]
+                    if not csv_names:
+                        continue
+                    with zf.open(csv_names[0]) as cf:
+                        text = cf.read().decode("utf-8-sig", errors="replace")
+                        rows = list(_csv.DictReader(__import__("io").StringIO(text)))
+                        if rows:
+                            log.info("Loaded %d rows from %s (ZIP)", len(rows), path.name)
+                            return rows
+            elif path.suffix.lower() in (".csv", ".txt"):
+                text = path.read_text(encoding="utf-8-sig", errors="replace")
+                rows = list(_csv.DictReader(__import__("io").StringIO(text)))
+                if rows:
+                    log.info("Loaded %d rows from %s", len(rows), path.name)
+                    return rows
+        except Exception as exc:
+            log.warning("Could not read %s: %s", path, exc)
+
+    return None
+
+
 def nces_val(v: Any) -> Optional[Any]:
     """Return None for NCES suppression codes, otherwise return the value."""
     if v in NCES_SUPPRESSION:

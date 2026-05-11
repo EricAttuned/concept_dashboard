@@ -31,12 +31,17 @@ MANUAL_URL = IA_ISASP_ALT
 
 
 def try_fetch_ia_isasp() -> list[dict] | None:
-    """Attempt to download Iowa ISASP school-level CSV."""
-    urls = [
+    """Load Iowa ISASP data — local file first, then URL fallback.
+    Place the ISASP CSV from educateiowa.gov into data/raw/IA/
+    """
+    from utils import load_raw_csv
+    local = load_raw_csv("IA", "isasp") or load_raw_csv("IA", "ISASP") or load_raw_csv("IA")
+    if local:
+        return local
+    for url in [
         IA_ISASP_URL,
         "https://educateiowa.gov/sites/files/ed/documents/2022-2023_ISASP_School_Building_Results.csv",
-    ]
-    for url in urls:
+    ]:
         try:
             r = SESSION.get(url, timeout=30)
             r.raise_for_status()

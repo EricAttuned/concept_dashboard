@@ -2,6 +2,9 @@ __pycache__/
 *.pyc
 *.pyo
 .DS_Store
-data/raw/
+data/raw/**/*.csv
+data/raw/**/*.xlsx
+data/raw/**/*.zip
+data/raw/**/*.txt
+!data/raw/**/.gitkeep
 *.xlsx
-*.zip

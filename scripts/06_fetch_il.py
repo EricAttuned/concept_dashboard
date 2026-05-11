@@ -36,15 +36,19 @@ MANUAL_URL = ISBE_BULK_URL
 
 
 def try_il_rc_api(rcdts: str | None = None, school_name: str = "") -> dict | None:
-    """Try Illinois Report Card API for a school."""
+    """Load IL assessment data — local file first, then API fallback.
+    Place IAR/PSAT/SAT CSV from isbe.net into data/raw/IL/
+    """
+    from utils import load_raw_csv
+    local = load_raw_csv("IL", "iar") or load_raw_csv("IL", "assessment") or load_raw_csv("IL")
+    if local:
+        return {"results": local}
     if not rcdts:
         return None
-
-    endpoints = [
+    for url in [
         f"https://www.illinoisreportcard.com/api/school/{rcdts}/assessments/",
         f"https://api.illinoisreportcard.com/school/{rcdts}/",
-    ]
-    for url in endpoints:
+    ]:
         data = get_json(url)
         if data:
             return data

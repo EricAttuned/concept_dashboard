@@ -32,7 +32,13 @@ MCDS_URL = "https://mcds.dese.mo.gov"
 
 
 def try_fetch_mo_map() -> list[dict] | None:
-    """Attempt to download Missouri MAP assessment CSV."""
+    """Load Missouri MAP data — local file first, then URL fallback.
+    Place the MAP CSV from dese.mo.gov or mcds.dese.mo.gov into data/raw/MO/
+    """
+    from utils import load_raw_csv
+    local = load_raw_csv("MO", "map") or load_raw_csv("MO", "MAP") or load_raw_csv("MO")
+    if local:
+        return local
     try:
         r = SESSION.get(MO_MAP_URL, timeout=30)
         r.raise_for_status()
@@ -44,7 +50,6 @@ def try_fetch_mo_map() -> list[dict] | None:
             return rows
     except Exception as exc:
         log.warning("MO: Primary MAP URL failed: %s", exc)
-
     return None
 
 

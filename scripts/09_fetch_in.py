@@ -28,11 +28,17 @@ IN_MANUAL_URL = "https://www.doe.in.gov/accountability/find-school-and-corporati
 
 
 def try_fetch_in_ilearn() -> list[dict] | None:
-    urls = [
+    """Load Indiana ILEARN data — local file first, then URL fallback.
+    Place the ILEARN CSV from doe.in.gov into data/raw/IN/
+    """
+    from utils import load_raw_csv
+    local = load_raw_csv("IN", "ilearn") or load_raw_csv("IN", "ILEARN") or load_raw_csv("IN")
+    if local:
+        return local
+    for url in [
         IN_ILEARN_URL,
         "https://www.doe.in.gov/sites/default/files/assessment/2022-23-ilearn-school-level.csv",
-    ]
-    for url in urls:
+    ]:
         try:
             r = SESSION.get(url, timeout=30)
             r.raise_for_status()

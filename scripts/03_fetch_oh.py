@@ -10,6 +10,12 @@ Files targeted:
   - Gap Closing component (subgroup performance)
   - Overall component grades (A-F accountability)
 
+Manual download:
+  1. Go to https://reportcard.education.ohio.gov/download
+  2. Download ZIP/CSV for Achievement, Progress, Gap Closing, Overall Summary
+  3. Place ANY of those files (CSV or ZIP) into:  data/raw/OH/
+  4. Re-run this script — it will find and parse them automatically.
+
 Schools are matched by Ohio IRN (state_id / seasch field in CCD directory).
 """
 
@@ -22,10 +28,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from utils import (
-    SESSION, get_json, iso_now, load_master, log, nces_val,
+    ROOT, SESSION, get_json, iso_now, load_master, log, nces_val,
     print_summary, save_school, update_manifest_school, year_label,
 )
 
+RAW_DIR = ROOT / "data" / "raw" / "OH"
 BASE_DOWNLOAD = "https://reportcard.education.ohio.gov/download"
 
 # Ohio Report Card bulk download URLs for most recent available year (2022-23)
@@ -100,18 +107,24 @@ def process_oh_schools(schools: list) -> tuple[int, int, int]:
         else:
             log.warning("Could not get Ohio IRN for %s", s["school_name"])
 
-    # Attempt to download Achievement data
-    # Ohio RC download page often requires specific navigation — log as manual
-    # Try a few known URL patterns first
-    achievement_data = None
-    for url_suffix in [
-        "https://reportcard.education.ohio.gov/api/Download/DownloadFile?fileName=Achievement_2223.zip",
-        "https://reportcard.education.ohio.gov/api/Download/DownloadFile?fileName=Achievement_2223.csv",
-    ]:
-        achievement_data = try_fetch_csv_zip(url_suffix, "achievement")
-        if achievement_data:
-            log.info("OH: Downloaded achievement data (%d rows)", len(achievement_data))
-            break
+    # Load Achievement data — local file first, then URL fallback
+    from utils import load_raw_csv
+    achievement_data = (
+        load_raw_csv("OH", "achievement")
+        or load_raw_csv("OH", "Achievement")
+        or load_raw_csv("OH")  # any CSV in data/raw/OH/ if no keyword match
+    )
+    if not achievement_data:
+        for url_suffix in [
+            "https://reportcard.education.ohio.gov/api/Download/DownloadFile?fileName=Achievement_2223.zip",
+            "https://reportcard.education.ohio.gov/api/Download/DownloadFile?fileName=Achievement_2223.csv",
+        ]:
+            achievement_data = try_fetch_csv_zip(url_suffix, "achievement")
+            if achievement_data:
+                log.info("OH: Downloaded achievement data (%d rows)", len(achievement_data))
+                break
+    else:
+        log.info("OH: Using local achievement file (%d rows)", len(achievement_data))
 
     # Whether or not bulk download succeeded, process each school
     for school in oh_schools:

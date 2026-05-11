@@ -30,11 +30,17 @@ MN_MANUAL_URL = "https://education.mn.gov/MDE/Data/"
 
 
 def try_fetch_mn_mca() -> list[dict] | None:
-    urls = [
+    """Load Minnesota MCA data — local file first, then URL fallback.
+    Place the MCA CSV from education.mn.gov/MDE/Data/ into data/raw/MN/
+    """
+    from utils import load_raw_csv
+    local = load_raw_csv("MN", "mca") or load_raw_csv("MN", "MCA") or load_raw_csv("MN")
+    if local:
+        return local
+    for url in [
         MN_MCA_URL,
         "https://education.mn.gov/mdeprod/groups/EdDev/documents/Basic_Package/bwrl/MDEFiles/MCA_2023_Schools.csv",
-    ]
-    for url in urls:
+    ]:
         try:
             r = SESSION.get(url, timeout=30)
             r.raise_for_status()

@@ -38,9 +38,13 @@ MANUAL_URLS = {
 
 def try_fetch_mi_data(nces_id: str, district_code: str | None = None) -> dict | None:
     """
-    Attempt to pull M-STEP data from MI School Data API.
-    The public portal uses undocumented endpoints; we attempt common patterns.
+    Attempt to pull M-STEP data — local CSV first, then API fallback.
+    Place any M-STEP CSV exported from mischooldata.org into data/raw/MI/
     """
+    from utils import load_raw_csv
+    local = load_raw_csv("MI", "mstep") or load_raw_csv("MI", "performance") or load_raw_csv("MI")
+    if local:
+        return {"results": local}
     params = {
         "schoolYear": "2022-2023",
         "entityType": "School",

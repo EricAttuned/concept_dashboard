@@ -75,55 +75,74 @@ Each script is **idempotent** — safe to re-run. It merges new data into existi
 
 Several state portals require manual navigation or file download. Check `data/data_manifest.json` for which schools need attention (`"status": "needs_manual_download"`). The Data Status tab in the dashboard also shows this at a glance.
 
+### How the drop-in folder works
+
+Each state script checks for local files **before** attempting any URL fetch. The workflow is always the same:
+
+1. Download the CSV (or ZIP containing a CSV) from the state portal
+2. Drop the file into `data/raw/{STATE}/` — **no renaming required**
+3. Re-run the state script: `python scripts/0X_fetch_XX.py`
+4. Re-run aggregation: `python scripts/10_aggregate.py`
+
+The script picks up any CSV in the folder automatically. If you have multiple files (e.g. Achievement + Progress), drop them all in — the script will read the first one that matches the expected keyword in the filename, then fall back to the first CSV found.
+
+```
+data/raw/
+├── OH/   ← drop Ohio Report Card CSVs/ZIPs here
+├── MI/   ← drop MI School Data M-STEP export here
+├── MO/   ← drop Missouri MAP assessment CSV here
+├── IL/   ← drop ISBE IAR/assessment CSV here
+├── IA/   ← drop Iowa ISASP CSV here
+├── MN/   ← drop Minnesota MCA CSV here
+└── IN/   ← drop Indiana ILEARN CSV here
+```
+
+> **Note:** Files in `data/raw/` are git-ignored (they can be large). The empty folders are tracked via `.gitkeep` files.
+
+---
+
 ### Ohio
 1. Go to **https://reportcard.education.ohio.gov/download**
-2. Download the ZIP files for: **Achievement**, **Progress (Value-Added)**, **Gap Closing**, and **Building Overall Summary** for the most recent school year
-3. Extract CSVs into a local folder
-4. Update `scripts/03_fetch_oh.py` to point `OH_DATA_URLS` at the local file paths
-5. Re-run `python scripts/03_fetch_oh.py`
+2. Download the ZIP/CSV for **Achievement** (and optionally Progress, Gap Closing, Overall Summary)
+3. Drop into `data/raw/OH/`
+4. Re-run `python scripts/03_fetch_oh.py`
 
 ### Michigan
 1. Go to **https://www.mischooldata.org**
 2. Navigate to: *Student Performance > M-STEP* (grades 3–8) or *SAT* (grade 11)
-3. Filter by school/district name, select most recent year, export CSV
-4. Also pull *Student Growth > SGP* and *Accountability Scorecard* CSVs
-5. Place files in `data/raw/mi/` and update path constants in `scripts/04_fetch_mi.py`
-6. Re-run `python scripts/04_fetch_mi.py`
+3. Filter by school/district, select most recent year, export CSV
+4. Drop into `data/raw/MI/`
+5. Re-run `python scripts/04_fetch_mi.py`
 
 ### Missouri
 1. Go to **https://dese.mo.gov/data-system-management/data-download** or **https://mcds.dese.mo.gov**
 2. Download **MAP Assessment Results** for the most recent year (school-level)
-3. Also download the **Annual Performance Report (APR)** data
-4. Place files in `data/raw/mo/` and update path constants in `scripts/05_fetch_mo.py`
-5. Re-run `python scripts/05_fetch_mo.py`
+3. Drop into `data/raw/MO/`
+4. Re-run `python scripts/05_fetch_mo.py`
 
 ### Illinois
 1. Go to **https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx**
-2. Download school-level **IAR**, **PSAT**, and **SAT** assessment data CSVs
-3. Also download **SGP** (Student Growth Percentile) and **Summative Designation** files
-4. Place files in `data/raw/il/` and update path constants in `scripts/06_fetch_il.py`
-5. Re-run `python scripts/06_fetch_il.py`
+2. Download school-level **IAR** assessment CSV (or PSAT/SAT for high school grades)
+3. Drop into `data/raw/IL/`
+4. Re-run `python scripts/06_fetch_il.py`
 
 ### Iowa
 1. Go to **https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data**
-2. Find and download **ISASP** (Iowa Statewide Assessment of Student Progress) school-level results
-3. Also download the **Iowa School Performance Profile** data
-4. Place files in `data/raw/ia/` and update path constants in `scripts/07_fetch_ia.py`
-5. Re-run `python scripts/07_fetch_ia.py`
+2. Download **ISASP** (Iowa Statewide Assessment of Student Progress) school-level results
+3. Drop into `data/raw/IA/`
+4. Re-run `python scripts/07_fetch_ia.py`
 
 ### Minnesota
 1. Go to **https://education.mn.gov/MDE/Data/**
-2. Download **MCA** (Minnesota Comprehensive Assessment) school-level results for the most recent year
-3. Also download the **Multiple Measurements Rating (MMR)** and accountability data
-4. Place files in `data/raw/mn/` and update path constants in `scripts/08_fetch_mn.py`
-5. Re-run `python scripts/08_fetch_mn.py`
+2. Download **MCA** (Minnesota Comprehensive Assessment) school-level results
+3. Drop into `data/raw/MN/`
+4. Re-run `python scripts/08_fetch_mn.py`
 
 ### Indiana
 1. Go to **https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports**
 2. Download **ILEARN** school-level assessment results
-3. Also download **A-F School Grades** and school-level growth data
-4. Place files in `data/raw/in/` and update path constants in `scripts/09_fetch_in.py`
-5. Re-run `python scripts/09_fetch_in.py`
+3. Drop into `data/raw/IN/`
+4. Re-run `python scripts/09_fetch_in.py`
 
 ## Adding a New School Year
 
