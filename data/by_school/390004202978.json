@@ -7,7 +7,7 @@
     "state": "OH",
     "grade_band": "9-10",
     "target_region": false,
-    "last_updated": "2026-05-12T17:32:50.246953+00:00",
+    "last_updated": "2026-05-12T18:07:10.554023+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -78,12 +78,12 @@
     "four_year_grad_rate": 94.2,
     "five_year_grad_rate": 98.4,
     "by_subgroup": {
-      "black": null,
+      "black": 94.4,
       "hispanic": null,
       "white": null,
-      "ell": null,
-      "sped": null,
-      "frl": null
+      "ell": 70.6,
+      "sped": 92.3,
+      "frl": 94.2
     }
   },
   "attendance": {

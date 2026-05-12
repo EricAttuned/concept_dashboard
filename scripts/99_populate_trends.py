@@ -380,13 +380,10 @@ MN_TARGETS = {
 }
 
 
-def populate_mn_trends() -> None:
-    """MN MCA Math/Reading/Science 2022-23 (= file labeled 2023). 'All Categories' + 'All students'."""
-    print("\n=== MINNESOTA TRENDS ===")
-    year = "2022-23"
+def _populate_mn_trend_year(year: str, suffix: str) -> None:
     files = {
-        "ela": RAW / "MN" / "mn_mca_reading_2022-23.csv",
-        "math": RAW / "MN" / "mn_mca_math_2022-23.csv",
+        "ela": RAW / "MN" / f"mn_mca_reading_{suffix}.csv",
+        "math": RAW / "MN" / f"mn_mca_math_{suffix}.csv",
     }
     per_school: dict[str, dict[str, list]] = {}
     for nid, patterns in MN_TARGETS.items():
@@ -420,6 +417,14 @@ def populate_mn_trends() -> None:
         set_trend(rec, year, ela, math)
         save_school(nid, rec)
         print(f"  {nid} [{year}]  {patterns[0]:42}  ELA={ela}  Math={math}")
+
+
+def populate_mn_trends() -> None:
+    """MN MCA trends. 'All Categories' + 'All students'. Note Iowa-style year labeling:
+    file year (e.g. 2023) = test administration year = end of school year (2022-23)."""
+    print("\n=== MINNESOTA TRENDS ===")
+    _populate_mn_trend_year("2022-23", "2022-23")   # file labeled 2023 = SY 2022-23
+    _populate_mn_trend_year("2021-22", "2021-22")   # file labeled 2022 = SY 2021-22
 
 
 MI_TARGETS_TRENDS = {

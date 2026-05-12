@@ -7,7 +7,7 @@
     "state": "MN",
     "grade_band": "K-8",
     "target_region": true,
-    "last_updated": "2026-05-12T16:49:57.500811+00:00",
+    "last_updated": "2026-05-12T18:07:10.558290+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -99,12 +99,12 @@
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
+      "2021-22": 18.2,
       "2022-23": 5.6,
       "2023-24": 7.4
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
+      "2021-22": 7.3,
       "2022-23": 2.9,
       "2023-24": 8.8
     }

@@ -7,7 +7,7 @@
     "state": "OH",
     "grade_band": "K-2",
     "target_region": false,
-    "last_updated": "2026-05-12T17:46:34.938829+00:00",
+    "last_updated": "2026-05-12T18:07:10.568173+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -99,13 +99,13 @@
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
+      "2021-22": 53.8,
+      "2022-23": 55.7,
       "2023-24": null
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
+      "2021-22": 29.9,
+      "2022-23": 31.9,
       "2023-24": null
     }
   }

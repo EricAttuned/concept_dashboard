@@ -7,7 +7,7 @@
     "state": "IL",
     "grade_band": "6-12",
     "target_region": false,
-    "last_updated": "2026-05-12T16:25:23.267784+00:00",
+    "last_updated": "2026-05-12T18:07:10.551542+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -78,12 +78,12 @@
     "four_year_grad_rate": 87.9,
     "five_year_grad_rate": 92.9,
     "by_subgroup": {
-      "black": null,
-      "hispanic": null,
+      "black": 92.3,
+      "hispanic": 79.4,
       "white": null,
-      "ell": null,
-      "sped": null,
-      "frl": null
+      "ell": 85.3,
+      "sped": 76.9,
+      "frl": 86.3
     }
   },
   "attendance": {
