@@ -1,5 +1,7 @@
 """Shared helpers for the Concept Schools data pipeline."""
 
+
+from __future__ import annotations
 import json
 import os
 import time

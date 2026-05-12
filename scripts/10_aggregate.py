@@ -8,6 +8,8 @@ and accountability rating distributions — at both network and region level.
 Null values are excluded from averages (not treated as 0).
 """
 
+
+from __future__ import annotations
 import sys
 from pathlib import Path
 from datetime import datetime

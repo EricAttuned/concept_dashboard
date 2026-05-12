@@ -7,41 +7,41 @@
     "state": "OH",
     "grade_band": "K-8",
     "target_region": false,
-    "last_updated": "2026-05-08T16:56:27.680417Z",
+    "last_updated": "2026-05-12T17:32:50.238682+00:00",
     "data_sources": []
   },
   "enrollment": {
     "year": "2023-24",
-    "total": 351,
+    "total": 329,
     "by_grade": null,
     "by_race_ethnicity": {
-      "white": null,
-      "black": null,
-      "hispanic": null,
+      "white": 47,
+      "black": 230,
+      "hispanic": 12,
       "asian": null,
       "american_indian": null,
       "pacific_islander": null,
-      "two_or_more": null
+      "two_or_more": 40
     },
-    "pct_free_reduced_lunch": null,
+    "pct_free_reduced_lunch": 100.0,
     "pct_ell": null,
-    "pct_sped": null
+    "pct_sped": 8.8
   },
   "staff": {
     "year": "2023-24",
     "teacher_fte": 27.0,
-    "pct_teachers_certified": null,
-    "pct_teachers_novice": null,
+    "pct_teachers_certified": 100.0,
+    "pct_teachers_novice": 29.6,
     "teacher_retention_rate": null
   },
   "assessment": {
-    "year": null,
+    "year": "2023-24",
     "source": "Ohio AIR / Ohio Report Card",
     "ela": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 39.1,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 39.1,
         "hispanic": null,
         "white": null,
         "ell": null,
@@ -50,10 +50,10 @@
       }
     },
     "math": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 40.5,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 40.5,
         "hispanic": null,
         "white": null,
         "ell": null,
@@ -62,16 +62,16 @@
       }
     },
     "science": {
-      "pct_proficient_all": null
+      "pct_proficient_all": 46.6
     }
   },
   "growth": {
-    "year": null,
+    "year": "2023-24",
     "source": "OH DOE",
     "metric_name": "Value-Added Index (VAI)",
-    "ela_growth": null,
-    "math_growth": null,
-    "overall_growth_rating": null
+    "ela_growth": 7.58,
+    "math_growth": 7.58,
+    "overall_growth_rating": "5 Stars"
   },
   "graduation": {
     "year": null,
@@ -87,26 +87,26 @@
     }
   },
   "attendance": {
-    "year": null,
-    "avg_daily_attendance_rate": null,
+    "year": "2023-24",
+    "avg_daily_attendance_rate": 88.2,
     "chronic_absenteeism_rate": null
   },
   "accountability": {
-    "year": null,
-    "state_rating": null,
-    "state_percentile_rank": null,
+    "year": "2023-24",
+    "state_rating": "2 Stars",
+    "state_percentile_rank": 66.2,
     "similar_schools_percentile": null
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 46.1,
+      "2022-23": 38.5,
+      "2023-24": 39.1
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 36.4,
+      "2022-23": 40.2,
+      "2023-24": 40.5
     }
   }
 }

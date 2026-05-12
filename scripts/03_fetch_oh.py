@@ -19,6 +19,8 @@ Manual download:
 Schools are matched by Ohio IRN (state_id / seasch field in CCD directory).
 """
 
+
+from __future__ import annotations
 import csv
 import io
 import sys

@@ -8,6 +8,8 @@ Primary source:
 Iowa schools: Horizon Science Academy Des Moines, Horizon Science Academy Davenport.
 """
 
+
+from __future__ import annotations
 import csv
 import io
 import sys

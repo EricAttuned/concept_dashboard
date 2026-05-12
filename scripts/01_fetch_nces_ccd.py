@@ -8,6 +8,8 @@ Endpoints used (Urban Institute Education Data Portal):
   GET /schools/ccd/staff/{ncessch}/          → teacher FTE
 """
 
+
+from __future__ import annotations
 import sys
 from datetime import datetime
 from pathlib import Path

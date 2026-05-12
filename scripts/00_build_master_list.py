@@ -6,6 +6,8 @@ via the Urban Institute Education Data Portal CCD directory API.
 Writes data/schools_master.json and updates data_manifest.json.
 """
 
+
+from __future__ import annotations
 import difflib
 import sys
 import unicodedata

@@ -8,6 +8,8 @@ Endpoints:
 EDFacts typically lags 1-2 years; used as fallback / cross-check vs state data.
 """
 
+
+from __future__ import annotations
 import sys
 from pathlib import Path
 

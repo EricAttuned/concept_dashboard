@@ -1,28 +1,49 @@
 {
-  "generated_at": "2026-05-08T16:56:32.005583Z",
+  "generated_at": "2026-05-12T17:46:35.167253Z",
   "total_schools": 33,
-  "total_enrollment": 12424,
-  "ela_proficiency_weighted_avg": null,
-  "ela_proficiency_schools_included": 0,
-  "math_proficiency_weighted_avg": null,
-  "math_proficiency_schools_included": 0,
-  "teacher_fte_total": 201.0,
-  "pct_teachers_certified_avg": null,
-  "grad_rate_4yr_avg": null,
-  "accountability_distribution": {},
-  "growth_rating_distribution": {},
-  "schools_with_growth_data": 0,
-  "schools_with_accountability": 0,
+  "total_enrollment": 13553,
+  "ela_proficiency_weighted_avg": 39.3,
+  "ela_proficiency_schools_included": 31,
+  "math_proficiency_weighted_avg": 27.2,
+  "math_proficiency_schools_included": 31,
+  "teacher_fte_total": 1085.9,
+  "pct_teachers_certified_avg": 96.3,
+  "grad_rate_4yr_avg": 83.5,
+  "accountability_distribution": {
+    "2 Stars": 12,
+    "1 Star": 4,
+    "NR": 1,
+    "Above 5th Percentile": 4,
+    "Commendable": 4,
+    "Priority": 1,
+    "Not Identified (Good Standing)": 1,
+    "Identified for Support": 1,
+    "Meets Expectations": 1,
+    "Does Not Meet Expectations": 1
+  },
+  "growth_rating_distribution": {
+    "5 Stars": 4,
+    "4 Stars": 7,
+    "3 Stars": 5,
+    "NC": 1,
+    "Below Avg": 1,
+    "Average": 1
+  },
+  "schools_with_growth_data": 19,
+  "schools_with_accountability": 30,
   "race_ethnicity_totals": {
     "american_indian": 0,
-    "asian": 0,
-    "black": 0,
-    "hispanic": 0,
-    "pacific_islander": 0,
-    "two_or_more": 0,
-    "white": 0
+    "asian": 225,
+    "black": 7098,
+    "hispanic": 2773,
+    "pacific_islander": 4,
+    "two_or_more": 617,
+    "white": 1614
   },
-  "assessment_years_present": [],
+  "assessment_years_present": [
+    "2023-24",
+    "2024-25"
+  ],
   "schools": [
     {
       "nces_id": "390045105010",
@@ -31,12 +52,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": false,
-      "enrollment": 351,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 329,
+      "ela_pct": 39.1,
+      "math_pct": 40.5,
+      "growth_rating": "5 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390051005220",
@@ -45,12 +66,12 @@
       "state": "OH",
       "grade_band": "K-12",
       "target_region": false,
-      "enrollment": 535,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 514,
+      "ela_pct": 44.6,
+      "math_pct": 34.1,
+      "growth_rating": "4 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390004002939",
@@ -59,12 +80,12 @@
       "state": "OH",
       "grade_band": "9-12",
       "target_region": false,
-      "enrollment": 308,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 284,
+      "ela_pct": 40.0,
+      "math_pct": 12.9,
+      "growth_rating": "3 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390047005029",
@@ -73,12 +94,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": false,
-      "enrollment": 233,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 198,
+      "ela_pct": 37.9,
+      "math_pct": 17.9,
+      "growth_rating": "4 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390045405013",
@@ -87,12 +108,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": false,
-      "enrollment": 255,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 246,
+      "ela_pct": 38.2,
+      "math_pct": 12.8,
+      "growth_rating": "5 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390136505544",
@@ -101,12 +122,12 @@
       "state": "OH",
       "grade_band": "K-12",
       "target_region": false,
-      "enrollment": 400,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 795,
+      "ela_pct": 49.0,
+      "math_pct": 30.7,
+      "growth_rating": "4 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390138905567",
@@ -115,12 +136,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": false,
-      "enrollment": 350,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 383,
+      "ela_pct": 62.6,
+      "math_pct": 34.1,
+      "growth_rating": "4 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390064605345",
@@ -129,12 +150,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": false,
-      "enrollment": 349,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 325,
+      "ela_pct": 46.8,
+      "math_pct": 30.2,
+      "growth_rating": "4 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390004202978",
@@ -143,12 +164,12 @@
       "state": "OH",
       "grade_band": "9-10",
       "target_region": false,
-      "enrollment": 300,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 596,
+      "ela_pct": 56.5,
+      "math_pct": 40.0,
+      "growth_rating": "5 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390132205440",
@@ -157,12 +178,12 @@
       "state": "OH",
       "grade_band": "6-8",
       "target_region": false,
-      "enrollment": 280,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 438,
+      "ela_pct": 31.3,
+      "math_pct": 12.2,
+      "growth_rating": "3 Stars",
+      "accountability": "1 Star",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390160605963",
@@ -171,12 +192,12 @@
       "state": "OH",
       "grade_band": "K-2",
       "target_region": false,
-      "enrollment": 150,
+      "enrollment": 364,
       "ela_pct": null,
       "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "growth_rating": "NC",
+      "accountability": "NR",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390135305483",
@@ -185,12 +206,12 @@
       "state": "OH",
       "grade_band": "3-5",
       "target_region": false,
-      "enrollment": 200,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 362,
+      "ela_pct": 53.7,
+      "math_pct": 44.8,
+      "growth_rating": "4 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390064505319",
@@ -199,12 +220,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": false,
-      "enrollment": 350,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 270,
+      "ela_pct": 45.7,
+      "math_pct": 37.3,
+      "growth_rating": "3 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390044405003",
@@ -213,12 +234,12 @@
       "state": "OH",
       "grade_band": "K-5",
       "target_region": false,
-      "enrollment": 280,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 173,
+      "ela_pct": 37.9,
+      "math_pct": 36.1,
+      "growth_rating": "5 Stars",
+      "accountability": "2 Stars",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390136605556",
@@ -227,12 +248,12 @@
       "state": "OH",
       "grade_band": "6-12",
       "target_region": true,
-      "enrollment": 350,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 248,
+      "ela_pct": 25.2,
+      "math_pct": 7.2,
+      "growth_rating": "3 Stars",
+      "accountability": "1 Star",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390138305625",
@@ -241,12 +262,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": true,
-      "enrollment": 400,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 182,
+      "ela_pct": 36.3,
+      "math_pct": 12.0,
+      "growth_rating": "4 Stars",
+      "accountability": "1 Star",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "390044105000",
@@ -255,12 +276,12 @@
       "state": "OH",
       "grade_band": "K-8",
       "target_region": true,
-      "enrollment": 380,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "enrollment": 210,
+      "ela_pct": 19.3,
+      "math_pct": 16.0,
+      "growth_rating": "3 Stars",
+      "accountability": "1 Star",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "260096708048",
@@ -269,12 +290,12 @@
       "state": "MI",
       "grade_band": "PreK-5",
       "target_region": true,
-      "enrollment": 250,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
+      "enrollment": 186,
+      "ela_pct": 20.0,
+      "math_pct": 20.0,
+      "growth_rating": "Below Avg",
       "accountability": null,
-      "assessment_year": null
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "260096708813",
@@ -283,12 +304,12 @@
       "state": "MI",
       "grade_band": "PreK-12",
       "target_region": true,
-      "enrollment": 600,
-      "ela_pct": null,
-      "math_pct": null,
-      "growth_rating": null,
+      "enrollment": 802,
+      "ela_pct": 29.7,
+      "math_pct": 12.9,
+      "growth_rating": "Average",
       "accountability": null,
-      "assessment_year": null
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "290059203174",
@@ -297,12 +318,12 @@
       "state": "MO",
       "grade_band": "PreK-5",
       "target_region": false,
-      "enrollment": 400,
-      "ela_pct": null,
-      "math_pct": null,
+      "enrollment": 348,
+      "ela_pct": 54.0,
+      "math_pct": 51.2,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Above 5th Percentile",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "290059203205",
@@ -311,12 +332,12 @@
       "state": "MO",
       "grade_band": "9-12",
       "target_region": false,
-      "enrollment": 300,
-      "ela_pct": null,
-      "math_pct": null,
+      "enrollment": 423,
+      "ela_pct": 50.0,
+      "math_pct": 56.6,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Above 5th Percentile",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "290059203244",
@@ -325,12 +346,12 @@
       "state": "MO",
       "grade_band": "6-8",
       "target_region": false,
-      "enrollment": 280,
-      "ela_pct": null,
-      "math_pct": null,
+      "enrollment": 407,
+      "ela_pct": 42.5,
+      "math_pct": 51.6,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Above 5th Percentile",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "290059203241",
@@ -339,12 +360,12 @@
       "state": "MO",
       "grade_band": "PreK-5",
       "target_region": false,
-      "enrollment": 350,
-      "ela_pct": null,
-      "math_pct": null,
+      "enrollment": 349,
+      "ela_pct": 24.3,
+      "math_pct": 29.2,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Above 5th Percentile",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "170993005092",
@@ -353,12 +374,12 @@
       "state": "IL",
       "grade_band": "6-12",
       "target_region": false,
-      "enrollment": 450,
-      "ela_pct": null,
-      "math_pct": null,
+      "enrollment": 616,
+      "ela_pct": 33.7,
+      "math_pct": 15.1,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Commendable",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "170141206309",
@@ -367,12 +388,12 @@
       "state": "IL",
       "grade_band": "K-11",
       "target_region": false,
-      "enrollment": 500,
-      "ela_pct": null,
-      "math_pct": null,
+      "enrollment": 671,
+      "ela_pct": 38.7,
+      "math_pct": 15.8,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Commendable",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "170141006254",
@@ -382,11 +403,11 @@
       "grade_band": "K-12",
       "target_region": false,
       "enrollment": 853,
-      "ela_pct": null,
-      "math_pct": null,
+      "ela_pct": 52.3,
+      "math_pct": 21.8,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Commendable",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "170993006331",
@@ -395,12 +416,12 @@
       "state": "IL",
       "grade_band": "K-12",
       "target_region": false,
-      "enrollment": 735,
-      "ela_pct": null,
-      "math_pct": null,
+      "enrollment": 746,
+      "ela_pct": 29.3,
+      "math_pct": 11.3,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Commendable",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "199902002316",
@@ -410,11 +431,11 @@
       "grade_band": "PreK-6",
       "target_region": false,
       "enrollment": 300,
-      "ela_pct": null,
-      "math_pct": null,
+      "ela_pct": 41.9,
+      "math_pct": 67.7,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Priority",
+      "assessment_year": "2024-25"
     },
     {
       "nces_id": "199903302345",
@@ -428,7 +449,7 @@
       "math_pct": null,
       "growth_rating": null,
       "accountability": null,
-      "assessment_year": null
+      "assessment_year": "2024-25"
     },
     {
       "nces_id": "270039905179",
@@ -438,11 +459,11 @@
       "grade_band": "K-12",
       "target_region": true,
       "enrollment": 250,
-      "ela_pct": null,
-      "math_pct": null,
+      "ela_pct": 22.8,
+      "math_pct": 12.9,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Not Identified (Good Standing)",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "270045005159",
@@ -452,11 +473,11 @@
       "grade_band": "K-8",
       "target_region": true,
       "enrollment": 350,
-      "ela_pct": null,
-      "math_pct": null,
+      "ela_pct": 7.4,
+      "math_pct": 8.8,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Identified for Support",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "180006702416",
@@ -466,11 +487,11 @@
       "grade_band": "K-8",
       "target_region": false,
       "enrollment": 535,
-      "ela_pct": null,
-      "math_pct": null,
+      "ela_pct": 49.4,
+      "math_pct": 53.8,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Meets Expectations",
+      "assessment_year": "2023-24"
     },
     {
       "nces_id": "180009402487",
@@ -480,11 +501,11 @@
       "grade_band": "K-12",
       "target_region": false,
       "enrollment": 600,
-      "ela_pct": null,
-      "math_pct": null,
+      "ela_pct": 19.8,
+      "math_pct": 9.8,
       "growth_rating": null,
-      "accountability": null,
-      "assessment_year": null
+      "accountability": "Does Not Meet Expectations",
+      "assessment_year": "2023-24"
     }
   ]
 }

@@ -1,30 +1,38 @@
 {
-  "generated_at": "2026-05-08T16:56:32.007590Z",
+  "generated_at": "2026-05-12T17:46:35.179364Z",
   "regions": {
     "North Ohio": {
       "total_schools": 8,
-      "total_enrollment": 2781,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": 92.0,
-      "pct_teachers_certified_avg": null,
-      "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
-      "growth_rating_distribution": {},
-      "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "total_enrollment": 3074,
+      "ela_proficiency_weighted_avg": 46.3,
+      "ela_proficiency_schools_included": 8,
+      "math_proficiency_weighted_avg": 28.8,
+      "math_proficiency_schools_included": 8,
+      "teacher_fte_total": 248.0,
+      "pct_teachers_certified_avg": 100.0,
+      "grad_rate_4yr_avg": 89.3,
+      "accountability_distribution": {
+        "2 Stars": 8
+      },
+      "growth_rating_distribution": {
+        "5 Stars": 2,
+        "4 Stars": 5,
+        "3 Stars": 1
+      },
+      "schools_with_growth_data": 8,
+      "schools_with_accountability": 8,
       "race_ethnicity_totals": {
         "american_indian": 0,
         "asian": 0,
-        "black": 0,
-        "hispanic": 0,
+        "black": 1836,
+        "hispanic": 592,
         "pacific_islander": 0,
-        "two_or_more": 0,
-        "white": 0
+        "two_or_more": 260,
+        "white": 386
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Horizon Science Academy Springfield",
         "Horizon Science Academy Toledo",
@@ -38,28 +46,39 @@
     },
     "Columbus": {
       "total_schools": 5,
-      "total_enrollment": 1280,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": null,
-      "pct_teachers_certified_avg": null,
-      "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
-      "growth_rating_distribution": {},
-      "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "total_enrollment": 2030,
+      "ela_proficiency_weighted_avg": 47.5,
+      "ela_proficiency_schools_included": 4,
+      "math_proficiency_weighted_avg": 33.3,
+      "math_proficiency_schools_included": 4,
+      "teacher_fte_total": 181.0,
+      "pct_teachers_certified_avg": 100.0,
+      "grad_rate_4yr_avg": 94.2,
+      "accountability_distribution": {
+        "2 Stars": 3,
+        "1 Star": 1,
+        "NR": 1
+      },
+      "growth_rating_distribution": {
+        "5 Stars": 1,
+        "3 Stars": 2,
+        "NC": 1,
+        "4 Stars": 1
+      },
+      "schools_with_growth_data": 5,
+      "schools_with_accountability": 5,
       "race_ethnicity_totals": {
         "american_indian": 0,
         "asian": 0,
-        "black": 0,
-        "hispanic": 0,
+        "black": 1674,
+        "hispanic": 157,
         "pacific_islander": 0,
-        "two_or_more": 0,
-        "white": 0
+        "two_or_more": 87,
+        "white": 144
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Horizon Science Academy Columbus High School Morse Road Campus",
         "Horizon Science Academy Columbus Middle School",
@@ -70,28 +89,37 @@
     },
     "Dayton/Cincinnati": {
       "total_schools": 4,
-      "total_enrollment": 1410,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": null,
-      "pct_teachers_certified_avg": null,
-      "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
-      "growth_rating_distribution": {},
-      "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "total_enrollment": 813,
+      "ela_proficiency_weighted_avg": 28.9,
+      "ela_proficiency_schools_included": 4,
+      "math_proficiency_weighted_avg": 16.7,
+      "math_proficiency_schools_included": 4,
+      "teacher_fte_total": 69.0,
+      "pct_teachers_certified_avg": 100.0,
+      "grad_rate_4yr_avg": 75.0,
+      "accountability_distribution": {
+        "2 Stars": 1,
+        "1 Star": 3
+      },
+      "growth_rating_distribution": {
+        "5 Stars": 1,
+        "3 Stars": 2,
+        "4 Stars": 1
+      },
+      "schools_with_growth_data": 4,
+      "schools_with_accountability": 4,
       "race_ethnicity_totals": {
         "american_indian": 0,
         "asian": 0,
-        "black": 0,
-        "hispanic": 0,
+        "black": 680,
+        "hispanic": 20,
         "pacific_islander": 0,
-        "two_or_more": 0,
-        "white": 0
+        "two_or_more": 33,
+        "white": 80
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Horizon Science Academy Dayton Elementary School",
         "Horizon Science Academy Dayton High School",
@@ -101,28 +129,33 @@
     },
     "Michigan": {
       "total_schools": 2,
-      "total_enrollment": 850,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": null,
-      "pct_teachers_certified_avg": null,
-      "grad_rate_4yr_avg": null,
+      "total_enrollment": 988,
+      "ela_proficiency_weighted_avg": 27.9,
+      "ela_proficiency_schools_included": 2,
+      "math_proficiency_weighted_avg": 14.2,
+      "math_proficiency_schools_included": 2,
+      "teacher_fte_total": 58.2,
+      "pct_teachers_certified_avg": 100.0,
+      "grad_rate_4yr_avg": 70.6,
       "accountability_distribution": {},
-      "growth_rating_distribution": {},
-      "schools_with_growth_data": 0,
+      "growth_rating_distribution": {
+        "Below Avg": 1,
+        "Average": 1
+      },
+      "schools_with_growth_data": 2,
       "schools_with_accountability": 0,
       "race_ethnicity_totals": {
         "american_indian": 0,
-        "asian": 0,
-        "black": 0,
+        "asian": 118,
+        "black": 1618,
         "hispanic": 0,
-        "pacific_islander": 0,
-        "two_or_more": 0,
-        "white": 0
+        "pacific_islander": 4,
+        "two_or_more": 50,
+        "white": 136
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Michigan Math and Science Academy Lorraine",
         "Michigan Math and Science Academy Dequindre"
@@ -130,28 +163,32 @@
     },
     "Missouri": {
       "total_schools": 4,
-      "total_enrollment": 1330,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": null,
-      "pct_teachers_certified_avg": null,
+      "total_enrollment": 1527,
+      "ela_proficiency_weighted_avg": 43.0,
+      "ela_proficiency_schools_included": 4,
+      "math_proficiency_weighted_avg": 47.8,
+      "math_proficiency_schools_included": 4,
+      "teacher_fte_total": 130.0,
+      "pct_teachers_certified_avg": 84.2,
       "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
+      "accountability_distribution": {
+        "Above 5th Percentile": 4
+      },
       "growth_rating_distribution": {},
       "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "schools_with_accountability": 4,
       "race_ethnicity_totals": {
         "american_indian": 0,
-        "asian": 0,
-        "black": 0,
-        "hispanic": 0,
+        "asian": 43,
+        "black": 426,
+        "hispanic": 109,
         "pacific_islander": 0,
-        "two_or_more": 0,
-        "white": 0
+        "two_or_more": 177,
+        "white": 768
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Gateway Science Academy of St. Louis - Smiley",
         "Gateway Science Academy of St. Louis - High",
@@ -161,28 +198,32 @@
     },
     "Illinois": {
       "total_schools": 4,
-      "total_enrollment": 2538,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": null,
-      "pct_teachers_certified_avg": null,
-      "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
+      "total_enrollment": 2886,
+      "ela_proficiency_weighted_avg": 39.2,
+      "ela_proficiency_schools_included": 4,
+      "math_proficiency_weighted_avg": 16.3,
+      "math_proficiency_schools_included": 4,
+      "teacher_fte_total": 253.7,
+      "pct_teachers_certified_avg": 91.0,
+      "grad_rate_4yr_avg": 87.2,
+      "accountability_distribution": {
+        "Commendable": 4
+      },
       "growth_rating_distribution": {},
       "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "schools_with_accountability": 4,
       "race_ethnicity_totals": {
         "american_indian": 0,
-        "asian": 0,
-        "black": 0,
-        "hispanic": 0,
+        "asian": 64,
+        "black": 797,
+        "hispanic": 1895,
         "pacific_islander": 0,
-        "two_or_more": 0,
-        "white": 0
+        "two_or_more": 10,
+        "white": 100
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Chicago Math and Science Academy",
         "Horizon Science Academy Belmont",
@@ -193,17 +234,19 @@
     "Iowa": {
       "total_schools": 2,
       "total_enrollment": 500,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": null,
+      "ela_proficiency_weighted_avg": 41.9,
+      "ela_proficiency_schools_included": 1,
+      "math_proficiency_weighted_avg": 67.7,
+      "math_proficiency_schools_included": 1,
+      "teacher_fte_total": 9.0,
       "pct_teachers_certified_avg": null,
       "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
+      "accountability_distribution": {
+        "Priority": 1
+      },
       "growth_rating_distribution": {},
       "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "schools_with_accountability": 1,
       "race_ethnicity_totals": {
         "american_indian": 0,
         "asian": 0,
@@ -213,7 +256,9 @@
         "two_or_more": 0,
         "white": 0
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2024-25"
+      ],
       "schools": [
         "Horizon Science Academy Des Moines",
         "Horizon Science Academy Davenport"
@@ -222,27 +267,32 @@
     "Minnesota": {
       "total_schools": 2,
       "total_enrollment": 600,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
-      "teacher_fte_total": null,
+      "ela_proficiency_weighted_avg": 13.8,
+      "ela_proficiency_schools_included": 2,
+      "math_proficiency_weighted_avg": 10.5,
+      "math_proficiency_schools_included": 2,
+      "teacher_fte_total": 28.0,
       "pct_teachers_certified_avg": null,
-      "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
+      "grad_rate_4yr_avg": 77.5,
+      "accountability_distribution": {
+        "Not Identified (Good Standing)": 1,
+        "Identified for Support": 1
+      },
       "growth_rating_distribution": {},
       "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "schools_with_accountability": 2,
       "race_ethnicity_totals": {
         "american_indian": 0,
         "asian": 0,
-        "black": 0,
+        "black": 67,
         "hispanic": 0,
         "pacific_islander": 0,
         "two_or_more": 0,
         "white": 0
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Minnesota Math and Science Academy",
         "Horizon Science Academy Twin Cities"
@@ -251,17 +301,20 @@
     "Indiana": {
       "total_schools": 2,
       "total_enrollment": 1135,
-      "ela_proficiency_weighted_avg": null,
-      "ela_proficiency_schools_included": 0,
-      "math_proficiency_weighted_avg": null,
-      "math_proficiency_schools_included": 0,
+      "ela_proficiency_weighted_avg": 33.8,
+      "ela_proficiency_schools_included": 2,
+      "math_proficiency_weighted_avg": 30.5,
+      "math_proficiency_schools_included": 2,
       "teacher_fte_total": 109.0,
       "pct_teachers_certified_avg": null,
       "grad_rate_4yr_avg": null,
-      "accountability_distribution": {},
+      "accountability_distribution": {
+        "Meets Expectations": 1,
+        "Does Not Meet Expectations": 1
+      },
       "growth_rating_distribution": {},
       "schools_with_growth_data": 0,
-      "schools_with_accountability": 0,
+      "schools_with_accountability": 2,
       "race_ethnicity_totals": {
         "american_indian": 0,
         "asian": 0,
@@ -271,7 +324,9 @@
         "two_or_more": 0,
         "white": 0
       },
-      "assessment_years_present": [],
+      "assessment_years_present": [
+        "2023-24"
+      ],
       "schools": [
         "Indiana Math and Science Academy West",
         "Indiana Math and Science Academy North"

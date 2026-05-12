@@ -4,7 +4,14 @@ __pycache__/
 .DS_Store
 data/raw/**/*.csv
 data/raw/**/*.xlsx
+data/raw/**/*.xls
+data/raw/**/*.XLS
 data/raw/**/*.zip
 data/raw/**/*.txt
+data/raw/**/*.pdf
+data/raw/**/*.docx
+data/raw/**/master/
+data/raw/**/_csv/
+data/raw/**/_csv_grad/
 !data/raw/**/.gitkeep
 *.xlsx

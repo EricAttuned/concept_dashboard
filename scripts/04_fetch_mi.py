@@ -11,6 +11,8 @@ MI School Data exports require navigation through a data portal.
 This script attempts the public data download endpoints and logs manual steps if needed.
 """
 
+
+from __future__ import annotations
 import csv
 import io
 import sys

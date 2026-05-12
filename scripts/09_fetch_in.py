@@ -8,6 +8,8 @@ Primary source:
 Indiana schools: Indiana Math and Science Academy West, North, Central (all Indianapolis).
 """
 
+
+from __future__ import annotations
 import csv
 import io
 import sys

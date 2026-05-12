@@ -7,7 +7,7 @@
     "state": "MN",
     "grade_band": "K-8",
     "target_region": true,
-    "last_updated": "2026-05-08T16:56:27.839458Z",
+    "last_updated": "2026-05-12T16:49:57.500811+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -16,49 +16,49 @@
     "by_grade": null,
     "by_race_ethnicity": {
       "white": null,
-      "black": null,
+      "black": 67,
       "hispanic": null,
       "asian": null,
       "american_indian": null,
       "pacific_islander": null,
       "two_or_more": null
     },
-    "pct_free_reduced_lunch": null,
-    "pct_ell": null,
+    "pct_free_reduced_lunch": 97.3,
+    "pct_ell": 82.4,
     "pct_sped": null
   },
   "staff": {
-    "year": null,
-    "teacher_fte": null,
+    "year": "2022-23",
+    "teacher_fte": 9.0,
     "pct_teachers_certified": null,
     "pct_teachers_novice": null,
     "teacher_retention_rate": null
   },
   "assessment": {
-    "year": null,
-    "source": "Minnesota MCA-III",
+    "year": "2023-24",
+    "source": "Minnesota MCA",
     "ela": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 7.4,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 6.8,
         "hispanic": null,
         "white": null,
-        "ell": null,
-        "sped": null,
-        "frl": null
+        "ell": 4.1,
+        "sped": 8.2,
+        "frl": 7.5
       }
     },
     "math": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 8.8,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 8.5,
         "hispanic": null,
         "white": null,
-        "ell": null,
-        "sped": null,
-        "frl": null
+        "ell": 11.4,
+        "sped": 9.6,
+        "frl": 9.0
       }
     },
     "science": {
@@ -66,8 +66,8 @@
     }
   },
   "growth": {
-    "year": null,
-    "source": "MN DOE",
+    "year": "2022-23",
+    "source": "Minnesota MDE",
     "metric_name": "Multiple Measurements Rating (MMR)",
     "ela_growth": null,
     "math_growth": null,
@@ -87,26 +87,26 @@
     }
   },
   "attendance": {
-    "year": null,
-    "avg_daily_attendance_rate": null,
-    "chronic_absenteeism_rate": null
+    "year": "2023-24",
+    "avg_daily_attendance_rate": 76.2,
+    "chronic_absenteeism_rate": 23.8
   },
   "accountability": {
-    "year": null,
-    "state_rating": null,
-    "state_percentile_rank": null,
+    "year": "2023-24",
+    "state_rating": "Identified for Support",
+    "state_percentile_rank": 5.4,
     "similar_schools_percentile": null
   },
   "trends": {
     "ela_proficiency_by_year": {
       "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2022-23": 5.6,
+      "2023-24": 7.4
     },
     "math_proficiency_by_year": {
       "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2022-23": 2.9,
+      "2023-24": 8.8
     }
   }
 }

@@ -10,6 +10,8 @@ Target schools:
   - Horizon Science Academy Twin Cities (Minneapolis, MN)
 """
 
+
+from __future__ import annotations
 import csv
 import io
 import sys

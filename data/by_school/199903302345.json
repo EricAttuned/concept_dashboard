@@ -7,7 +7,7 @@
     "state": "IA",
     "grade_band": "K-6",
     "target_region": false,
-    "last_updated": "2026-05-08T16:56:27.825946Z",
+    "last_updated": "2026-05-12T16:21:00.843015+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -35,7 +35,7 @@
     "teacher_retention_rate": null
   },
   "assessment": {
-    "year": null,
+    "year": "2024-25",
     "source": "Iowa ISASP",
     "ela": {
       "pct_proficient_all": null,
@@ -101,12 +101,14 @@
     "ela_proficiency_by_year": {
       "2021-22": null,
       "2022-23": null,
-      "2023-24": null
+      "2023-24": null,
+      "2024-25": null
     },
     "math_proficiency_by_year": {
       "2021-22": null,
       "2022-23": null,
-      "2023-24": null
+      "2023-24": null,
+      "2024-25": null
     }
   }
 }

@@ -7,7 +7,7 @@
     "state": "IN",
     "grade_band": "K-12",
     "target_region": false,
-    "last_updated": "2026-05-08T16:56:27.853122Z",
+    "last_updated": "2026-05-12T17:20:09.877701+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -28,17 +28,17 @@
     "pct_sped": null
   },
   "staff": {
-    "year": "2023-24",
+    "year": "2022-23",
     "teacher_fte": 60.0,
     "pct_teachers_certified": null,
     "pct_teachers_novice": null,
     "teacher_retention_rate": null
   },
   "assessment": {
-    "year": null,
+    "year": "2023-24",
     "source": "Indiana ILEARN",
     "ela": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 19.8,
       "by_grade": {},
       "by_subgroup": {
         "black": null,
@@ -50,7 +50,7 @@
       }
     },
     "math": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 9.8,
       "by_grade": {},
       "by_subgroup": {
         "black": null,
@@ -62,7 +62,7 @@
       }
     },
     "science": {
-      "pct_proficient_all": null
+      "pct_proficient_all": 13.3
     }
   },
   "growth": {
@@ -92,21 +92,21 @@
     "chronic_absenteeism_rate": null
   },
   "accountability": {
-    "year": null,
-    "state_rating": null,
+    "year": "2023-24",
+    "state_rating": "Does Not Meet Expectations",
     "state_percentile_rank": null,
     "similar_schools_percentile": null
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 23.2,
+      "2022-23": 24.8,
+      "2023-24": 19.8
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 20.4,
+      "2022-23": 17.2,
+      "2023-24": 9.8
     }
   }
 }

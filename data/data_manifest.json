@@ -724,24 +724,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.mischooldata.org"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.mischooldata.org/student-performance/",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.mischooldata.org"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.mischooldata.org/student-growth/",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.mischooldata.org"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.mischooldata.org/accountability-scorecard/",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "MI School Data portal requires manual navigation \u2014 automated fetch failed"
       ]
     },
     "260096708813": {
@@ -760,24 +764,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.mischooldata.org"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.mischooldata.org/student-performance/",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.mischooldata.org"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.mischooldata.org/student-growth/",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.mischooldata.org"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.mischooldata.org/accountability-scorecard/",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "MI School Data portal requires manual navigation \u2014 automated fetch failed"
       ]
     },
     "290059203174": {
@@ -796,24 +804,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://mcds.dese.mo.gov",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
       ]
     },
     "290059203205": {
@@ -832,24 +844,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://mcds.dese.mo.gov",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
       ]
     },
     "290059203244": {
@@ -868,24 +884,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://mcds.dese.mo.gov",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
       ]
     },
     "290059203241": {
@@ -904,24 +924,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://mcds.dese.mo.gov",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
       ]
     },
     "170993005092": {
@@ -940,24 +964,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Illinois ISBE data requires manual download from report card portal"
       ]
     },
     "170141206309": {
@@ -976,24 +1004,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Illinois ISBE data requires manual download from report card portal"
       ]
     },
     "170141006254": {
@@ -1012,24 +1044,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Illinois ISBE data requires manual download from report card portal"
       ]
     },
     "170993006331": {
@@ -1048,24 +1084,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Illinois ISBE data requires manual download from report card portal"
       ]
     },
     "199902002316": {
@@ -1156,24 +1196,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://education.mn.gov/MDE/Data/"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://education.mn.gov/MDE/Data/",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://education.mn.gov/MDE/Data/"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://education.mn.gov/MDE/Data/",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://education.mn.gov/MDE/Data/"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://education.mn.gov/MDE/Data/",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Minnesota MCA data requires manual download from MDE portal"
       ]
     },
     "270045005159": {
@@ -1192,24 +1236,28 @@
         },
         "state_assessment": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://education.mn.gov/MDE/Data/"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://education.mn.gov/MDE/Data/",
+          "year": "2022-23"
         },
         "state_growth": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://education.mn.gov/MDE/Data/"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://education.mn.gov/MDE/Data/",
+          "year": "2022-23"
         },
         "state_accountability": {
           "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://education.mn.gov/MDE/Data/"
+          "last_fetched": "2026-05-12",
+          "manual_url": "https://education.mn.gov/MDE/Data/",
+          "year": "2022-23"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
+        "EDFacts API blocked in current environment",
+        "Minnesota MCA data requires manual download from MDE portal"
       ]
     },
     "180006702416": {
@@ -1285,7 +1333,7 @@
       ]
     }
   },
-  "generated_at": "2026-05-08T16:56:32.008898Z",
+  "generated_at": "2026-05-12T17:46:35.181372Z",
   "network_summary": {
     "total_schools": 40,
     "schools_with_full_data": 0,

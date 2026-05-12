@@ -7,67 +7,67 @@
     "state": "MO",
     "grade_band": "PreK-5",
     "target_region": false,
-    "last_updated": "2026-05-08T16:56:27.787874Z",
+    "last_updated": "2026-05-12T17:37:00.012505+00:00",
     "data_sources": []
   },
   "enrollment": {
     "year": "2023-24",
-    "total": 350,
+    "total": 349,
     "by_grade": null,
     "by_race_ethnicity": {
-      "white": null,
-      "black": null,
-      "hispanic": null,
-      "asian": null,
+      "white": 109,
+      "black": 168,
+      "hispanic": 21,
+      "asian": 8,
       "american_indian": null,
       "pacific_islander": null,
-      "two_or_more": null
+      "two_or_more": 42
     },
-    "pct_free_reduced_lunch": null,
-    "pct_ell": null,
-    "pct_sped": null
+    "pct_free_reduced_lunch": 73.6,
+    "pct_ell": 16.33,
+    "pct_sped": 10.32
   },
   "staff": {
-    "year": null,
-    "teacher_fte": null,
-    "pct_teachers_certified": null,
+    "year": "2023-24",
+    "teacher_fte": 29.0,
+    "pct_teachers_certified": 88.9,
     "pct_teachers_novice": null,
     "teacher_retention_rate": null
   },
   "assessment": {
-    "year": null,
-    "source": "Missouri MAP Assessment",
+    "year": "2023-24",
+    "source": "Missouri MAP",
     "ela": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 24.3,
       "by_grade": {},
       "by_subgroup": {
         "black": null,
-        "hispanic": null,
+        "hispanic": 31.2,
         "white": null,
         "ell": null,
-        "sped": null,
-        "frl": null
+        "sped": 27.2,
+        "frl": 40.0
       }
     },
     "math": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 29.2,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 20.5,
         "hispanic": null,
         "white": null,
         "ell": null,
-        "sped": null,
-        "frl": null
+        "sped": 32.9,
+        "frl": 34.3
       }
     },
     "science": {
-      "pct_proficient_all": null
+      "pct_proficient_all": 39.6
     }
   },
   "growth": {
-    "year": null,
-    "source": "MO DOE",
+    "year": "2022-23",
+    "source": "Missouri DESE",
     "metric_name": "Annual Performance Report (APR) Growth Component",
     "ela_growth": null,
     "math_growth": null,
@@ -92,21 +92,21 @@
     "chronic_absenteeism_rate": null
   },
   "accountability": {
-    "year": null,
-    "state_rating": null,
+    "year": "2023-24",
+    "state_rating": "Above 5th Percentile",
     "state_percentile_rank": null,
     "similar_schools_percentile": null
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 31.1,
+      "2022-23": 31.2,
+      "2023-24": 24.3
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 17.9,
+      "2022-23": 27.4,
+      "2023-24": 29.2
     }
   }
 }

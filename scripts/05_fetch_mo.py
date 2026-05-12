@@ -8,6 +8,8 @@ Primary sources:
 Gateway Science Academy schools (all in St. Louis, MO).
 """
 
+
+from __future__ import annotations
 import csv
 import io
 import sys

@@ -7,7 +7,7 @@
     "state": "IL",
     "grade_band": "K-12",
     "target_region": false,
-    "last_updated": "2026-05-08T16:56:27.805878Z",
+    "last_updated": "2026-05-12T16:25:23.270194+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -15,50 +15,50 @@
     "total": 853,
     "by_grade": null,
     "by_race_ethnicity": {
-      "white": null,
-      "black": null,
-      "hispanic": null,
+      "white": 50,
+      "black": 80,
+      "hispanic": 716,
       "asian": null,
       "american_indian": null,
       "pacific_islander": null,
       "two_or_more": null
     },
-    "pct_free_reduced_lunch": null,
-    "pct_ell": null,
-    "pct_sped": null
+    "pct_free_reduced_lunch": 97.1,
+    "pct_ell": 25.9,
+    "pct_sped": 11.6
   },
   "staff": {
-    "year": null,
-    "teacher_fte": null,
-    "pct_teachers_certified": null,
-    "pct_teachers_novice": null,
-    "teacher_retention_rate": null
+    "year": "2023-24",
+    "teacher_fte": 75.83,
+    "pct_teachers_certified": 90.8,
+    "pct_teachers_novice": 14.1,
+    "teacher_retention_rate": 85.6
   },
   "assessment": {
-    "year": null,
-    "source": "Illinois IAR / PSAT / SAT (ISBE)",
+    "year": "2023-24",
+    "source": "Illinois IAR / SAT",
     "ela": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 52.3,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
-        "hispanic": null,
-        "white": null,
-        "ell": null,
-        "sped": null,
-        "frl": null
+        "black": 42.9,
+        "hispanic": 52.1,
+        "white": 65.6,
+        "ell": 44.3,
+        "sped": 16.4,
+        "frl": 52.0
       }
     },
     "math": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 21.8,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
-        "hispanic": null,
-        "white": null,
-        "ell": null,
-        "sped": null,
-        "frl": null
+        "black": 14.3,
+        "hispanic": 20.9,
+        "white": 40.6,
+        "ell": 9.4,
+        "sped": 1.8,
+        "frl": 21.8
       }
     },
     "science": {
@@ -66,17 +66,17 @@
     }
   },
   "growth": {
-    "year": null,
-    "source": "IL DOE",
+    "year": "2022-23",
+    "source": "Illinois ISBE",
     "metric_name": "Student Growth Percentile (SGP)",
     "ela_growth": null,
     "math_growth": null,
     "overall_growth_rating": null
   },
   "graduation": {
-    "year": null,
-    "four_year_grad_rate": null,
-    "five_year_grad_rate": null,
+    "year": "2023-24",
+    "four_year_grad_rate": 93.2,
+    "five_year_grad_rate": 91.4,
     "by_subgroup": {
       "black": null,
       "hispanic": null,
@@ -87,26 +87,26 @@
     }
   },
   "attendance": {
-    "year": null,
-    "avg_daily_attendance_rate": null,
-    "chronic_absenteeism_rate": null
+    "year": "2023-24",
+    "avg_daily_attendance_rate": 92.9,
+    "chronic_absenteeism_rate": 23.5
   },
   "accountability": {
-    "year": null,
-    "state_rating": null,
+    "year": "2023-24",
+    "state_rating": "Commendable",
     "state_percentile_rank": null,
     "similar_schools_percentile": null
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 35.9,
+      "2022-23": 37.9,
+      "2023-24": 52.3
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 19.3,
+      "2022-23": 21.8,
+      "2023-24": 21.8
     }
   }
 }

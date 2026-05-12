@@ -7,76 +7,76 @@
     "state": "MI",
     "grade_band": "PreK-12",
     "target_region": true,
-    "last_updated": "2026-05-08T16:56:27.765340Z",
+    "last_updated": "2026-05-12T17:32:50.214899+00:00",
     "data_sources": []
   },
   "enrollment": {
     "year": "2023-24",
-    "total": 600,
+    "total": 802,
     "by_grade": null,
     "by_race_ethnicity": {
-      "white": null,
-      "black": null,
-      "hispanic": null,
-      "asian": null,
-      "american_indian": null,
-      "pacific_islander": null,
-      "two_or_more": null
+      "black": 1278,
+      "hispanic": 0,
+      "white": 126,
+      "asian": 104,
+      "american_indian": 0,
+      "pacific_islander": 4,
+      "two_or_more": 44
     },
-    "pct_free_reduced_lunch": null,
-    "pct_ell": null,
-    "pct_sped": null
+    "pct_free_reduced_lunch": 96.9,
+    "pct_ell": 6.3,
+    "pct_sped": 9.2
   },
   "staff": {
-    "year": null,
-    "teacher_fte": null,
-    "pct_teachers_certified": null,
-    "pct_teachers_novice": null,
+    "year": "2023-24",
+    "teacher_fte": 42.2,
+    "pct_teachers_certified": 100.0,
+    "pct_teachers_novice": 55.7,
     "teacher_retention_rate": null
   },
   "assessment": {
-    "year": null,
+    "year": "2023-24",
     "source": "Michigan M-STEP",
     "ela": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 29.7,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 26.6,
         "hispanic": null,
         "white": null,
         "ell": null,
         "sped": null,
-        "frl": null
+        "frl": 29.4
       }
     },
     "math": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 12.9,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 11.5,
         "hispanic": null,
         "white": null,
         "ell": null,
         "sped": null,
-        "frl": null
+        "frl": 13.8
       }
     },
     "science": {
-      "pct_proficient_all": null
+      "pct_proficient_all": 10.0
     }
   },
   "growth": {
-    "year": null,
-    "source": "MI DOE",
+    "year": "2023-24",
+    "source": "Michigan MDE",
     "metric_name": "Student Growth Percentile (SGP)",
-    "ela_growth": null,
-    "math_growth": null,
-    "overall_growth_rating": null
+    "ela_growth": 57.2,
+    "math_growth": 49.2,
+    "overall_growth_rating": "Average"
   },
   "graduation": {
-    "year": null,
-    "four_year_grad_rate": null,
-    "five_year_grad_rate": null,
+    "year": "2023-24",
+    "four_year_grad_rate": 70.59,
+    "five_year_grad_rate": 93.33,
     "by_subgroup": {
       "black": null,
       "hispanic": null,
@@ -92,21 +92,21 @@
     "chronic_absenteeism_rate": null
   },
   "accountability": {
-    "year": null,
+    "year": "2022-23",
     "state_rating": null,
     "state_percentile_rank": null,
     "similar_schools_percentile": null
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 14.3,
+      "2022-23": 18.6,
+      "2023-24": 29.7
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 6.1,
+      "2022-23": 7.2,
+      "2023-24": 12.9
     }
   }
 }

@@ -9,6 +9,8 @@ Illinois schools: Chicago Math and Science Academy, Horizon Science Academy Belm
   McKinley Park, Southwest Chicago.
 """
 
+
+from __future__ import annotations
 import csv
 import io
 import sys

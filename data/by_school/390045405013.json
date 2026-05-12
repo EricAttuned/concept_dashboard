@@ -7,42 +7,42 @@
     "state": "OH",
     "grade_band": "K-8",
     "target_region": false,
-    "last_updated": "2026-05-08T16:56:27.696591Z",
+    "last_updated": "2026-05-12T17:32:50.243680+00:00",
     "data_sources": []
   },
   "enrollment": {
     "year": "2023-24",
-    "total": 255,
+    "total": 246,
     "by_grade": null,
     "by_race_ethnicity": {
-      "white": null,
-      "black": null,
-      "hispanic": null,
+      "white": 21,
+      "black": 136,
+      "hispanic": 70,
       "asian": null,
       "american_indian": null,
       "pacific_islander": null,
-      "two_or_more": null
+      "two_or_more": 19
     },
-    "pct_free_reduced_lunch": null,
-    "pct_ell": null,
-    "pct_sped": null
+    "pct_free_reduced_lunch": 100.0,
+    "pct_ell": 23.7,
+    "pct_sped": 11.3
   },
   "staff": {
-    "year": null,
-    "teacher_fte": null,
-    "pct_teachers_certified": null,
-    "pct_teachers_novice": null,
+    "year": "2023-24",
+    "teacher_fte": 20.0,
+    "pct_teachers_certified": 100.0,
+    "pct_teachers_novice": 39.6,
     "teacher_retention_rate": null
   },
   "assessment": {
-    "year": null,
+    "year": "2023-24",
     "source": "Ohio AIR / Ohio Report Card",
     "ela": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 38.2,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
-        "hispanic": null,
+        "black": 35.7,
+        "hispanic": 43.2,
         "white": null,
         "ell": null,
         "sped": null,
@@ -50,11 +50,11 @@
       }
     },
     "math": {
-      "pct_proficient_all": null,
+      "pct_proficient_all": 12.8,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
-        "hispanic": null,
+        "black": 10.1,
+        "hispanic": 18.2,
         "white": null,
         "ell": null,
         "sped": null,
@@ -62,16 +62,16 @@
       }
     },
     "science": {
-      "pct_proficient_all": null
+      "pct_proficient_all": 53.8
     }
   },
   "growth": {
-    "year": null,
+    "year": "2023-24",
     "source": "OH DOE",
     "metric_name": "Value-Added Index (VAI)",
-    "ela_growth": null,
-    "math_growth": null,
-    "overall_growth_rating": null
+    "ela_growth": 5.15,
+    "math_growth": 5.15,
+    "overall_growth_rating": "5 Stars"
   },
   "graduation": {
     "year": null,
@@ -87,26 +87,26 @@
     }
   },
   "attendance": {
-    "year": null,
-    "avg_daily_attendance_rate": null,
+    "year": "2023-24",
+    "avg_daily_attendance_rate": 87.3,
     "chronic_absenteeism_rate": null
   },
   "accountability": {
-    "year": null,
-    "state_rating": null,
-    "state_percentile_rank": null,
+    "year": "2023-24",
+    "state_rating": "2 Stars",
+    "state_percentile_rank": 52.4,
     "similar_schools_percentile": null
   },
   "trends": {
     "ela_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 31.2,
+      "2022-23": 25.9,
+      "2023-24": 38.2
     },
     "math_proficiency_by_year": {
-      "2021-22": null,
-      "2022-23": null,
-      "2023-24": null
+      "2021-22": 21.0,
+      "2022-23": 28.4,
+      "2023-24": 12.8
     }
   }
 }
