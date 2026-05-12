@@ -7,7 +7,7 @@
     "state": "MN",
     "grade_band": "K-8",
     "target_region": true,
-    "last_updated": "2026-05-12T18:07:10.558290+00:00",
+    "last_updated": "2026-05-12T18:38:33.857050+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -38,7 +38,7 @@
     "year": "2023-24",
     "source": "Minnesota MCA",
     "ela": {
-      "pct_proficient_all": 7.4,
+      "pct_proficient_all": 7.8,
       "by_grade": {},
       "by_subgroup": {
         "black": 6.8,
@@ -50,7 +50,7 @@
       }
     },
     "math": {
-      "pct_proficient_all": 8.8,
+      "pct_proficient_all": 8.2,
       "by_grade": {},
       "by_subgroup": {
         "black": 8.5,

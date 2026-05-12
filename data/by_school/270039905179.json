@@ -7,7 +7,7 @@
     "state": "MN",
     "grade_band": "K-12",
     "target_region": true,
-    "last_updated": "2026-05-12T18:07:10.562762+00:00",
+    "last_updated": "2026-05-12T18:38:34.791335+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -78,12 +78,12 @@
     "four_year_grad_rate": 77.5,
     "five_year_grad_rate": 84.85,
     "by_subgroup": {
-      "black": null,
+      "black": 77.5,
       "hispanic": null,
       "white": null,
-      "ell": null,
+      "ell": 76.92,
       "sped": null,
-      "frl": null
+      "frl": 76.92
     }
   },
   "attendance": {

@@ -7,7 +7,7 @@
     "state": "MI",
     "grade_band": "PreK-12",
     "target_region": true,
-    "last_updated": "2026-05-12T18:07:10.549602+00:00",
+    "last_updated": "2026-05-12T18:15:34.002027+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -41,12 +41,12 @@
       "pct_proficient_all": 29.7,
       "by_grade": {},
       "by_subgroup": {
-        "black": 26.6,
+        "black": 44.0,
         "hispanic": null,
         "white": null,
         "ell": null,
         "sped": null,
-        "frl": 29.4
+        "frl": 40.2
       }
     },
     "math": {
@@ -58,7 +58,7 @@
         "white": null,
         "ell": null,
         "sped": null,
-        "frl": 13.8
+        "frl": 31.6
       }
     },
     "science": {

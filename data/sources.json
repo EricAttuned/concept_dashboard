@@ -1,0 +1,134 @@
+{
+  "description": "Public-source links for every state DOE dataset used in the dashboard. Region tab surfaces these so values can be validated against the underlying reports.",
+  "last_reviewed": "2026-05-12",
+  "by_state": {
+    "OH": {
+      "state_name": "Ohio",
+      "agency": "Ohio Department of Education and Workforce",
+      "school_year_used": "2023-24",
+      "portal": {
+        "label": "Ohio School Report Cards (per-school)",
+        "url": "https://reportcard.education.ohio.gov/"
+      },
+      "links": [
+        {"label": "Search any school's report card", "url": "https://reportcard.education.ohio.gov/", "notes": "Type school name to view Performance Index, achievement, grad rate"},
+        {"label": "ODEW Download Data (bulk files)", "url": "https://reports.education.ohio.gov/download-data", "notes": "Source for our achievement, ethnic/econ/ELL/SpEd disaggregated CSVs"},
+        {"label": "Achievement file (school-level)", "url": "https://reports.education.ohio.gov/download-data"},
+        {"label": "Graduation Rate file", "url": "https://reports.education.ohio.gov/download-data"}
+      ],
+      "metrics_sourced": ["ela_proficient_pct (PI proxy + actual prof.)", "math_proficient_pct", "graduation rate + 5yr", "subgroup grad", "teacher FTE/cert/novice", "accountability rating (overall component grade)"],
+      "known_gaps": ["chronic absenteeism not published per-school in any standard download"]
+    },
+    "MI": {
+      "state_name": "Michigan",
+      "agency": "MI School Data (CEPI / MDE)",
+      "school_year_used": "2023-24",
+      "portal": {
+        "label": "MI School Data — school search",
+        "url": "https://www.mischooldata.org/"
+      },
+      "links": [
+        {"label": "MI School Data home", "url": "https://www.mischooldata.org/"},
+        {"label": "Assessment results download", "url": "https://www.mischooldata.org/state-assessments/", "notes": "M-STEP/PSAT proficiency"},
+        {"label": "Student Counts (Enrollment)", "url": "https://www.mischooldata.org/student-counts/"},
+        {"label": "Educator Effectiveness / Workforce", "url": "https://www.mischooldata.org/teacher-and-administrator-effectiveness/"}
+      ],
+      "metrics_sourced": ["proficiency (overall + subgroups)", "enrollment + demographics", "teacher FTE/cert/novice"],
+      "known_gaps": ["chronic absenteeism not in standard MI download set"]
+    },
+    "MO": {
+      "state_name": "Missouri",
+      "agency": "Missouri Department of Elementary and Secondary Education (DESE)",
+      "school_year_used": "2023-24",
+      "portal": {
+        "label": "Missouri Comprehensive Data System (MCDS)",
+        "url": "https://apps.dese.mo.gov/MCDS/home.aspx"
+      },
+      "links": [
+        {"label": "MCDS portal (search any school)", "url": "https://apps.dese.mo.gov/MCDS/home.aspx"},
+        {"label": "Gateway Science Acad / St. Louis APR (PDF)", "url": "https://apps.dese.mo.gov/MCDS/Visualizations/APR.aspx?rp=APR&y=2024"},
+        {"label": "MAP Performance + Proportional Attendance", "url": "https://apps.dese.mo.gov/MCDS/Visualizations/PerformanceLevel.aspx"},
+        {"label": "Educator Profile (Teacher Quality)", "url": "https://apps.dese.mo.gov/MCDS/Visualizations/EducatorQuality.aspx"}
+      ],
+      "metrics_sourced": ["MAP proficiency", "Proportional Attendance → chronic absenteeism", "APR % (accountability)", "teacher FTE/cert/novice/retention"],
+      "known_gaps": ["APR points totals require Tableau lookups — overall % score sourced from APR PDF"]
+    },
+    "MN": {
+      "state_name": "Minnesota",
+      "agency": "Minnesota Department of Education (MDE)",
+      "school_year_used": "2023-24",
+      "portal": {
+        "label": "MN Report Card",
+        "url": "https://rc.education.mn.gov/"
+      },
+      "links": [
+        {"label": "MN Report Card home (per-school)", "url": "https://rc.education.mn.gov/"},
+        {"label": "MCA Public Assessment Results", "url": "https://education.mn.gov/MDE/dse/test/mca/", "notes": "MCA Math/Reading/Science proficiency files"},
+        {"label": "MMR / North Star Accountability Files", "url": "https://education.mn.gov/MDE/dse/account/"},
+        {"label": "Staff Workforce Data Reports", "url": "https://w20.education.state.mn.us/MDEAnalytics/DataReports.jsp"}
+      ],
+      "metrics_sourced": ["MCA proficiency (overall + subgroups)", "consistent attendance → chronic absenteeism", "graduation rate + subgroups", "teacher FTE/cert/novice"],
+      "known_gaps": []
+    },
+    "IL": {
+      "state_name": "Illinois",
+      "agency": "Illinois State Board of Education (ISBE)",
+      "school_year_used": "2023-24",
+      "portal": {
+        "label": "Illinois Report Card",
+        "url": "https://www.illinoisreportcard.com/"
+      },
+      "links": [
+        {"label": "Illinois Report Card (per-school)", "url": "https://www.illinoisreportcard.com/", "notes": "Type school name; tabs for Academic Progress, Climate, Teachers"},
+        {"label": "Assessment + Accountability Data Library", "url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx"},
+        {"label": "Teacher Workforce data", "url": "https://www.isbe.net/Pages/Teacher-Workforce-Data.aspx"}
+      ],
+      "metrics_sourced": ["IAR/SAT proficiency + subgroups", "SGP growth", "graduation rate + subgroups", "chronic absenteeism", "teacher cert/novice/retention", "accountability designation"],
+      "known_gaps": []
+    },
+    "IN": {
+      "state_name": "Indiana",
+      "agency": "Indiana Department of Education (IDOE)",
+      "school_year_used": "2023-24",
+      "portal": {
+        "label": "INView School Locator",
+        "url": "https://inview.doe.in.gov/"
+      },
+      "links": [
+        {"label": "INView school search", "url": "https://inview.doe.in.gov/"},
+        {"label": "IDOE Data Center", "url": "https://www.in.gov/doe/it/data-center-and-reports/"},
+        {"label": "ILEARN Assessment results (Ethnicity/EL/SpEd/FRL files)", "url": "https://www.in.gov/doe/students/assessment/ilearn/"}
+      ],
+      "metrics_sourced": ["ILEARN proficiency overall + subgroups", "Federal accountability rating", "teacher data (some)"],
+      "known_gaps": ["retention rate not published at school level"]
+    },
+    "IA": {
+      "state_name": "Iowa",
+      "agency": "Iowa Department of Education",
+      "school_year_used": "2023-24",
+      "portal": {
+        "label": "Iowa School Performance Profiles",
+        "url": "https://educateiowa.gov/data/iowa-school-performance-profiles"
+      },
+      "links": [
+        {"label": "Iowa School Performance Profiles", "url": "https://educateiowa.gov/data/iowa-school-performance-profiles"},
+        {"label": "ISASP Assessment Results", "url": "https://educate.iowa.gov/pk-12/educator-quality/iowa-statewide-assessment-student-progress-isasp"},
+        {"label": "Iowa Education Statistics", "url": "https://educate.iowa.gov/pk-12/data/education-statistics"},
+        {"label": "BEDS Teacher / Staff File", "url": "https://educate.iowa.gov/pk-12/data/education-statistics", "notes": "ia_teacher_info_2023-24 used for HSA Des Moines staff"}
+      ],
+      "metrics_sourced": ["ISASP proficiency", "accountability index", "district-level staff FTE/novice (for HSA Des Moines)"],
+      "known_gaps": ["HSA Davenport closed — no current data"]
+    }
+  },
+  "by_region": {
+    "North Ohio": "OH",
+    "Columbus": "OH",
+    "Dayton/Cincinnati": "OH",
+    "Michigan": "MI",
+    "Missouri": "MO",
+    "Illinois": "IL",
+    "Iowa": "IA",
+    "Minnesota": "MN",
+    "Indiana": "IN"
+  }
+}

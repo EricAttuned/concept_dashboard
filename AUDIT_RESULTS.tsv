@@ -1,0 +1,126 @@
+state	nces_id	school_name	metric	json_value	source_value	status	source_file	notes
+IL	170993005092	Chicago Math and Science Academy	attendance.rate	92.7	92.7	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	attendance.chronic	22.9	22.9	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	graduation.4yr	87.9	87.9	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	graduation.5yr	92.9	92.9	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	grad.sub.black	92.3	92.3	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	grad.sub.hispanic	79.4	79.4	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	grad.sub.white	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	grad.sub.ell	85.3	85.3	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	grad.sub.sped	76.9	76.9	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	grad.sub.frl	86.3	86.3	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	staff.retention	82.7	82.7	OK	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	attendance.rate	91.7	91.7	OK	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	attendance.chronic	33.7	33.7	OK	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	graduation.4yr	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	graduation.5yr	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	grad.sub.black	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	grad.sub.hispanic	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	grad.sub.white	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	grad.sub.ell	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	grad.sub.sped	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	grad.sub.frl	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	staff.retention	69.2	69.2	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	attendance.rate	92.9	92.9	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	attendance.chronic	23.5	23.5	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	graduation.4yr	93.2	93.2	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	graduation.5yr	91.4	91.4	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	grad.sub.black	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	grad.sub.hispanic	94.2	94.2	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	grad.sub.white	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	grad.sub.ell	100.0	100.0	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	grad.sub.sped	91.7	91.7	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	grad.sub.frl	93.0	93.0	OK	il_assessment_general_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	staff.retention	85.6	85.6	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	attendance.rate	92.7	92.7	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	attendance.chronic	21.4	21.4	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	graduation.4yr	80.4	80.4	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	graduation.5yr	94.7	94.7	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	grad.sub.black	82.4	82.4	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	grad.sub.hispanic	78.8	78.8	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	grad.sub.white	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	grad.sub.ell	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	grad.sub.sped	—	—	OK_NULL	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	grad.sub.frl	80.0	80.0	OK	il_assessment_general_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	staff.retention	74.4	74.4	OK	il_assessment_general_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	assess.ela	33.7	33.7	OK	il_assessment_iar_2023-24.csv	
+IL	170993005092	Chicago Math and Science Academy	assess.math	15.1	15.1	OK	il_assessment_iar_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	assess.ela	38.7	38.7	OK	il_assessment_iar_2023-24.csv	
+IL	170141206309	Horizon Science Academy Belmont	assess.math	15.8	15.8	OK	il_assessment_iar_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	assess.ela	52.3	52.3	OK	il_assessment_iar_2023-24.csv	
+IL	170141006254	Horizon Science Academy McKinley Park	assess.math	21.8	21.8	OK	il_assessment_iar_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	assess.ela	29.3	29.3	OK	il_assessment_iar_2023-24.csv	
+IL	170993006331	Horizon Science Academy Southwest Chicago	assess.math	11.3	11.3	OK	il_assessment_iar_2023-24.csv	
+MN	270045005159	Horizon Science Academy Twin Cities	assess.ela	7.8	7.8	OK	mn_mca_reading_2023-24.csv	Grade=0 All students
+MN	270045005159	Horizon Science Academy Twin Cities	assess.math	8.2	8.2	OK	mn_mca_math_2023-24.csv	Grade=0 All students
+MN	270039905179	Minnesota Math and Science Academy	assess.ela	22.8	22.8	OK	mn_mca_reading_2023-24.csv	Grade=0 All students
+MN	270039905179	Minnesota Math and Science Academy	assess.math	12.9	12.9	OK	mn_mca_math_2023-24.csv	Grade=0 All students
+MO	290059203174	Gateway Science Academy of St. Louis - Smiley	attendance.proportional	67.9	67.9	OK	mo_proportional_attendance.csv	
+MO	290059203174	Gateway Science Academy of St. Louis - Smiley	attendance.chronic	32.1	32.1	OK	mo_proportional_attendance.csv	
+MO	290059203205	Gateway Science Academy of St. Louis - High	attendance.proportional	62.7	62.7	OK	mo_proportional_attendance.csv	
+MO	290059203205	Gateway Science Academy of St. Louis - High	attendance.chronic	37.3	37.3	OK	mo_proportional_attendance.csv	
+MO	290059203244	Gateway Science Academy of St. Louis - Middle	attendance.proportional	66.3	66.3	OK	mo_proportional_attendance.csv	
+MO	290059203244	Gateway Science Academy of St. Louis - Middle	attendance.chronic	33.7	33.7	OK	mo_proportional_attendance.csv	
+MO	290059203241	Gateway Science Academy of St. Louis - South	attendance.proportional	69.3	69.3	OK	mo_proportional_attendance.csv	
+MO	290059203241	Gateway Science Academy of St. Louis - South	attendance.chronic	30.7	30.7	OK	mo_proportional_attendance.csv	
+OH	390004002939	Horizon Science Academy Cleveland High School	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390004002939	Horizon Science Academy Cleveland High School	graduation.4yr	89.3	89.3	OK	Graduation_Component.csv	
+OH	390004002939	Horizon Science Academy Cleveland High School	graduation.5yr	90.5	90.5	OK	Graduation_Component.csv	
+OH	390004202978	Horizon Science Academy Columbus High School Morse Road Campus	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390004202978	Horizon Science Academy Columbus High School Morse Road Campus	graduation.4yr	94.2	94.2	OK	Graduation_Component.csv	
+OH	390004202978	Horizon Science Academy Columbus High School Morse Road Campus	graduation.5yr	98.4	98.4	OK	Graduation_Component.csv	
+OH	390044105000	Horizon Science Academy Cincinnati	accountability.rating	1 Star	1  Star	OK	oh_achievement_2023-24.csv	
+OH	390044105000	Horizon Science Academy Cincinnati	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390044105000	Horizon Science Academy Cincinnati	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390044405003	Horizon Science Academy Dayton Elementary School	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390044405003	Horizon Science Academy Dayton Elementary School	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390044405003	Horizon Science Academy Dayton Elementary School	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390045105010	Horizon Science Academy Springfield	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390045105010	Horizon Science Academy Springfield	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390045105010	Horizon Science Academy Springfield	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390045405013	Horizon Science Academy Denison	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390045405013	Horizon Science Academy Denison	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390045405013	Horizon Science Academy Denison	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390047005029	Horizon Science Academy Cleveland Elementary School	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390047005029	Horizon Science Academy Cleveland Elementary School	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390047005029	Horizon Science Academy Cleveland Elementary School	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390051005220	Horizon Science Academy Toledo	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390051005220	Horizon Science Academy Toledo	graduation.4yr	100.0	100.0	OK	Graduation_Component.csv	
+OH	390051005220	Horizon Science Academy Toledo	graduation.5yr	84.4	84.4	OK	Graduation_Component.csv	
+OH	390064505319	Noble Academy Columbus	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390064505319	Noble Academy Columbus	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390064505319	Noble Academy Columbus	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390064605345	Noble Academy Euclid	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390064605345	Noble Academy Euclid	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390064605345	Noble Academy Euclid	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390132205440	Horizon Science Academy Columbus Middle School	accountability.rating	1 Star	1  Star	OK	oh_achievement_2023-24.csv	
+OH	390132205440	Horizon Science Academy Columbus Middle School	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390132205440	Horizon Science Academy Columbus Middle School	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390135305483	Horizon Science Academy Columbus Elementary School	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390135305483	Horizon Science Academy Columbus Elementary School	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390135305483	Horizon Science Academy Columbus Elementary School	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390136505544	Horizon Science Academy Lorain	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390136505544	Horizon Science Academy Lorain	graduation.4yr	97.5	97.5	OK	Graduation_Component.csv	
+OH	390136505544	Horizon Science Academy Lorain	graduation.5yr	100.0	100.0	OK	Graduation_Component.csv	
+OH	390136605556	Horizon Science Academy Dayton High School	accountability.rating	1 Star	1  Star	OK	oh_achievement_2023-24.csv	
+OH	390136605556	Horizon Science Academy Dayton High School	graduation.4yr	75.0	75.0	OK	Graduation_Component.csv	
+OH	390136605556	Horizon Science Academy Dayton High School	graduation.5yr	95.1	95.1	OK	Graduation_Component.csv	
+OH	390138305625	Horizon Science Academy Dayton Downtown	accountability.rating	1 Star	1  Star	OK	oh_achievement_2023-24.csv	
+OH	390138305625	Horizon Science Academy Dayton Downtown	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390138305625	Horizon Science Academy Dayton Downtown	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390138905567	Horizon Science Academy Youngstown	accountability.rating	2 Stars	2  Stars	OK	oh_achievement_2023-24.csv	
+OH	390138905567	Horizon Science Academy Youngstown	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390138905567	Horizon Science Academy Youngstown	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390160605963	Horizon Science Academy Columbus Primary School	accountability.rating	NR	NR	OK	oh_achievement_2023-24.csv	
+OH	390160605963	Horizon Science Academy Columbus Primary School	graduation.4yr	—	—	OK_NULL	Graduation_Component.csv	
+OH	390160605963	Horizon Science Academy Columbus Primary School	graduation.5yr	—	—	OK_NULL	Graduation_Component.csv	
+IN	180009402487	Indiana Math and Science Academy North	assess.ela	19.8	19.8	OK	in_ilearn_ela_2023-24.csv	
+IN	180009402487	Indiana Math and Science Academy North	assess.math	9.8	9.8	OK	in_ilearn_math_2023-24.csv	
+IN	180006702416	Indiana Math and Science Academy West	assess.ela	49.4	49.4	OK	in_ilearn_ela_2023-24.csv	
+IN	180006702416	Indiana Math and Science Academy West	assess.math	53.8	53.8	OK	in_ilearn_math_2023-24.csv	
+IA	199902002316	Horizon Science Academy Des Moines	staff.teacher_fte	9.0	9.0	OK	ia_teacher_info_2023-24.csv	
+IA	199902002316	Horizon Science Academy Des Moines	staff.novice	22.2	22.2	OK	ia_teacher_info_2023-24.csv	
+MI	260096708048	Michigan Math and Science Academy Lorraine	assess.ela	20.0	20.0	OK	mi_mstep_grades_3-8_2023-24.csv	Weighted across grades
+MI	260096708048	Michigan Math and Science Academy Lorraine	assess.math	20.0	20.0	OK	mi_mstep_grades_3-8_2023-24.csv	Weighted across grades
+MI	260096708813	Michigan Math and Science Academy Dequindre	assess.ela	29.7	29.7	OK	mi_mstep_grades_3-8_2023-24.csv	Weighted across grades
+MI	260096708813	Michigan Math and Science Academy Dequindre	assess.math	12.9	12.9	OK	mi_mstep_grades_3-8_2023-24.csv	Weighted across grades

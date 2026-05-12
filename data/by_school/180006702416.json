@@ -7,7 +7,7 @@
     "state": "IN",
     "grade_band": "K-8",
     "target_region": false,
-    "last_updated": "2026-05-12T18:07:10.556708+00:00",
+    "last_updated": "2026-05-12T18:15:27.157945+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -41,24 +41,24 @@
       "pct_proficient_all": 49.4,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
-        "hispanic": null,
+        "black": 55.4,
+        "hispanic": 34.7,
         "white": null,
-        "ell": null,
-        "sped": null,
-        "frl": null
+        "ell": 60.1,
+        "sped": 52.7,
+        "frl": 34.4
       }
     },
     "math": {
       "pct_proficient_all": 53.8,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
-        "hispanic": null,
+        "black": 57.5,
+        "hispanic": 44.6,
         "white": null,
-        "ell": null,
-        "sped": null,
-        "frl": null
+        "ell": 59.5,
+        "sped": 57.0,
+        "frl": 36.5
       }
     },
     "science": {

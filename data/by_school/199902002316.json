@@ -7,7 +7,7 @@
     "state": "IA",
     "grade_band": "PreK-6",
     "target_region": false,
-    "last_updated": "2026-05-12T18:07:10.561946+00:00",
+    "last_updated": "2026-05-12T18:21:06.156963+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -28,10 +28,10 @@
     "pct_sped": null
   },
   "staff": {
-    "year": "2022-23",
+    "year": "2023-24",
     "teacher_fte": 9.0,
     "pct_teachers_certified": null,
-    "pct_teachers_novice": null,
+    "pct_teachers_novice": 22.2,
     "teacher_retention_rate": null
   },
   "assessment": {

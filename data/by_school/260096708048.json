@@ -7,7 +7,7 @@
     "state": "MI",
     "grade_band": "PreK-5",
     "target_region": true,
-    "last_updated": "2026-05-12T18:07:10.555856+00:00",
+    "last_updated": "2026-05-12T18:15:31.476181+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -41,7 +41,7 @@
       "pct_proficient_all": 20.0,
       "by_grade": {},
       "by_subgroup": {
-        "black": 24.0,
+        "black": 47.8,
         "hispanic": null,
         "white": null,
         "ell": null,

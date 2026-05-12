@@ -7,7 +7,7 @@
     "state": "OH",
     "grade_band": "K-12",
     "target_region": false,
-    "last_updated": "2026-05-12T18:07:10.560220+00:00",
+    "last_updated": "2026-05-12T18:44:57.230756+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -74,9 +74,9 @@
     "overall_growth_rating": "4 Stars"
   },
   "graduation": {
-    "year": null,
-    "four_year_grad_rate": null,
-    "five_year_grad_rate": null,
+    "year": "2023-24",
+    "four_year_grad_rate": 100.0,
+    "five_year_grad_rate": 84.4,
     "by_subgroup": {
       "black": null,
       "hispanic": null,

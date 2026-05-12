@@ -7,7 +7,7 @@
     "state": "MO",
     "grade_band": "6-8",
     "target_region": false,
-    "last_updated": "2026-05-12T18:07:10.567261+00:00",
+    "last_updated": "2026-05-12T18:19:33.014382+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -41,24 +41,26 @@
       "pct_proficient_all": 42.5,
       "by_grade": {},
       "by_subgroup": {
-        "black": 44.0,
-        "hispanic": 52.3,
-        "white": null,
+        "black": 10.5,
+        "hispanic": 13.9,
+        "white": 53.2,
         "ell": null,
         "sped": 44.6,
-        "frl": 42.5
+        "frl": 42.5,
+        "asian": 0.0
       }
     },
     "math": {
       "pct_proficient_all": 51.6,
       "by_grade": {},
       "by_subgroup": {
-        "black": 39.1,
-        "hispanic": 59.9,
-        "white": null,
+        "black": 8.7,
+        "hispanic": 13.9,
+        "white": 61.2,
         "ell": null,
         "sped": 54.0,
-        "frl": 50.2
+        "frl": 50.2,
+        "asian": 62.5
       }
     },
     "science": {
@@ -87,9 +89,9 @@
     }
   },
   "attendance": {
-    "year": null,
-    "avg_daily_attendance_rate": null,
-    "chronic_absenteeism_rate": null
+    "year": "2023-24",
+    "avg_daily_attendance_rate": 66.3,
+    "chronic_absenteeism_rate": 33.7
   },
   "accountability": {
     "year": "2023-24",

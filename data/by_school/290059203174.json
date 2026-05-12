@@ -7,7 +7,7 @@
     "state": "MO",
     "grade_band": "PreK-5",
     "target_region": false,
-    "last_updated": "2026-05-12T18:07:10.552328+00:00",
+    "last_updated": "2026-05-12T18:19:33.006096+00:00",
     "data_sources": []
   },
   "enrollment": {
@@ -41,9 +41,9 @@
       "pct_proficient_all": 54.0,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 0.0,
         "hispanic": 54.8,
-        "white": null,
+        "white": 54.8,
         "ell": null,
         "sped": 48.8,
         "frl": 45.7
@@ -53,9 +53,9 @@
       "pct_proficient_all": 51.2,
       "by_grade": {},
       "by_subgroup": {
-        "black": null,
+        "black": 0.0,
         "hispanic": 50.7,
-        "white": null,
+        "white": 50.7,
         "ell": null,
         "sped": 53.4,
         "frl": 52.2
@@ -87,9 +87,9 @@
     }
   },
   "attendance": {
-    "year": null,
-    "avg_daily_attendance_rate": null,
-    "chronic_absenteeism_rate": null
+    "year": "2023-24",
+    "avg_daily_attendance_rate": 67.9,
+    "chronic_absenteeism_rate": 32.1
   },
   "accountability": {
     "year": "2023-24",
