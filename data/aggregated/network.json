@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-12T18:21:10.311493Z",
+  "generated_at": "2026-05-13T14:32:41.032960Z",
   "total_schools": 33,
   "total_enrollment": 13553,
   "ela_proficiency_weighted_avg": 39.3,
   "ela_proficiency_schools_included": 31,
-  "math_proficiency_weighted_avg": 27.2,
+  "math_proficiency_weighted_avg": 27.1,
   "math_proficiency_schools_included": 31,
   "teacher_fte_total": 1085.9,
   "pct_teachers_certified_avg": 96.3,
-  "grad_rate_4yr_avg": 83.5,
+  "grad_rate_4yr_avg": 86.6,
   "accountability_distribution": {
     "2 Stars": 12,
     "1 Star": 4,
@@ -44,6 +44,28 @@
     "2023-24",
     "2024-25"
   ],
+  "trends": {
+    "ela_proficiency_by_year": {
+      "2021-22": 33.9,
+      "2022-23": 36.9,
+      "2023-24": 39.2
+    },
+    "math_proficiency_by_year": {
+      "2021-22": 22.1,
+      "2022-23": 24.0,
+      "2023-24": 26.2
+    },
+    "ela_schools_per_year": {
+      "2021-22": 31,
+      "2022-23": 31,
+      "2023-24": 30
+    },
+    "math_schools_per_year": {
+      "2021-22": 31,
+      "2022-23": 31,
+      "2023-24": 30
+    }
+  },
   "schools": [
     {
       "nces_id": "390045105010",
@@ -473,8 +495,8 @@
       "grade_band": "K-8",
       "target_region": true,
       "enrollment": 350,
-      "ela_pct": 7.4,
-      "math_pct": 8.8,
+      "ela_pct": 7.8,
+      "math_pct": 8.2,
       "growth_rating": null,
       "accountability": "Identified for Support",
       "assessment_year": "2023-24"

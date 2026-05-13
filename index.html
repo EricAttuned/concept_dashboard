@@ -180,6 +180,10 @@
   .data-dot.missing { background: var(--red); }
   .data-dot.na { background: var(--gray); }
 
+  /* Benchmark comparison badges */
+  .bench-better { color: var(--green); }
+  .bench-worse { color: var(--red); }
+
   /* ── Progress Bars ────────────────────────────────────────── */
   .pill-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
   .pill-bar-label { font-size: 12px; color: var(--text-secondary); width: 90px; flex-shrink: 0; }
@@ -447,7 +451,15 @@
   <div class="stat-grid" id="region-stat-grid"></div>
 
   <div class="card">
-    <div class="card-header"><span class="card-title">Schools in Region</span></div>
+    <div class="card-header">
+      <span class="card-title">Schools in Region</span>
+      <span style="font-size:12px;color:var(--text-muted);display:flex;gap:14px;align-items:center">
+        <span style="display:flex;align-items:center;gap:4px"><span class="data-dot ok"></span>Full data</span>
+        <span style="display:flex;align-items:center;gap:4px"><span class="data-dot partial"></span>Partial</span>
+        <span style="display:flex;align-items:center;gap:4px"><span class="data-dot missing"></span>Mostly missing</span>
+        <span style="display:flex;align-items:center;gap:4px"><span class="data-dot na"></span>N/A</span>
+      </span>
+    </div>
     <div class="card-body" style="padding:0">
       <div class="data-table-wrap">
         <table class="data-table" id="region-table">
@@ -460,7 +472,7 @@
               <th>Math %</th>
               <th>Growth</th>
               <th>State Rating</th>
-              <th>Data</th>
+              <th title="Hover over the dot to see which categories are populated">Data</th>
             </tr>
           </thead>
           <tbody id="region-table-body"></tbody>
@@ -642,6 +654,7 @@ const state = {
   network: null,
   byRegion: null,
   sources: null,
+  benchmarks: null,
   schoolRecords: {},  // nces_id → full record
   selectedRegion: null,
   selectedSchool: null,
@@ -680,10 +693,74 @@ function statusCell(status) {
   return `<div class="status-cell ${cls}">${sym}</div>`;
 }
 
-function dataDot(status) {
+function benchDelta(ncesId, schoolVal, metric, isHs) {
+  // Inline "vs state" delta for region tables — compact.
+  const bench = window.state?.benchmarks?.by_school?.[ncesId];
+  if (!bench || schoolVal == null) return "";
+  const stateB = bench.state || {};
+  const key = (metric === "ela" || metric === "math")
+    ? (isHs ? metric + "_sat" : metric + "_iar")
+    : metric;
+  let v = stateB[key];
+  if (v == null && (metric === "ela" || metric === "math")) {
+    v = stateB[metric + "_iar"] || stateB[metric + "_sat"];
+  }
+  if (v == null) return "";
+  const diff = schoolVal - v;
+  const cls = diff >= 0 ? "bench-better" : "bench-worse";
+  const sign = diff > 0 ? "+" : "";
+  return `<span class="${cls}" style="font-size:11px;margin-left:6px" title="vs ${bench.state_code} state avg ${v.toFixed(1)}%">${sign}${diff.toFixed(1)}</span>`;
+}
+
+function benchmarkRow(ncesId, schoolVal, metric, isHs, invertColor) {
+  // metric: "ela" | "math" | "attendance" | "chronic" | "grad_4yr" | "grad_5yr" | "retention"
+  // schoolVal: school's value. invertColor: when set, lower is better (chronic absenteeism).
+  const bench = window.state?.benchmarks?.by_school?.[ncesId];
+  if (!bench || schoolVal == null) return "";
+  const stateB = bench.state || {};
+  const distB = bench.district || {};
+  const stateKey = (metric === "ela" || metric === "math")
+    ? (isHs ? metric + "_sat" : metric + "_iar")
+    : metric;
+  let stateV = stateB[stateKey];
+  let distV = distB[stateKey];
+  // Fallback: if HS metric not available, try the non-HS version (or vice versa)
+  if (stateV == null && (metric === "ela" || metric === "math")) {
+    stateV = stateB[metric + "_iar"] || stateB[metric + "_sat"] || stateB[metric];
+    distV = distV ?? (distB[metric + "_iar"] || distB[metric + "_sat"] || distB[metric]);
+  }
+  if (stateV == null && distV == null) return "";
+
+  const cmp = (myV, otherV) => {
+    if (otherV == null) return "";
+    const diff = myV - otherV;
+    const cssCls = invertColor
+      ? (diff <= 0 ? "bench-better" : "bench-worse")
+      : (diff >= 0 ? "bench-better" : "bench-worse");
+    const sign = diff > 0 ? "+" : "";
+    return `<span class="${cssCls}" style="font-weight:600">${sign}${diff.toFixed(1)}</span>`;
+  };
+
+  const items = [];
+  if (distV != null) {
+    items.push(`<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:12px"><span style="color:var(--text-muted)">vs ${(bench.district_name || "district").substring(0,28)}: ${distV.toFixed(1)}%</span>${cmp(schoolVal, distV)}</div>`);
+  }
+  if (stateV != null) {
+    items.push(`<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:12px"><span style="color:var(--text-muted)">vs ${bench.state_code || "state"} state: ${stateV.toFixed(1)}%</span>${cmp(schoolVal, stateV)}</div>`);
+  }
+  if (!items.length) return "";
+  return `<div style="margin-top:8px;padding-top:8px;border-top:1px solid #eee">${items.join("")}</div>`;
+}
+
+function dataDot(status, tooltip) {
   const map = { ok: "ok", partial: "partial", suppressed: "partial",
-                needs_manual_download: "missing", error: "missing" };
-  return `<span class="data-dot ${map[status] || "na"}"></span>`;
+                needs_manual_download: "missing", error: "missing",
+                missing: "missing", not_applicable: "na" };
+  const cls = map[status] || "na";
+  const labels = { ok: "All metrics populated", partial: "Some metrics missing",
+                    missing: "Most metrics missing", na: "Not applicable" };
+  const title = tooltip || labels[cls] || status;
+  return `<span class="data-dot ${cls}" title="${title}"></span>`;
 }
 
 // ── Data Loading ─────────────────────────────────────────────
@@ -704,17 +781,20 @@ async function loadSchoolRecord(ncesId) {
 
 // ── Bootstrap ─────────────────────────────────────────────────
 async function bootstrap() {
-  const [manifest, network, byRegion, sources] = await Promise.all([
+  const [manifest, network, byRegion, sources, benchmarks] = await Promise.all([
     loadJSON(`${DATA_BASE}/data_manifest.json`),
     loadJSON(`${DATA_BASE}/aggregated/network.json`),
     loadJSON(`${DATA_BASE}/aggregated/by_region.json`),
     loadJSON(`${DATA_BASE}/sources.json`).catch(() => null),
+    loadJSON(`${DATA_BASE}/aggregated/benchmarks.json`).catch(() => null),
   ]);
 
   state.manifest = manifest;
   state.network = network;
   state.byRegion = byRegion;
   state.sources = sources;
+  state.benchmarks = benchmarks;
+  window.state = state;  // expose for benchmarkRow() helper
 
   document.getElementById("loading-overlay").classList.add("hidden");
 
@@ -836,33 +916,25 @@ function buildDemographicsChart() {
 }
 
 function buildTrendChart() {
-  const schools = state.network?.schools || [];
   const allYears = ["2021-22", "2022-23", "2023-24"];
+  const networkTrends = state.network?.trends || {};
+  const elaBy = networkTrends.ela_proficiency_by_year || {};
+  const mathBy = networkTrends.math_proficiency_by_year || {};
+  const elaN = networkTrends.ela_schools_per_year || {};
+  const mathN = networkTrends.math_schools_per_year || {};
 
-  // Aggregate trend data from school records where available
-  const elaByYear = {};
-  const mathByYear = {};
-  allYears.forEach(y => { elaByYear[y] = []; mathByYear[y] = []; });
+  // Pull from aggregated network trends (computed in scripts/10_aggregate.py)
+  let elaVals = allYears.map(y => elaBy[y] ?? null);
+  let mathVals = allYears.map(y => mathBy[y] ?? null);
 
-  schools.forEach(s => {
-    if (!s.nces_id) return;
-    const rec = state.schoolRecords[s.nces_id];
-    const trends = rec?.trends;
-    if (!trends) return;
-    allYears.forEach(y => {
-      if (trends.ela_proficiency_by_year?.[y] != null) elaByYear[y].push(trends.ela_proficiency_by_year[y]);
-      if (trends.math_proficiency_by_year?.[y] != null) mathByYear[y].push(trends.math_proficiency_by_year[y]);
-    });
-  });
-
-  const avg = arr => arr.length > 0 ? arr.reduce((a,b)=>a+b)/arr.length : null;
-  const elaVals = allYears.map(y => avg(elaByYear[y]));
-  const mathVals = allYears.map(y => avg(mathByYear[y]));
-
-  // If all null, use current year values as single data points
+  // Fallback if no aggregated trends present yet
   const hasData = elaVals.some(v => v !== null) || mathVals.some(v => v !== null);
-  const singleEla = hasData ? elaVals : [null, null, state.network?.ela_proficiency_weighted_avg];
-  const singleMath = hasData ? mathVals : [null, null, state.network?.math_proficiency_weighted_avg];
+  if (!hasData) {
+    elaVals = [null, null, state.network?.ela_proficiency_weighted_avg];
+    mathVals = [null, null, state.network?.math_proficiency_weighted_avg];
+  }
+  const singleEla = elaVals;
+  const singleMath = mathVals;
 
   makeChart("chart-trend", {
     type: "line",
@@ -972,19 +1044,22 @@ function renderRegionView(regionName) {
     return;
   }
   regionSchools.forEach(s => {
-    const manifestEntry = Object.values(state.manifest?.schools || {}).find(e => e.school_name === s.school_name);
+    const manifestEntry = state.manifest?.schools?.[s.nces_id] ||
+                          Object.values(state.manifest?.schools || {}).find(e => e.school_name === s.school_name);
     const overallStatus = getOverallDataStatus(manifestEntry);
+    const dataTooltip = getDataTooltip(manifestEntry);
+    const isHs = (s.grade_band || "").includes("9-12") || s.grade_band === "K-12" || s.grade_band === "PreK-12" || s.grade_band === "6-12";
     const tr = document.createElement("tr");
     tr.className = "clickable";
     tr.innerHTML = `
       <td class="school-name">${s.school_name}</td>
       <td><span class="badge badge-blue">${s.grade_band || "–"}</span></td>
       <td>${fmtInt(s.enrollment)}</td>
-      <td>${fmtPct(s.ela_pct)}</td>
-      <td>${fmtPct(s.math_pct)}</td>
+      <td>${fmtPct(s.ela_pct)}${benchDelta(s.nces_id, s.ela_pct, "ela", isHs)}</td>
+      <td>${fmtPct(s.math_pct)}${benchDelta(s.nces_id, s.math_pct, "math", isHs)}</td>
       <td>${s.growth_rating ? `<span class="badge ${growthBadgeClass(s.growth_rating)}">${s.growth_rating}</span>` : "–"}</td>
       <td>${s.accountability ? `<span class="badge badge-gray">${s.accountability}</span>` : "–"}</td>
-      <td>${dataDot(overallStatus)}</td>
+      <td>${dataDot(overallStatus, dataTooltip)}</td>
     `;
     tr.addEventListener("click", () => navigateToSchool(s.nces_id));
     tbody.appendChild(tr);
@@ -1058,10 +1133,34 @@ function renderRegionSources(regionName) {
 
 function getOverallDataStatus(entry) {
   if (!entry) return "na";
-  const statuses = Object.values(entry.data_sources || {}).map(s => s.status);
-  if (statuses.every(s => s === "ok")) return "ok";
-  if (statuses.some(s => s === "needs_manual_download" || s === "error")) return "needs_manual_download";
+  const statuses = Object.values(entry.data_sources || {})
+                         .map(s => s.status)
+                         .filter(s => s !== "not_applicable");  // K-8 grad doesn't count against
+  if (statuses.length === 0) return "na";
+  const okCount = statuses.filter(s => s === "ok").length;
+  const missingCount = statuses.filter(s => s === "missing" || s === "needs_manual_download" || s === "error").length;
+  if (okCount === statuses.length) return "ok";
+  if (missingCount > statuses.length / 2) return "missing";
   return "partial";
+}
+
+function getDataTooltip(entry) {
+  if (!entry || !entry.data_sources) return "No metadata available";
+  const sources = entry.data_sources;
+  const okList = []; const partialList = []; const missingList = []; const naList = [];
+  Object.entries(sources).forEach(([cat, s]) => {
+    const st = s.status;
+    if (st === "ok") okList.push(cat);
+    else if (st === "partial") partialList.push(cat);
+    else if (st === "not_applicable") naList.push(cat);
+    else missingList.push(cat);
+  });
+  const lines = [];
+  if (okList.length) lines.push(`Full: ${okList.join(", ")}`);
+  if (partialList.length) lines.push(`Partial: ${partialList.join(", ")}`);
+  if (missingList.length) lines.push(`Missing: ${missingList.join(", ")}`);
+  if (naList.length) lines.push(`N/A: ${naList.join(", ")}`);
+  return lines.join("\n");
 }
 
 function growthBadgeClass(rating) {
@@ -1195,12 +1294,14 @@ function renderSchoolDetail(container, rec, manifestEntry, ncesId) {
           <div class="perf-card-subject">ELA / Reading</div>
           <div class="perf-card-pct ${assess.ela?.pct_proficient_all == null ? "null-val" : ""}">${fmtPct(assess.ela?.pct_proficient_all)}</div>
           <div class="perf-card-year">proficient or above${assess.year ? " · " + assess.year : ""}</div>
+          ${benchmarkRow(ncesId, assess.ela?.pct_proficient_all, "ela", isHighSchool)}
           ${subgroupTable(assess.ela?.by_subgroup, "ELA")}
         </div>
         <div class="perf-card">
           <div class="perf-card-subject">Math</div>
           <div class="perf-card-pct ${assess.math?.pct_proficient_all == null ? "null-val" : ""}">${fmtPct(assess.math?.pct_proficient_all)}</div>
           <div class="perf-card-year">proficient or above${assess.year ? " · " + assess.year : ""}</div>
+          ${benchmarkRow(ncesId, assess.math?.pct_proficient_all, "math", isHighSchool)}
           ${subgroupTable(assess.math?.by_subgroup, "Math")}
         </div>
       </div>
@@ -1253,9 +1354,9 @@ function renderSchoolDetail(container, rec, manifestEntry, ncesId) {
         </div>
         <div class="stat-card"><div class="stat-card-label">State Percentile</div><div class="stat-card-value">${fmtPct(acct.state_percentile_rank)}</div></div>
         <div class="stat-card"><div class="stat-card-label">Similar Schools</div><div class="stat-card-value">${fmtPct(acct.similar_schools_percentile)}</div></div>
-        <div class="stat-card"><div class="stat-card-label">Attendance Rate</div><div class="stat-card-value">${fmtPct(attend.avg_daily_attendance_rate)}</div><div class="stat-card-sub">${attend.year || ""}</div></div>
-        <div class="stat-card"><div class="stat-card-label">Chronic Absent.</div><div class="stat-card-value">${fmtPct(attend.chronic_absenteeism_rate)}</div></div>
-        ${isHighSchool ? `<div class="stat-card"><div class="stat-card-label">4-Yr Grad Rate</div><div class="stat-card-value">${fmtPct(grad.four_year_grad_rate)}</div><div class="stat-card-sub">${grad.year || ""}</div></div>` : ""}
+        <div class="stat-card"><div class="stat-card-label">Attendance Rate</div><div class="stat-card-value">${fmtPct(attend.avg_daily_attendance_rate)}</div><div class="stat-card-sub">${attend.year || ""}</div>${benchmarkRow(ncesId, attend.avg_daily_attendance_rate, "attendance")}</div>
+        <div class="stat-card"><div class="stat-card-label">Chronic Absent.</div><div class="stat-card-value">${fmtPct(attend.chronic_absenteeism_rate)}</div>${benchmarkRow(ncesId, attend.chronic_absenteeism_rate, "chronic", false, true)}</div>
+        ${isHighSchool ? `<div class="stat-card"><div class="stat-card-label">4-Yr Grad Rate</div><div class="stat-card-value">${fmtPct(grad.four_year_grad_rate)}</div><div class="stat-card-sub">${grad.year || ""}</div>${benchmarkRow(ncesId, grad.four_year_grad_rate, "grad_4yr")}</div>` : ""}
       </div>
     </div>
 

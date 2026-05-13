@@ -1,0 +1,433 @@
+{
+  "generated_at": "2026-05-13T14:48:44.487825+00:00",
+  "school_year": "2023-24",
+  "by_state": {
+    "IL": {
+      "ela_iar": 41.2,
+      "math_iar": 28.4,
+      "ela_sat": 31.1,
+      "math_sat": 26.1,
+      "attendance": 91.6,
+      "chronic": 26.3,
+      "grad_4yr": 87.7,
+      "grad_5yr": 89.3,
+      "retention": 89.6
+    },
+    "OH": {
+      "grad_4yr": 87.9,
+      "grad_5yr": 89.1
+    }
+  },
+  "by_school": {
+    "170141006254": {
+      "school_name": "Horizon Science Academy McKinley Park",
+      "district_name": "Chicago Public Schools District 299",
+      "state_code": "IL",
+      "state": {
+        "ela_iar": 41.2,
+        "math_iar": 28.4,
+        "ela_sat": 31.1,
+        "math_sat": 26.1,
+        "attendance": 91.6,
+        "chronic": 26.3,
+        "grad_4yr": 87.7,
+        "grad_5yr": 89.3,
+        "retention": 89.6
+      },
+      "district": {
+        "ela_iar": 30.5,
+        "math_iar": 18.3,
+        "ela_sat": 22.4,
+        "math_sat": 18.6,
+        "attendance": 88.1,
+        "chronic": 40.8,
+        "grad_4yr": 80.9,
+        "grad_5yr": 84.6,
+        "retention": 87.4
+      }
+    },
+    "170141206309": {
+      "school_name": "Horizon Science Academy Belmont",
+      "district_name": "Chicago Public Schools District 299",
+      "state_code": "IL",
+      "state": {
+        "ela_iar": 41.2,
+        "math_iar": 28.4,
+        "ela_sat": 31.1,
+        "math_sat": 26.1,
+        "attendance": 91.6,
+        "chronic": 26.3,
+        "grad_4yr": 87.7,
+        "grad_5yr": 89.3,
+        "retention": 89.6
+      },
+      "district": {
+        "ela_iar": 30.5,
+        "math_iar": 18.3,
+        "ela_sat": 22.4,
+        "math_sat": 18.6,
+        "attendance": 88.1,
+        "chronic": 40.8,
+        "grad_4yr": 80.9,
+        "grad_5yr": 84.6,
+        "retention": 87.4
+      }
+    },
+    "170993005092": {
+      "school_name": "Chicago Math and Science Academy",
+      "district_name": "Chicago Public Schools District 299",
+      "state_code": "IL",
+      "state": {
+        "ela_iar": 41.2,
+        "math_iar": 28.4,
+        "ela_sat": 31.1,
+        "math_sat": 26.1,
+        "attendance": 91.6,
+        "chronic": 26.3,
+        "grad_4yr": 87.7,
+        "grad_5yr": 89.3,
+        "retention": 89.6
+      },
+      "district": {
+        "ela_iar": 30.5,
+        "math_iar": 18.3,
+        "ela_sat": 22.4,
+        "math_sat": 18.6,
+        "attendance": 88.1,
+        "chronic": 40.8,
+        "grad_4yr": 80.9,
+        "grad_5yr": 84.6,
+        "retention": 87.4
+      }
+    },
+    "170993006331": {
+      "school_name": "Horizon Science Academy Southwest Chicago",
+      "district_name": "Chicago Public Schools District 299",
+      "state_code": "IL",
+      "state": {
+        "ela_iar": 41.2,
+        "math_iar": 28.4,
+        "ela_sat": 31.1,
+        "math_sat": 26.1,
+        "attendance": 91.6,
+        "chronic": 26.3,
+        "grad_4yr": 87.7,
+        "grad_5yr": 89.3,
+        "retention": 89.6
+      },
+      "district": {
+        "ela_iar": 30.5,
+        "math_iar": 18.3,
+        "ela_sat": 22.4,
+        "math_sat": 18.6,
+        "attendance": 88.1,
+        "chronic": 40.8,
+        "grad_4yr": 80.9,
+        "grad_5yr": 84.6,
+        "retention": 87.4
+      }
+    },
+    "180006702416": {
+      "school_name": "Indiana Math and Science Academy West",
+      "district_name": "Indianapolis Public Schools",
+      "state_code": "IN",
+      "state": {},
+      "district": {}
+    },
+    "180009402487": {
+      "school_name": "Indiana Math and Science Academy North",
+      "district_name": "Indianapolis Public Schools",
+      "state_code": "IN",
+      "state": {},
+      "district": {}
+    },
+    "199902002316": {
+      "school_name": "Horizon Science Academy Des Moines",
+      "district_name": "Des Moines Independent Community School District",
+      "state_code": "IA",
+      "state": {},
+      "district": {}
+    },
+    "199903302345": {
+      "school_name": "Horizon Science Academy Davenport",
+      "district_name": "Davenport Community School District",
+      "state_code": "IA",
+      "state": {},
+      "district": {}
+    },
+    "260096708048": {
+      "school_name": "Michigan Math and Science Academy Lorraine",
+      "district_name": "Michigan Mathematics and Science Academy",
+      "state_code": "MI",
+      "state": {},
+      "district": {}
+    },
+    "260096708813": {
+      "school_name": "Michigan Math and Science Academy Dequindre",
+      "district_name": "Michigan Mathematics and Science Academy",
+      "state_code": "MI",
+      "state": {},
+      "district": {}
+    },
+    "270039905179": {
+      "school_name": "Minnesota Math and Science Academy",
+      "district_name": "Saint Paul Public Schools",
+      "state_code": "MN",
+      "state": {},
+      "district": {}
+    },
+    "270045005159": {
+      "school_name": "Horizon Science Academy Twin Cities",
+      "district_name": "Minneapolis Public Schools",
+      "state_code": "MN",
+      "state": {},
+      "district": {}
+    },
+    "290059203174": {
+      "school_name": "Gateway Science Academy of St. Louis - Smiley",
+      "district_name": "GATEWAY SCIENCE ACADEMY",
+      "state_code": "MO",
+      "state": {},
+      "district": {}
+    },
+    "290059203205": {
+      "school_name": "Gateway Science Academy of St. Louis - High",
+      "district_name": "GATEWAY SCIENCE ACADEMY",
+      "state_code": "MO",
+      "state": {},
+      "district": {}
+    },
+    "290059203241": {
+      "school_name": "Gateway Science Academy of St. Louis - South",
+      "district_name": "GATEWAY SCIENCE ACADEMY",
+      "state_code": "MO",
+      "state": {},
+      "district": {}
+    },
+    "290059203244": {
+      "school_name": "Gateway Science Academy of St. Louis - Middle",
+      "district_name": "GATEWAY SCIENCE ACADEMY",
+      "state_code": "MO",
+      "state": {},
+      "district": {}
+    },
+    "390004002939": {
+      "school_name": "Horizon Science Academy Cleveland High School",
+      "district_name": "Cleveland Municipal",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 75.4,
+        "grad_5yr": 80.1
+      }
+    },
+    "390004202978": {
+      "school_name": "Horizon Science Academy Columbus High School Morse Road Campus",
+      "district_name": "Columbus City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 77.9,
+        "grad_5yr": 82.1
+      }
+    },
+    "390044105000": {
+      "school_name": "Horizon Science Academy Cincinnati",
+      "district_name": "Cincinnati City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {}
+    },
+    "390044405003": {
+      "school_name": "Horizon Science Academy Dayton Elementary School",
+      "district_name": "Dayton City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 72.8,
+        "grad_5yr": 76.0
+      }
+    },
+    "390045105010": {
+      "school_name": "Horizon Science Academy Springfield",
+      "district_name": "Toledo City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 75.5,
+        "grad_5yr": 79.7
+      }
+    },
+    "390045405013": {
+      "school_name": "Horizon Science Academy Denison",
+      "district_name": "Cleveland Municipal",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 75.4,
+        "grad_5yr": 80.1
+      }
+    },
+    "390047005029": {
+      "school_name": "Horizon Science Academy Cleveland Elementary School",
+      "district_name": "Cleveland Municipal",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 75.4,
+        "grad_5yr": 80.1
+      }
+    },
+    "390051005220": {
+      "school_name": "Horizon Science Academy Toledo",
+      "district_name": "Toledo City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 75.5,
+        "grad_5yr": 79.7
+      }
+    },
+    "390064505319": {
+      "school_name": "Noble Academy Columbus",
+      "district_name": "Columbus City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 77.9,
+        "grad_5yr": 82.1
+      }
+    },
+    "390064605345": {
+      "school_name": "Noble Academy Euclid",
+      "district_name": "Cleveland Municipal",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 75.4,
+        "grad_5yr": 80.1
+      }
+    },
+    "390132205440": {
+      "school_name": "Horizon Science Academy Columbus Middle School",
+      "district_name": "Columbus City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 77.9,
+        "grad_5yr": 82.1
+      }
+    },
+    "390135305483": {
+      "school_name": "Horizon Science Academy Columbus Elementary School",
+      "district_name": "Columbus City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 77.9,
+        "grad_5yr": 82.1
+      }
+    },
+    "390136505544": {
+      "school_name": "Horizon Science Academy Lorain",
+      "district_name": "Lorain City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 73.9,
+        "grad_5yr": 81.2
+      }
+    },
+    "390136605556": {
+      "school_name": "Horizon Science Academy Dayton High School",
+      "district_name": "Dayton City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 72.8,
+        "grad_5yr": 76.0
+      }
+    },
+    "390138305625": {
+      "school_name": "Horizon Science Academy Dayton Downtown",
+      "district_name": "Dayton City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 72.8,
+        "grad_5yr": 76.0
+      }
+    },
+    "390138905567": {
+      "school_name": "Horizon Science Academy Youngstown",
+      "district_name": "Youngstown City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 85.6,
+        "grad_5yr": 88.0
+      }
+    },
+    "390160605963": {
+      "school_name": "Horizon Science Academy Columbus Primary School",
+      "district_name": "Columbus City",
+      "state_code": "OH",
+      "state": {
+        "grad_4yr": 87.9,
+        "grad_5yr": 89.1
+      },
+      "district": {
+        "grad_4yr": 77.9,
+        "grad_5yr": 82.1
+      }
+    }
+  }
+}

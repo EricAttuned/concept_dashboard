@@ -96,889 +96,44 @@
         "NCES ID not found \u2014 manual lookup required"
       ]
     },
-    "390045105010": {
-      "school_name": "Horizon Science Academy Springfield",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390051005220": {
-      "school_name": "Horizon Science Academy Toledo",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390004002939": {
-      "school_name": "Horizon Science Academy Cleveland High School",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390047005029": {
-      "school_name": "Horizon Science Academy Cleveland Elementary School",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390045405013": {
-      "school_name": "Horizon Science Academy Denison",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390136505544": {
-      "school_name": "Horizon Science Academy Lorain",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390138905567": {
-      "school_name": "Horizon Science Academy Youngstown",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390064605345": {
-      "school_name": "Noble Academy Euclid",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390004202978": {
-      "school_name": "Horizon Science Academy Columbus High School Morse Road Campus",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390132205440": {
-      "school_name": "Horizon Science Academy Columbus Middle School",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390160605963": {
-      "school_name": "Horizon Science Academy Columbus Primary School",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390135305483": {
-      "school_name": "Horizon Science Academy Columbus Elementary School",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390064505319": {
-      "school_name": "Noble Academy Columbus",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390044405003": {
-      "school_name": "Horizon Science Academy Dayton Elementary School",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390136605556": {
-      "school_name": "Horizon Science Academy Dayton High School",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390138305625": {
-      "school_name": "Horizon Science Academy Dayton Downtown",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "390044105000": {
-      "school_name": "Horizon Science Academy Cincinnati",
-      "state": "OH",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://reportcard.education.ohio.gov/download"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "260096708048": {
-      "school_name": "Michigan Math and Science Academy Lorraine",
-      "state": "MI",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.mischooldata.org/student-performance/",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.mischooldata.org/student-growth/",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.mischooldata.org/accountability-scorecard/",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "MI School Data portal requires manual navigation \u2014 automated fetch failed"
-      ]
-    },
-    "260096708813": {
-      "school_name": "Michigan Math and Science Academy Dequindre",
-      "state": "MI",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.mischooldata.org/student-performance/",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.mischooldata.org/student-growth/",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.mischooldata.org/accountability-scorecard/",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "MI School Data portal requires manual navigation \u2014 automated fetch failed"
-      ]
-    },
-    "290059203174": {
-      "school_name": "Gateway Science Academy of St. Louis - Smiley",
-      "state": "MO",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://mcds.dese.mo.gov",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "Missouri MAP data requires manual download from DESE or MCDS portal"
-      ]
-    },
-    "290059203205": {
-      "school_name": "Gateway Science Academy of St. Louis - High",
-      "state": "MO",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://mcds.dese.mo.gov",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "Missouri MAP data requires manual download from DESE or MCDS portal"
-      ]
-    },
-    "290059203244": {
-      "school_name": "Gateway Science Academy of St. Louis - Middle",
-      "state": "MO",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://mcds.dese.mo.gov",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "Missouri MAP data requires manual download from DESE or MCDS portal"
-      ]
-    },
-    "290059203241": {
-      "school_name": "Gateway Science Academy of St. Louis - South",
-      "state": "MO",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://mcds.dese.mo.gov",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://dese.mo.gov/data-system-management/data-download",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "Missouri MAP data requires manual download from DESE or MCDS portal"
-      ]
-    },
-    "170993005092": {
-      "school_name": "Chicago Math and Science Academy",
+    "170141006254": {
+      "school_name": "Horizon Science Academy McKinley Park",
       "state": "IL",
+      "region": "Illinois",
+      "grade_band": "K-12",
       "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
+        "enrollment": {
+          "status": "ok",
           "year": "2023-24"
         },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 52.3,
+          "math": 21.8
         },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
         },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "graduation": {
+          "status": "ok",
+          "year": "2023-24"
         },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 4
+        },
+        "trends": {
+          "status": "ok"
         }
       },
       "flags": [
@@ -986,39 +141,47 @@
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
         "EDFacts API blocked in current environment",
         "Illinois ISBE data requires manual download from report card portal"
-      ]
+      ],
+      "last_updated": "2026-05-12T18:07:10.570575+00:00"
     },
     "170141206309": {
       "school_name": "Horizon Science Academy Belmont",
       "state": "IL",
+      "region": "Illinois",
+      "grade_band": "K-11",
       "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
+        "enrollment": {
+          "status": "ok",
           "year": "2023-24"
         },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 38.7,
+          "math": 15.8
         },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
         },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
         },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 4
+        },
+        "trends": {
+          "status": "ok"
         }
       },
       "flags": [
@@ -1026,39 +189,47 @@
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
         "EDFacts API blocked in current environment",
         "Illinois ISBE data requires manual download from report card portal"
-      ]
+      ],
+      "last_updated": "2026-05-12T18:07:10.573135+00:00"
     },
-    "170141006254": {
-      "school_name": "Horizon Science Academy McKinley Park",
+    "170993005092": {
+      "school_name": "Chicago Math and Science Academy",
       "state": "IL",
+      "region": "Illinois",
+      "grade_band": "6-12",
       "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
+        "enrollment": {
+          "status": "ok",
           "year": "2023-24"
         },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 33.7,
+          "math": 15.1
         },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
         },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "graduation": {
+          "status": "ok",
+          "year": "2023-24"
         },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 4
+        },
+        "trends": {
+          "status": "ok"
         }
       },
       "flags": [
@@ -1066,39 +237,47 @@
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
         "EDFacts API blocked in current environment",
         "Illinois ISBE data requires manual download from report card portal"
-      ]
+      ],
+      "last_updated": "2026-05-12T18:07:10.551542+00:00"
     },
     "170993006331": {
       "school_name": "Horizon Science Academy Southwest Chicago",
       "state": "IL",
+      "region": "Illinois",
+      "grade_band": "K-12",
       "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
+        "enrollment": {
+          "status": "ok",
           "year": "2023-24"
         },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 29.3,
+          "math": 11.3
         },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
         },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "graduation": {
+          "status": "ok",
+          "year": "2023-24"
         },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://www.isbe.net/Pages/Illinois-State-Report-Card-Data.aspx",
-          "year": "2022-23"
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 4
+        },
+        "trends": {
+          "status": "ok"
         }
       },
       "flags": [
@@ -1106,234 +285,1375 @@
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
         "EDFacts API blocked in current environment",
         "Illinois ISBE data requires manual download from report card portal"
-      ]
-    },
-    "199902002316": {
-      "school_name": "Horizon Science Academy Des Moines",
-      "state": "IA",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "199903302345": {
-      "school_name": "Horizon Science Academy Davenport",
-      "state": "IA",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educateiowa.gov/data-reporting/data-reporting/school-and-district-data"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment"
-      ]
-    },
-    "270039905179": {
-      "school_name": "Minnesota Math and Science Academy",
-      "state": "MN",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://education.mn.gov/MDE/Data/",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://education.mn.gov/MDE/Data/",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://education.mn.gov/MDE/Data/",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "Minnesota MCA data requires manual download from MDE portal"
-      ]
-    },
-    "270045005159": {
-      "school_name": "Horizon Science Academy Twin Cities",
-      "state": "MN",
-      "data_sources": {
-        "nces_ccd": {
-          "status": "partial",
-          "last_fetched": "2026-05-08",
-          "year": "2023-24"
-        },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
-        },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://education.mn.gov/MDE/Data/",
-          "year": "2022-23"
-        },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://education.mn.gov/MDE/Data/",
-          "year": "2022-23"
-        },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-12",
-          "manual_url": "https://education.mn.gov/MDE/Data/",
-          "year": "2022-23"
-        }
-      },
-      "flags": [
-        "Some race/ethnicity enrollment counts suppressed by NCES",
-        "NCES CCD fetched from web search data; full API fetch needed for complete data",
-        "EDFacts API blocked in current environment",
-        "Minnesota MCA data requires manual download from MDE portal"
-      ]
+      ],
+      "last_updated": "2026-05-12T18:07:10.573759+00:00"
     },
     "180006702416": {
       "school_name": "Indiana Math and Science Academy West",
       "state": "IN",
+      "region": "Indiana",
+      "grade_band": "K-8",
       "data_sources": {
-        "nces_ccd": {
+        "enrollment": {
           "status": "partial",
-          "last_fetched": "2026-05-08",
           "year": "2023-24"
         },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 49.4,
+          "math": 53.8
         },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports"
+        "attendance": {
+          "status": "missing"
         },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports"
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
         },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports"
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2022-23",
+          "fields_populated": 1
+        },
+        "trends": {
+          "status": "ok"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
         "EDFacts API blocked in current environment"
-      ]
+      ],
+      "last_updated": "2026-05-12T18:15:27.157945+00:00"
     },
     "180009402487": {
       "school_name": "Indiana Math and Science Academy North",
       "state": "IN",
+      "region": "Indiana",
+      "grade_band": "K-12",
       "data_sources": {
-        "nces_ccd": {
+        "enrollment": {
           "status": "partial",
-          "last_fetched": "2026-05-08",
           "year": "2023-24"
         },
-        "edfacts": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://educationdata.urban.org/api/v1/schools/edfacts/"
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 19.8,
+          "math": 9.8
         },
-        "state_assessment": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports"
+        "attendance": {
+          "status": "missing"
         },
-        "state_growth": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports"
+        "graduation": {
+          "status": "missing"
         },
-        "state_accountability": {
-          "status": "needs_manual_download",
-          "last_fetched": "2026-05-08",
-          "manual_url": "https://www.doe.in.gov/accountability/find-school-and-corporation-data-reports"
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2022-23",
+          "fields_populated": 1
+        },
+        "trends": {
+          "status": "ok"
         }
       },
       "flags": [
         "Some race/ethnicity enrollment counts suppressed by NCES",
         "NCES CCD fetched from web search data; full API fetch needed for complete data",
         "EDFacts API blocked in current environment"
-      ]
+      ],
+      "last_updated": "2026-05-12T18:15:27.264228+00:00"
+    },
+    "199902002316": {
+      "school_name": "Horizon Science Academy Des Moines",
+      "state": "IA",
+      "region": "Iowa",
+      "grade_band": "PreK-6",
+      "data_sources": {
+        "enrollment": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "partial",
+          "year": "2024-25",
+          "ela": 41.9,
+          "math": 67.7
+        },
+        "attendance": {
+          "status": "missing"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2024-25"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2023-24",
+          "fields_populated": 2
+        },
+        "trends": {
+          "status": "missing"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:21:06.156963+00:00"
+    },
+    "199903302345": {
+      "school_name": "Horizon Science Academy Davenport",
+      "state": "IA",
+      "region": "Iowa",
+      "grade_band": "K-6",
+      "data_sources": {
+        "enrollment": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "missing"
+        },
+        "attendance": {
+          "status": "missing"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "missing"
+        },
+        "staff": {
+          "status": "missing"
+        },
+        "trends": {
+          "status": "missing"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.559259+00:00"
+    },
+    "260096708048": {
+      "school_name": "Michigan Math and Science Academy Lorraine",
+      "state": "MI",
+      "region": "Michigan",
+      "grade_band": "PreK-5",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 20.0,
+          "math": 20.0
+        },
+        "attendance": {
+          "status": "missing"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "missing"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "MI School Data portal requires manual navigation \u2014 automated fetch failed"
+      ],
+      "last_updated": "2026-05-12T18:15:31.476181+00:00"
+    },
+    "260096708813": {
+      "school_name": "Michigan Math and Science Academy Dequindre",
+      "state": "MI",
+      "region": "Michigan",
+      "grade_band": "PreK-12",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 29.7,
+          "math": 12.9
+        },
+        "attendance": {
+          "status": "missing"
+        },
+        "graduation": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "missing"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "MI School Data portal requires manual navigation \u2014 automated fetch failed"
+      ],
+      "last_updated": "2026-05-12T18:15:34.002027+00:00"
+    },
+    "270039905179": {
+      "school_name": "Minnesota Math and Science Academy",
+      "state": "MN",
+      "region": "Minnesota",
+      "grade_band": "K-12",
+      "data_sources": {
+        "enrollment": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 22.8,
+          "math": 12.9
+        },
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2022-23",
+          "fields_populated": 1
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "Minnesota MCA data requires manual download from MDE portal"
+      ],
+      "last_updated": "2026-05-12T18:38:34.791335+00:00"
+    },
+    "270045005159": {
+      "school_name": "Horizon Science Academy Twin Cities",
+      "state": "MN",
+      "region": "Minnesota",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 7.8,
+          "math": 8.2
+        },
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2022-23",
+          "fields_populated": 1
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "Minnesota MCA data requires manual download from MDE portal"
+      ],
+      "last_updated": "2026-05-12T18:38:33.857050+00:00"
+    },
+    "290059203174": {
+      "school_name": "Gateway Science Academy of St. Louis - Smiley",
+      "state": "MO",
+      "region": "Missouri",
+      "grade_band": "PreK-5",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 54.0,
+          "math": 51.2
+        },
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2023-24",
+          "fields_populated": 2
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
+      ],
+      "last_updated": "2026-05-12T18:19:33.006096+00:00"
+    },
+    "290059203205": {
+      "school_name": "Gateway Science Academy of St. Louis - High",
+      "state": "MO",
+      "region": "Missouri",
+      "grade_band": "9-12",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 50.0,
+          "math": 56.6
+        },
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2023-24",
+          "fields_populated": 2
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
+      ],
+      "last_updated": "2026-05-12T18:19:33.012753+00:00"
+    },
+    "290059203241": {
+      "school_name": "Gateway Science Academy of St. Louis - South",
+      "state": "MO",
+      "region": "Missouri",
+      "grade_band": "PreK-5",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 24.3,
+          "math": 29.2
+        },
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2023-24",
+          "fields_populated": 2
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
+      ],
+      "last_updated": "2026-05-12T18:19:33.016354+00:00"
+    },
+    "290059203244": {
+      "school_name": "Gateway Science Academy of St. Louis - Middle",
+      "state": "MO",
+      "region": "Missouri",
+      "grade_band": "6-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 42.5,
+          "math": 51.6
+        },
+        "attendance": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "missing"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "partial",
+          "year": "2023-24",
+          "fields_populated": 2
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment",
+        "Missouri MAP data requires manual download from DESE or MCDS portal"
+      ],
+      "last_updated": "2026-05-12T18:19:33.014382+00:00"
+    },
+    "390004002939": {
+      "school_name": "Horizon Science Academy Cleveland High School",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "9-12",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 40.0,
+          "math": 12.9
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.572500+00:00"
+    },
+    "390004202978": {
+      "school_name": "Horizon Science Academy Columbus High School Morse Road Campus",
+      "state": "OH",
+      "region": "Columbus",
+      "grade_band": "9-10",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 56.5,
+          "math": 40.0
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.554023+00:00"
+    },
+    "390044105000": {
+      "school_name": "Horizon Science Academy Cincinnati",
+      "state": "OH",
+      "region": "Dayton/Cincinnati",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 19.3,
+          "math": 16.0
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.565428+00:00"
+    },
+    "390044405003": {
+      "school_name": "Horizon Science Academy Dayton Elementary School",
+      "state": "OH",
+      "region": "Dayton/Cincinnati",
+      "grade_band": "K-5",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 37.9,
+          "math": 36.1
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.561061+00:00"
+    },
+    "390045105010": {
+      "school_name": "Horizon Science Academy Springfield",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 39.1,
+          "math": 40.5
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.554953+00:00"
+    },
+    "390045405013": {
+      "school_name": "Horizon Science Academy Denison",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 38.2,
+          "math": 12.8
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.557540+00:00"
+    },
+    "390047005029": {
+      "school_name": "Horizon Science Academy Cleveland Elementary School",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 37.9,
+          "math": 17.9
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.563814+00:00"
+    },
+    "390051005220": {
+      "school_name": "Horizon Science Academy Toledo",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "K-12",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 44.6,
+          "math": 34.1
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:44:57.230756+00:00"
+    },
+    "390064505319": {
+      "school_name": "Noble Academy Columbus",
+      "state": "OH",
+      "region": "Columbus",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 45.7,
+          "math": 37.3
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.569727+00:00"
+    },
+    "390064605345": {
+      "school_name": "Noble Academy Euclid",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "partial",
+          "year": "2023-24",
+          "ela": 46.8,
+          "math": 30.2
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.546888+00:00"
+    },
+    "390132205440": {
+      "school_name": "Horizon Science Academy Columbus Middle School",
+      "state": "OH",
+      "region": "Columbus",
+      "grade_band": "6-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 31.3,
+          "math": 12.2
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.548803+00:00"
+    },
+    "390135305483": {
+      "school_name": "Horizon Science Academy Columbus Elementary School",
+      "state": "OH",
+      "region": "Columbus",
+      "grade_band": "3-5",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 53.7,
+          "math": 44.8
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "missing"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.550585+00:00"
+    },
+    "390136505544": {
+      "school_name": "Horizon Science Academy Lorain",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "K-12",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 49.0,
+          "math": 30.7
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:44:57.233934+00:00"
+    },
+    "390136605556": {
+      "school_name": "Horizon Science Academy Dayton High School",
+      "state": "OH",
+      "region": "Dayton/Cincinnati",
+      "grade_band": "6-12",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 25.2,
+          "math": 7.2
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.568963+00:00"
+    },
+    "390138305625": {
+      "school_name": "Horizon Science Academy Dayton Downtown",
+      "state": "OH",
+      "region": "Dayton/Cincinnati",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 36.3,
+          "math": 12.0
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.564638+00:00"
+    },
+    "390138905567": {
+      "school_name": "Horizon Science Academy Youngstown",
+      "state": "OH",
+      "region": "North Ohio",
+      "grade_band": "K-8",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "ok",
+          "year": "2023-24",
+          "ela": 62.6,
+          "math": 34.1
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.571489+00:00"
+    },
+    "390160605963": {
+      "school_name": "Horizon Science Academy Columbus Primary School",
+      "state": "OH",
+      "region": "Columbus",
+      "grade_band": "K-2",
+      "data_sources": {
+        "enrollment": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "assessment": {
+          "status": "missing"
+        },
+        "attendance": {
+          "status": "partial",
+          "year": "2023-24"
+        },
+        "graduation": {
+          "status": "not_applicable",
+          "year": null
+        },
+        "growth": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "accountability": {
+          "status": "ok",
+          "year": "2023-24"
+        },
+        "staff": {
+          "status": "ok",
+          "year": "2023-24",
+          "fields_populated": 3
+        },
+        "trends": {
+          "status": "ok"
+        }
+      },
+      "flags": [
+        "Some race/ethnicity enrollment counts suppressed by NCES",
+        "NCES CCD fetched from web search data; full API fetch needed for complete data",
+        "EDFacts API blocked in current environment"
+      ],
+      "last_updated": "2026-05-12T18:07:10.568173+00:00"
     }
   },
-  "generated_at": "2026-05-12T18:21:10.326205Z",
+  "generated_at": "2026-05-13T14:33:35.658821+00:00",
   "network_summary": {
     "total_schools": 40,
     "schools_with_full_data": 0,

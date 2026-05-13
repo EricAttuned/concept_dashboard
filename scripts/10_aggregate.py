@@ -59,6 +59,11 @@ def build_school_metrics(record: dict) -> dict:
     grad_4yr = safe_get(record, "graduation", "four_year_grad_rate")
     race = safe_get(record, "enrollment", "by_race_ethnicity") or {}
 
+    # Prior-year proficiency for trend aggregation
+    trends = record.get("trends") or {}
+    trends_ela = trends.get("ela_proficiency_by_year") or {}
+    trends_math = trends.get("math_proficiency_by_year") or {}
+
     return {
         "enrollment": enrollment,
         "ela_pct": ela,
@@ -74,6 +79,8 @@ def build_school_metrics(record: dict) -> dict:
         "grad_4yr": grad_4yr,
         "race": race,
         "assessment_year": safe_get(record, "assessment", "year"),
+        "trends_ela": trends_ela,
+        "trends_math": trends_math,
     }
 
 
@@ -102,9 +109,22 @@ def aggregate_group(schools_with_metrics: list[tuple[dict, dict]]) -> dict:
     schools_with_growth = 0
     schools_with_accountability = 0
 
+    # Year-over-year proficiency aggregation
+    trend_years = ["2021-22", "2022-23", "2023-24"]
+    trend_ela: dict[str, list[tuple[float, float]]] = {y: [] for y in trend_years}
+    trend_math: dict[str, list[tuple[float, float]]] = {y: [] for y in trend_years}
+
     for meta, m in schools_with_metrics:
         enroll = m["enrollment"] or 0
         total_enrollment += enroll
+
+        for y in trend_years:
+            v = (m.get("trends_ela") or {}).get(y)
+            if v is not None:
+                trend_ela[y].append((v, enroll or 1))
+            v = (m.get("trends_math") or {}).get(y)
+            if v is not None:
+                trend_math[y].append((v, enroll or 1))
 
         if m["ela_pct"] is not None:
             ela_pairs.append((m["ela_pct"], enroll or 1))
@@ -150,6 +170,12 @@ def aggregate_group(schools_with_metrics: list[tuple[dict, dict]]) -> dict:
         "schools_with_accountability": schools_with_accountability,
         "race_ethnicity_totals": race_totals,
         "assessment_years_present": sorted(assessment_years),
+        "trends": {
+            "ela_proficiency_by_year": {y: weighted_avg(trend_ela[y]) for y in trend_years},
+            "math_proficiency_by_year": {y: weighted_avg(trend_math[y]) for y in trend_years},
+            "ela_schools_per_year": {y: len(trend_ela[y]) for y in trend_years},
+            "math_schools_per_year": {y: len(trend_math[y]) for y in trend_years},
+        },
     }
 
 
