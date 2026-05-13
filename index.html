@@ -526,14 +526,14 @@
   <div class="status-summary-box" id="status-summary-text">Loading…</div>
 
   <div class="status-legend">
-    <div class="status-legend-item"><div class="status-cell ok">✓</div> Data available</div>
-    <div class="status-legend-item"><div class="status-cell partial">~</div> Partial / suppressed</div>
-    <div class="status-legend-item"><div class="status-cell missing">!</div> Manual download needed</div>
+    <div class="status-legend-item"><div class="status-cell ok">✓</div> Fully populated</div>
+    <div class="status-legend-item"><div class="status-cell partial">~</div> Partial (some fields missing)</div>
+    <div class="status-legend-item"><div class="status-cell missing">✗</div> Not available from state</div>
     <div class="status-legend-item"><div class="status-cell na">–</div> Not applicable</div>
   </div>
 
   <div class="card" style="margin-bottom:20px">
-    <div class="card-header"><span class="card-title">Source Coverage by School</span></div>
+    <div class="card-header"><span class="card-title">Data Coverage by School</span><span style="font-size:12px;color:var(--text-muted)">Hover ✓ / ~ / ✗ for details</span></div>
     <div class="card-body" style="padding:0">
       <div class="data-table-wrap">
         <table class="data-table" id="status-table">
@@ -541,12 +541,14 @@
             <tr>
               <th>School</th>
               <th>State</th>
-              <th>NCES CCD</th>
-              <th>EDFacts</th>
-              <th>State Assessment</th>
-              <th>State Growth</th>
-              <th>Accountability</th>
-              <th>Flags</th>
+              <th title="Total students + demographics">Enroll</th>
+              <th title="ELA + Math + subgroups">Assess</th>
+              <th title="Attendance rate + chronic absenteeism">Attend</th>
+              <th title="4-year graduation + subgroups">Grad</th>
+              <th title="ELA + Math growth ratings">Growth</th>
+              <th title="State accountability rating">Acct</th>
+              <th title="Teacher FTE/cert/novice/retention">Staff</th>
+              <th title="Prior-year proficiency for trend chart">Trends</th>
             </tr>
           </thead>
           <tbody id="status-table-body"></tbody>
@@ -686,11 +688,14 @@ function makeChart(id, config) {
   return state.chartInstances[id];
 }
 
-function statusCell(status) {
+function statusCell(status, tooltip) {
   const map = { ok: ["ok", "✓"], partial: ["partial", "~"], suppressed: ["partial", "~"],
-                needs_manual_download: ["missing", "!"], error: ["missing", "!"] };
+                needs_manual_download: ["missing", "✗"], error: ["missing", "✗"],
+                missing: ["missing", "✗"], not_applicable: ["na", "–"] };
   const [cls, sym] = map[status] || ["na", "–"];
-  return `<div class="status-cell ${cls}">${sym}</div>`;
+  const t = tooltip || ({ok:"Fully populated", partial:"Partial coverage",
+                          missing:"Not available from state", not_applicable:"Not applicable"}[status] || status || "—");
+  return `<div class="status-cell ${cls}" title="${t}">${sym}</div>`;
 }
 
 function benchDelta(ncesId, schoolVal, metric, isHs) {
@@ -1501,19 +1506,32 @@ function initStatusTab() {
     return;
   }
 
-  const schools = manifest.schools || {};
+  // Only count schools we actually have JSON files for (skip placeholders with no data_sources)
+  const schools = Object.fromEntries(
+    Object.entries(manifest.schools || {}).filter(([id, s]) =>
+      Object.keys(s.data_sources || {}).length > 0
+    )
+  );
   const total = Object.keys(schools).length;
-  const fullData = Object.values(schools).filter(s =>
-    Object.values(s.data_sources || {}).length > 0 &&
-    Object.values(s.data_sources || {}).every(src => src.status === "ok")
-  ).length;
-  const manualNeeded = Object.values(schools).filter(s =>
-    Object.values(s.data_sources || {}).some(src => src.status === "needs_manual_download")
-  ).length;
+
+  // Count categories that are "ok" across all schools
+  let okCount = 0, partialCount = 0, missingCount = 0, naCount = 0;
+  Object.values(schools).forEach(s => {
+    Object.values(s.data_sources || {}).forEach(src => {
+      if (src.status === "ok") okCount++;
+      else if (src.status === "partial" || src.status === "suppressed") partialCount++;
+      else if (src.status === "not_applicable") naCount++;
+      else missingCount++;
+    });
+  });
+  const totalChecks = okCount + partialCount + missingCount + naCount;
+  const pctOk = totalChecks ? Math.round(okCount/(totalChecks-naCount)*100) : 0;
 
   document.getElementById("status-summary-text").innerHTML =
-    `<strong>${fullData}</strong> of <strong>${total}</strong> schools have complete data. ` +
-    `<strong>${manualNeeded}</strong> sources need manual download.`;
+    `<strong>${total}</strong> schools tracked. ` +
+    `<strong>${okCount}</strong> fully populated, <strong>${partialCount}</strong> partial, ` +
+    `<strong>${missingCount}</strong> missing (not published by state), <strong>${naCount}</strong> N/A. ` +
+    `Network coverage: <strong>${pctOk}%</strong>.`;
 
   const tbody = document.getElementById("status-table-body");
   tbody.innerHTML = "";
@@ -1528,22 +1546,32 @@ function initStatusTab() {
   Object.entries(byState).sort().forEach(([state, entries]) => {
     const groupRow = document.createElement("tr");
     groupRow.className = "region-group";
-    groupRow.innerHTML = `<td colspan="8" style="padding:8px 12px">${state}</td>`;
+    groupRow.innerHTML = `<td colspan="10" style="padding:8px 12px">${state}</td>`;
     tbody.appendChild(groupRow);
 
     entries.sort((a,b) => a[1].school_name.localeCompare(b[1].school_name)).forEach(([id, s]) => {
       const ds = s.data_sources || {};
-      const flags = s.flags || [];
+      const cell = (cat) => {
+        const src = ds[cat] || {};
+        const yr = src.year ? ` (${src.year})` : "";
+        const tip = (src.status === "ok" ? "Fully populated" :
+                     src.status === "partial" ? "Partial — some fields missing" :
+                     src.status === "not_applicable" ? "Not applicable" :
+                     src.status === "missing" ? "Not published per-school by state" : "—") + yr;
+        return statusCell(src.status, tip);
+      };
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td class="school-name">${s.school_name}</td>
         <td>${state}</td>
-        <td>${statusCell(ds.nces_ccd?.status)}</td>
-        <td>${statusCell(ds.edfacts?.status)}</td>
-        <td>${statusCell(ds.state_assessment?.status)}</td>
-        <td>${statusCell(ds.state_growth?.status)}</td>
-        <td>${statusCell(ds.state_accountability?.status)}</td>
-        <td style="font-size:11px;color:var(--text-muted)">${flags.length ? `<span title="${flags.join("\n")}" style="cursor:help">⚠ ${flags.length}</span>` : "–"}</td>
+        <td>${cell("enrollment")}</td>
+        <td>${cell("assessment")}</td>
+        <td>${cell("attendance")}</td>
+        <td>${cell("graduation")}</td>
+        <td>${cell("growth")}</td>
+        <td>${cell("accountability")}</td>
+        <td>${cell("staff")}</td>
+        <td>${cell("trends")}</td>
       `;
       tbody.appendChild(tr);
     });
